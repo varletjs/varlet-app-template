@@ -1,10 +1,17 @@
 import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
+import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '~': fileURLToPath(new URL('./src/assets', import.meta.url))
+    }
+  },
   plugins: [
     vue(),
     autoImport({
@@ -22,8 +29,8 @@ export default defineConfig({
     }),
     autoImport({
       imports: ['vue', 'vue-router', 'pinia'],
-      eslintrc: { enabled: true },
-      resolvers: [VarletUIResolver({ autoImport: true })]
+      resolvers: [VarletUIResolver({ autoImport: true })],
+      eslintrc: { enabled: true }
     })
   ],
   resolve: {
