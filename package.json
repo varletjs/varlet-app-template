@@ -8,6 +8,7 @@
     "postinstall": "simple-git-hooks",
     "dev": "vite",
     "build": "vite build",
+    "build:test": "vite build --mode test",
     "preview": "vite preview",
     "format": "prettier --write",
     "lint": "eslint . --fix",
