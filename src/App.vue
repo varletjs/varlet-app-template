@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const msg = ref('按钮')
+</script>
 
 <template>
-  <var-button>按钮</var-button>
+  <var-button type="primary">{{ msg }}</var-button>
 </template>
