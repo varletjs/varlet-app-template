@@ -6,7 +6,16 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        transformAssetUrls: {
+          'var-image': ['src'],
+          'var-avatar': ['src'],
+          'var-card': ['src'],
+          'var-app-bar': ['image']
+        }
+      }
+    }),
     components({
       resolvers: [VarletUIResolver()]
     }),
