@@ -28,6 +28,13 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    open: true
+    open: true,
+    port: 9988,
+    proxy: {
+      "/api": {
+        target: "",
+        changeOrigin: true
+      }
+    }
   }
 })
