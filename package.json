@@ -28,6 +28,7 @@
     "koa-router": "^12.0.0",
 =======
     "@varlet/touch-emulator": "2.11.2",
+    "@varlet/bounce-fixer": "^0.0.2",
     "axle": "^0.2.1",
 >>>>>>> e808c10 (refactor: refactor dev deps)
     "pinia": "^2.1.3",

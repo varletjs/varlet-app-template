@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@varlet/bounce-fixer':
+    specifier: ^0.0.2
+    version: 0.0.2
   '@varlet/touch-emulator':
     specifier: 2.11.2
     version: 2.11.2
@@ -786,6 +789,10 @@ packages:
       '@typescript-eslint/types': 5.59.8
       eslint-visitor-keys: 3.4.1
     dev: true
+
+  /@varlet/bounce-fixer@0.0.2:
+    resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
+    dev: false
 
   /@varlet/icons@2.11.2:
     resolution: {integrity: sha512-PhD2SpNXhU9lVTAw3MM2kQPfLLAgCrOXhBVAQxG07pVSl0BA1CPNKM2HCZ7Zy3ZmeXV/hm5nXegnHV14Zdma/Q==}
