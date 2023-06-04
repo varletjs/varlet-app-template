@@ -42,6 +42,29 @@ export default defineConfig({
         target: "",
         changeOrigin: true
       }
-    }
+    },
+    build: {
+      target: ['ios12']
+    },
+    plugins: [
+      vue({
+        template: {
+          transformAssetUrls: {
+            'var-image': ['src'],
+            'var-avatar': ['src'],
+            'var-card': ['src'],
+            'var-app-bar': ['image']
+          }
+        }
+      }),
+      components({
+        resolvers: [VarletUIResolver()]
+      }),
+      autoImport({
+        imports: ['vue', 'vue-router', 'pinia'],
+        resolvers: [VarletUIResolver({ autoImport: true })],
+        eslintrc: { enabled: true }
+      })
+    ]
   }
 })
