@@ -8,6 +8,7 @@
     "postinstall": "simple-git-hooks",
     "dev": "vite",
     "build": "vite build",
+    "build:test": "vite build --mode test",
     "preview": "vite preview",
 <<<<<<< HEAD
     "lint": "eslint . --ext .vue,.ts,.tsx,.js,.jsx --fix",

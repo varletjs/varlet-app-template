@@ -33,11 +33,6 @@ export default defineConfig({
       eslintrc: { enabled: true }
     })
   ],
-  resolve: {
-    alias: {
-      '@': '/src'
-    }
-  },
   server: {
     host: '0.0.0.0',
     open: true,
