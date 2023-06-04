@@ -35,6 +35,16 @@ export default defineConfig(() => {
         resolvers: [VarletUIResolver({ autoImport: true })],
         eslintrc: { enabled: true }
       })
-    ]
+    ],
+    server: {
+      host: '0.0.0.0',
+      open: true,
+      port: 9988,
+      proxy: {
+        "/api": {
+          target: "",
+          changeOrigin: true
+        }
+      },
   }
 })
