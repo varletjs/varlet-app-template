@@ -3,5 +3,5 @@ const msg = ref('按钮')
 </script>
 
 <template>
-  <var-button>Varlet</var-button>
+  <var-button type="primary">{{ msg }}</var-button>
 </template>
