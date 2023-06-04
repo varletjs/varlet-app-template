@@ -5,10 +5,10 @@ const sessionstorage: Storage = {
     if (typeof value === "object") {
       value = JSON.stringify(value);
     }
-    localStorage.setItem(key, value);
+    sessionStorage.setItem(key, value);
   },
   get(key: string): any {
-    const data = localStorage.getItem(key) as string;
+    const data = sessionStorage.getItem(key) as string;
     try {
       return JSON.parse(data);
     } catch (err) {
@@ -16,7 +16,7 @@ const sessionstorage: Storage = {
     }
   },
   remove(key: string): void {
-    localStorage.removeItem(key);
+    sessionStorage.removeItem(key);
   },
 };
 
