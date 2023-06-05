@@ -3,16 +3,16 @@ export const lang = {
   tabbar: {
     home: '首页',
     list: '列表',
-    demo: '示例',
+    demo: '示例'
   },
   languages: {
     en: '英文',
-    zh: '中文',
+    zh: '中文'
   },
   btn: {
     confirm: '确认',
     submit: '提交',
     cancel: '取消',
     reset: '重置'
-  },
+  }
 }

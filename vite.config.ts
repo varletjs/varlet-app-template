@@ -41,10 +41,11 @@ export default defineConfig(() => {
       open: true,
       port: 9988,
       proxy: {
-        "/api": {
-          target: "",
+        '/api': {
+          target: '',
           changeOrigin: true
         }
-      },
+      }
+    }
   }
 })

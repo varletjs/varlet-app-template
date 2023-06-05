@@ -14,19 +14,13 @@ const router: Router = createRouter({
           path: '/403',
           name: '403',
           meta: { public: true, title: '403' },
-          component: () =>
-            import(
-              /* webpackChunkName: "common" */ '@/views/notPage/Page403.vue'
-            )
+          component: () => import(/* webpackChunkName: "common" */ '@/views/notPage/Page403.vue')
         },
         {
           path: '/:pathMatch(.*)',
           name: '404',
           meta: { public: true, title: '404' },
-          component: () =>
-            import(
-              /* webpackChunkName: "common" */ '@/views/notPage/Page404.vue'
-            )
+          component: () => import(/* webpackChunkName: "common" */ '@/views/notPage/Page404.vue')
         }
       ]
     }
