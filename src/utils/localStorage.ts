@@ -2,7 +2,7 @@ import { type Storage } from "./types/storage.type";
 
 const localstorage: Storage = {
   set(key: string, value: any): void {
-    if (typeof value === "object") {
+    if (typeof value !== "string") {
       value = JSON.stringify(value);
     }
     localStorage.setItem(key, value);

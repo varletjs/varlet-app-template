@@ -2,7 +2,7 @@ import { type Storage } from "./types/storage.type";
 
 const sessionstorage: Storage = {
   set(key: string, value: any): void {
-    if (typeof value === "object") {
+    if (typeof value !== "string") {
       value = JSON.stringify(value);
     }
     sessionStorage.setItem(key, value);
