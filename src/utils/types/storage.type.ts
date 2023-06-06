@@ -1,6 +1,5 @@
 export interface Storage {
-  set(key: string, value: any): void;
-  get(key: string): any;
-  remove(key: string): void;
+  set(key: string, value: any): void
+  get(key: string): any
+  remove(key: string): void
 }
-

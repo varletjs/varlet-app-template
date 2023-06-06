@@ -1,13 +1,7 @@
 export const useGlobalStore = defineStore('globalStore', {
   state: () => {
-    return {
-      
-    }
+    return {}
   },
-  getters: {
-
-  },
-  actions: {
-
-  }
+  getters: {},
+  actions: {}
 })
