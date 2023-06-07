@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import localstorage from '../../utils/localStorage.js'
+import localstorage from '../../utils/storage.js'
 
 export const loadLang = () => {
   const modules: Record<string, any> = import.meta.glob('./langs.*.ts', {
