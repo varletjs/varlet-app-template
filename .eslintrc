@@ -19,5 +19,7 @@
     "parser": "@typescript-eslint/parser"
   },
   "plugins": ["vue", "@typescript-eslint", "prettier"],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }

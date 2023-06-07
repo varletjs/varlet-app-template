@@ -1,4 +1,4 @@
-export const lang = {
+export default {
   title: 'Varlet app 开发模板',
   tabbar: {
     home: '首页',

@@ -1,4 +1,4 @@
-export const lang = {
+export default {
   title: 'Varlet app Development Template ',
   tabbar: {
     home: 'home ',
