@@ -12,7 +12,9 @@
     "preview": "vite preview",
     "format": "prettier --write",
     "lint": "eslint . --fix",
-    "type-check": "vue-tsc --noEmit"
+    "type-check": "vue-tsc --noEmit",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
@@ -43,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/test-utils": "^2.3.2",
     "dayjs": "^1.11.8",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
