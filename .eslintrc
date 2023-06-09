@@ -21,10 +21,11 @@
     "sourceType": "module",
     "parser": "@typescript-eslint/parser"
   },
-  "rules": {
-    "vue/multi-word-component-names":"off",
-    "@typescript-eslint/no-explicit-any": ["off"]
-  },
   "plugins": ["vue", "@typescript-eslint", "prettier"],
-
+  "rules": {
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "off"
+    ]
+  }
 }
