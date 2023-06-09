@@ -4,7 +4,7 @@ import { localStorage } from '@/utils/storage'
 export type Locale = 'zh-CN' | 'en-US'
 
 export const loadMessages = () => {
-  const modules: Record<string, any> = import.meta.glob('./messages.*.ts', {
+  const modules: Record<string, any> = import.meta.glob('./messages/*.ts', {
     eager: true
   })
 
