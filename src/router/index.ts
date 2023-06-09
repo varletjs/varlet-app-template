@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory, Router } from 'vue-router'
 import routes from './routes'
-import Layout from '../views/layout/Layout.vue'
+import Layout from '../pages/layout.vue'
 
 const router: Router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/layout/home',
       component: Layout,
       children: [
         ...routes,
@@ -15,13 +15,13 @@ const router: Router = createRouter({
           path: '/403',
           name: '403',
           meta: { public: true, title: '403' },
-          component: () => import(/* webpackChunkName: "common" */ '../views/not-page/StatusForbidden.vue')
+          component: () => import(/* webpackChunkName: "common" */ '../pages/not-page/StatusForbidden.vue')
         },
         {
           path: '/:pathMatch(.*)',
           name: '404',
           meta: { public: true, title: '404' },
-          component: () => import(/* webpackChunkName: "common" */ '../views/not-page/StatusNotFound.vue')
+          component: () => import(/* webpackChunkName: "common" */ '../pages/not-page/StatusNotFound.vue')
         }
       ]
     }

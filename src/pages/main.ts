@@ -1,5 +1,5 @@
 import '@varlet/touch-emulator'
-import App from './App.vue'
+import App from '../pages/App.vue'
 import { createApp } from 'vue'
 import { createBounceFixer } from '@varlet/bounce-fixer'
 

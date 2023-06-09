@@ -7,6 +7,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig(() => {
   return {
+    lintOnSave: false,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
