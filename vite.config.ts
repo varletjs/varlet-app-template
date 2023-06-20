@@ -3,7 +3,7 @@ import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig(() => {
   return {
@@ -39,13 +39,18 @@ export default defineConfig(() => {
     ],
     server: {
       host: '0.0.0.0',
-      open: true,
       port: 9988,
       proxy: {
         '/api': {
           target: '',
           changeOrigin: true
         }
+      }
+    },
+    test: {
+      environment: 'jsdom',
+      deps: {
+        inline: ['@varlet/ui']
       }
     }
   }
