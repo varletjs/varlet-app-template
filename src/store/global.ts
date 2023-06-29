@@ -1,4 +1,4 @@
-export const useGlobalStore = defineStore('globalStore', {
+export const useGlobalStore = defineStore('global', {
   state: () => {
     return {}
   },

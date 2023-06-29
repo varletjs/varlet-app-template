@@ -1,9 +1,11 @@
 import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
+import pages from 'vite-plugin-pages'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vitest/config'
+import { extendRoute } from './src/router/extendRoute'
 
 export default defineConfig(() => {
   return {
@@ -35,6 +37,9 @@ export default defineConfig(() => {
         imports: ['vue', 'vue-router', 'pinia'],
         resolvers: [VarletUIResolver({ autoImport: true })],
         eslintrc: { enabled: true }
+      }),
+      pages({
+        extendRoute
       })
     ],
     server: {

@@ -1,4 +1,5 @@
-import { createAxle, createUseAxle } from '@varlet/axle'
+import { createAxle } from '@varlet/axle'
+import { createUseAxle } from '@varlet/axle/use'
 
 function api(api: string) {
   return (...ids: (string | number)[]) => {
