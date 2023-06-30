@@ -54,6 +54,7 @@ export default defineConfig(() => {
     },
     test: {
       environment: 'jsdom',
+      setupFiles: ['tests/setup.ts'],
       deps: {
         inline: ['@varlet/ui']
       }

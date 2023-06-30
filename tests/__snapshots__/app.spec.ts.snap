@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`test App.vue mount 1`] = `
-"<button class=\\"var-button var--box var-button--normal var--inline-flex var-button--primary var-elevation--2\\" type=\\"button\\">
-  <!--v-if-->
-  <div class=\\"var-button__content\\">mock i18n text</div>
-  <div class=\\"var-hover-overlay\\"></div>
-</button>"
-`;

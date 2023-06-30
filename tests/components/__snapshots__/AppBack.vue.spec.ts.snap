@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test AppBack mount 1`] = `
+"<button data-v-451b0f49=\\"\\" class=\\"var-button var--box var-button--normal var--inline-flex var-button--text-default var-button--text var-button--round app-back\\" style=\\"color: rgb(255, 255, 255); background: transparent;\\" type=\\"button\\">
+  <!--v-if-->
+  <div class=\\"var-button__content\\"><i data-v-451b0f49=\\"\\" class=\\"var-icon var-icon--set var-icon-chevron-left app-back-icon\\" style=\\"transition-duration: 0ms;\\"></i></div>
+  <div class=\\"var-hover-overlay\\"></div>
+</button>"
+`;
