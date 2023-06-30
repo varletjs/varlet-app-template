@@ -10,7 +10,8 @@
     "build": "vite build",
     "build:test": "vite build --mode test",
     "preview": "vite preview",
-    "lint": "prettier --write . && eslint . --fix",
+    "lint": "eslint . --fix",
+    "format": "prettier --write .",
     "type-check": "vue-tsc --noEmit",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
@@ -20,7 +21,8 @@
     "commit-msg": "pnpm exec commitlint -e $1"
   },
   "lint-staged": {
-    "*.{vue,ts,tsx,js,jsx,less,css}": "pnpm lint"
+    "*.${vue,ts,tsx,js,jsx,less,css}": "pnpm format",
+    "*.{vue,ts,tsx,js,jsx}": "pnpm lint"
   },
   "dependencies": {
     "@varlet/axle": "^0.0.8",
