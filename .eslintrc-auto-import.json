@@ -76,6 +76,7 @@
     "watchEffect": true,
     "watchPostEffect": true,
     "watchSyncEffect": true,
-    "Varlet": true
+    "Varlet": true,
+    "StyleProvider": true
   }
 }

@@ -6,12 +6,7 @@ const router = useRouter()
 const route = useRoute()
 const active = ref()
 
-watch(
-  () => active.value,
-  (newValue) => {
-    router.replace(newValue)
-  }
-)
+watch(() => active.value, router.replace)
 
 watch(
   () => route.path,

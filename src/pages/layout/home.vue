@@ -19,17 +19,17 @@ function handleClick() {
 </script>
 
 <template>
-  <app-header>
-    <template #content>
-      <var-tabs color="transparent" active-color="#fff" inactive-color="#ddd" v-model:active="active">
-        <var-tab>Option A</var-tab>
-        <var-tab>Option B</var-tab>
-        <var-tab>Option C</var-tab>
-      </var-tabs>
-    </template>
-  </app-header>
-
   <div class="home">
+    <app-header>
+      <template #content>
+        <var-tabs color="transparent" active-color="#fff" inactive-color="#ddd" v-model:active="active">
+          <var-tab>Option A</var-tab>
+          <var-tab>Option B</var-tab>
+          <var-tab>Option C</var-tab>
+        </var-tabs>
+      </template>
+    </app-header>
+
     <var-pull-refresh v-model="isRefresh" @refresh="refresh">
       <var-tabs-items ref="items" v-model:active="active">
         <var-tab-item class="home-tab-item">
@@ -98,14 +98,15 @@ function handleClick() {
 
 <style lang="less" scoped>
 .home {
-  padding: 114px 14px 16px;
+  --home-header-height: 98px;
+  padding: calc(var(--home-header-height) + 16px) 14px 16px;
 
   &-tab-item {
     min-height: calc(100vh - 190px);
   }
 
   &-tab-item-space {
-    padding: 2px;
+    padding: 4px;
   }
 }
 </style>

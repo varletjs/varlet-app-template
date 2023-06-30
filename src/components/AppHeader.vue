@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Context } from '@varlet/ui'
-import { useRouter } from 'vue-router'
 
 defineProps({
   title: {
@@ -10,36 +9,33 @@ defineProps({
     type: Boolean,
     default: true
   },
-  showTheme: {
+  showThemeSwitch: {
     type: Boolean,
     default: true
   },
-  showI18n: {
+  showI18nSwitch: {
     type: Boolean,
     default: true
   }
 })
-
-const router = useRouter()
-
-function back() {
-  router.back()
-}
 </script>
 
 <template>
-  <header class="app-header" :style="{ zIndex: Context.zIndex }">
+  <header class="app-header" :style="{ 'z-index': Context.zIndex }">
     <var-app-bar safe-area-top :title="title" title-position="center">
       <template #left>
         <slot name="left">
-          <var-button color="transparent" text-color="#fff" round text @click="back" v-if="showBack">
-            <var-icon class="app-header-icon" name="chevron-left" />
-          </var-button>
+          <app-back v-if="showBack" />
         </slot>
       </template>
 
       <template #right>
-        <slot name="right" />
+        <slot name="right">
+          <var-space class="app-header-right" :size="[0, '1.4vmin']">
+            <app-theme-switch v-if="showThemeSwitch" />
+            <app-locale-switch v-if="showI18nSwitch" />
+          </var-space>
+        </slot>
       </template>
 
       <template #content>
@@ -51,13 +47,13 @@ function back() {
 
 <style lang="less" scoped>
 .app-header {
-  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
+  width: 100%;
 
-  &-icon {
-    font-size: 30px;
+  &-right {
+    padding-right: 4px;
   }
 }
 </style>

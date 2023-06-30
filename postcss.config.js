@@ -6,7 +6,8 @@ export default {
       fontViewportUnit: 'vmin',
       unitPrecision: 6,
       unitToConvert: 'px',
-      propList: ['*']
+      propList: ['*'],
+      selectorBlackList: ['var-elevation']
     }
   }
 }

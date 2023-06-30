@@ -1,7 +1,7 @@
 export function extendRoute(route: any) {
   const views = (route.meta?.views ?? []) as string[]
 
-  if (views.length === 0) {
+  if (!views.length) {
     return
   }
 
