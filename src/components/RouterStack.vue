@@ -13,8 +13,11 @@ defineProps({
   }
 })
 
+const emit = defineEmits(['push', 'pushed', 'pop', 'popped'])
+
 const stack = ref<HTMLElement>()
 const showParent = ref(true)
+const zIndex = ref(Context.zIndex)
 const { length, bindChildren } = useChildren<any, any>('__ROUTER_STACK__')
 const { bindParent } = useParent<any, any>('__ROUTER_STACK__')
 
@@ -22,6 +25,12 @@ bindChildren({})
 bindParent?.({})
 
 const savedPosition = { top: 0, left: 0 }
+
+function handlePush() {
+  Context.zIndex += 1
+  zIndex.value = Context.zIndex
+  emit('push')
+}
 
 watch(
   () => length.value,
@@ -41,26 +50,22 @@ watch(
     }
   }
 )
-
-Context.zIndex += 1
 </script>
 
 <template>
-  <div class="router-stack" ref="stack" :style="{ zIndex: Context.zIndex }">
-    <app-header />
-
+  <div class="router-stack" ref="stack" :style="{ zIndex }">
     <keep-alive v-if="keepAlive">
-      <div class="router-stack-parent" v-if="showParent">
+      <div v-if="showParent">
         <slot />
       </div>
     </keep-alive>
-    <div class="router-stack-parent" v-show="showParent" v-else>
+    <div v-show="showParent" v-else>
       <slot />
     </div>
 
     <router-stack-view
       :animation="animation"
-      @push="$emit('push')"
+      @push="handlePush"
       @pushed="$emit('pushed')"
       @pop="$emit('pop')"
       @popped="$emit('popped')"

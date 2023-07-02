@@ -5,6 +5,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const Locale: typeof import('@varlet/ui')['Locale']
   const StyleProvider: typeof import('@varlet/ui')['StyleProvider']
   const Varlet: typeof import('@varlet/ui')['let']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']

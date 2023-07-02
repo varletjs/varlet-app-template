@@ -28,7 +28,7 @@
     "@varlet/axle": "^0.0.8",
     "@varlet/bounce-fixer": "^0.0.2",
     "@varlet/touch-emulator": "2.11.8",
-    "@varlet/ui": "2.12.1",
+    "@varlet/ui": "2.12.2",
     "@varlet/use": "^2.12.1",
     "cypress": "^12.13.0",
     "mockjs": "^1.1.0",

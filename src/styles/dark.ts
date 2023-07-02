@@ -2,6 +2,6 @@ import { Themes } from '@varlet/ui'
 
 export const darkTheme = {
   ...Themes.dark,
-
-  '--app-cell-active-background': '#4a7afe20'
+  '--color-primary': '#BB86FC',
+  '--app-cell-active-background': '#BB86FC14'
 }

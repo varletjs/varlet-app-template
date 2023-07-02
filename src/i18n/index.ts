@@ -1,5 +1,9 @@
 import { createI18n } from 'vue-i18n'
 import { localStorage } from '@/utils/storage'
+import { Locale as ComponentsLocale } from '@varlet/ui'
+
+ComponentsLocale.add('en-US', ComponentsLocale.enUS)
+ComponentsLocale.use(localStorage.get('locale') ?? 'zh-CN')
 
 export type Locale = 'zh-CN' | 'en-US'
 
@@ -25,4 +29,5 @@ export const i18n = createI18n({
 export function setLocale(locale: Locale) {
   localStorage.set('locale', locale)
   i18n.global.locale.value = locale
+  ComponentsLocale.use(locale)
 }

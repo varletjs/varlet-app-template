@@ -17,7 +17,7 @@ function handleCellClick(locale: Locale) {
 </script>
 
 <template>
-  <var-menu close-on-click-reference placement="bottom-end" offset-y="2vmin" v-model:show="show">
+  <var-menu close-on-click-reference placement="bottom" offset-y="2vmin" v-model:show="show">
     <var-button class="app-locale-switch" text round>
       <var-icon class="app-locale-switch-icon" name="translate" />
     </var-button>

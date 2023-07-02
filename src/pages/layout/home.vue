@@ -21,11 +21,18 @@ function handleClick() {
 <template>
   <div class="home">
     <app-header>
+      <template #left>
+        <app-side-menu />
+      </template>
+      <template #right>
+        <app-locale-switch />
+        <app-theme-switch />
+      </template>
       <template #content>
         <var-tabs color="transparent" active-color="#fff" inactive-color="#ddd" v-model:active="active">
-          <var-tab>Option A</var-tab>
-          <var-tab>Option B</var-tab>
-          <var-tab>Option C</var-tab>
+          <var-tab>{{ $t('Card List') }}</var-tab>
+          <var-tab>{{ $t('Card List') }}</var-tab>
+          <var-tab>{{ $t('Card List') }}</var-tab>
         </var-tabs>
       </template>
     </app-header>
