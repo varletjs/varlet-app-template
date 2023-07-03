@@ -5,5 +5,5 @@ import.meta.glob('./apis/*.ts', {
 })
 
 Mock.setup({
-  timeout: 3000
+  timeout: 300
 })

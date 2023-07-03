@@ -27,6 +27,7 @@ declare module '@vue/runtime-core' {
     ThemeSwitcher: typeof import('./src/components/ThemeSwitcher.vue')['default']
     VarAppBar: typeof import('@varlet/ui')['_AppBarComponent']
     VarAvatar: typeof import('@varlet/ui')['_AvatarComponent']
+    VarBackTop: typeof import('@varlet/ui')['_BackTopComponent']
     VarBottomNavigation: typeof import('@varlet/ui')['_BottomNavigationComponent']
     VarBottomNavigationItem: typeof import('@varlet/ui')['_BottomNavigationItemComponent']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']

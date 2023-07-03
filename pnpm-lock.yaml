@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.0.8
-    version: 0.0.8(vue@3.3.4)
+    specifier: ^0.0.14
+    version: 0.0.14
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
@@ -951,16 +951,13 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@varlet/axle@0.0.8(vue@3.3.4):
-    resolution: {integrity: sha512-BBlXFGC9DSgR6/zvGtzGXkJbnLGRsY3QKMO42kCafgfB7Qpsb72Bf4XP1XZIP8ed28i0Z2EyH95kzSdmvGKjPg==}
+  /@varlet/axle@0.0.14:
+    resolution: {integrity: sha512-de3l5ZepY131xUSulpsswO1K3xXKKkupmoyjjF8OwMpzLyz1iUWaj7gGVoBzJc48bSHXGvY/Czh56UsB3KgKWw==}
     engines: {pnpm: '>=8.0'}
-    peerDependencies:
-      vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.11.8
+      '@varlet/shared': 2.12.2
       axios: 1.4.0
       qs: 6.11.2
-      vue: 3.3.4
     transitivePeerDependencies:
       - debug
     dev: false
@@ -971,10 +968,6 @@ packages:
 
   /@varlet/icons@2.12.2:
     resolution: {integrity: sha512-j8qvwDRYQ6xojbG2ZdAjd9msJLff9A0GOKoZhT2wOtBQngooBCJQCyLajLceLVBpuEdLnFizXIa7o4Jc4W66Dw==}
-    dev: false
-
-  /@varlet/shared@2.11.8:
-    resolution: {integrity: sha512-PukW5LrzUyUvIkwqHsytaMZZYVv9P33BCG6fRGgQLS9I+JjJTf/VVo17HjEb3h23IDvqFpgE3034BOtiX1zCYg==}
     dev: false
 
   /@varlet/shared@2.12.1:

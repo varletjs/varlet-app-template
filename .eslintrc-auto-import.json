@@ -78,6 +78,7 @@
     "watchSyncEffect": true,
     "Varlet": true,
     "StyleProvider": true,
-    "Locale": true
+    "Locale": true,
+    "Snackbar": true
   }
 }
