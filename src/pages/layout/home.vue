@@ -66,8 +66,8 @@ function handleClick() {
         <var-tab-item class="home-tab-item">
           <var-space class="home-tab-item-space" direction="column" size="large">
             <var-card
-              title="Dangerous"
-              subtitle="The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."
+              :title="$t('Card Title')"
+              :subtitle="$t('Card Subtitle')"
               src="@/assets/material-1.png"
               layout="row"
               ripple
@@ -89,14 +89,19 @@ function handleClick() {
         <var-tab-item class="home-tab-item">
           <var-space class="home-tab-item-space" direction="column" size="large">
             <var-card
-              title="Dangerous"
-              subtitle="The girl was dangerous"
-              description="The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."
+              :title="$t('Card Title')"
+              :subtitle="$t('Card Subtitle')"
               ripple
               v-for="i in 5"
               :key="i"
               @click="handleClick"
-            />
+            >
+              <template #description>
+                <var-ellipsis class="var-card__description" :line-clamp="6" :tooltip="false">
+                  {{ $t('Card Description') }}
+                </var-ellipsis>
+              </template>
+            </var-card>
           </var-space>
         </var-tab-item>
       </var-tabs-items>
