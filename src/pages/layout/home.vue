@@ -11,6 +11,10 @@ interface CardList {
   error: boolean
 }
 
+const router = useRouter()
+const active = ref('card')
+const isRefresh = ref(false)
+
 const [card, loadCard, isCardLoading] = useApiGetCards<CardList>({
   data: {
     data: [],
@@ -18,7 +22,6 @@ const [card, loadCard, isCardLoading] = useApiGetCards<CardList>({
     error: false,
     finished: false
   },
-  immediate: false,
   dataTransformer,
   errorTransformer(error) {
     card.value.error = true
@@ -33,7 +36,6 @@ const [plainCard, loadPlainCard, isPlainCardLoading] = useApiGetPlainCards<CardL
     error: false,
     finished: false
   },
-  immediate: false,
   dataTransformer,
   errorTransformer(error) {
     plainCard.value.error = true
@@ -48,17 +50,12 @@ const [rowCard, loadRowCard, isRowCardLoading] = useApiGetRowCards<CardList>({
     error: false,
     finished: false
   },
-  immediate: false,
   dataTransformer,
   errorTransformer(error) {
     rowCard.value.error = true
     return error
   }
 })
-
-const router = useRouter()
-const active = ref('card')
-const isRefresh = ref(false)
 
 function dataTransformer(response: Response<CardModel[]>, prev: CardList) {
   if (response.code !== 200) {

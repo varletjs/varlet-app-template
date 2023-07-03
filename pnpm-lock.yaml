@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.0.14
-    version: 0.0.14
+    specifier: ^0.0.15
+    version: 0.0.15
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
@@ -951,8 +951,8 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@varlet/axle@0.0.14:
-    resolution: {integrity: sha512-de3l5ZepY131xUSulpsswO1K3xXKKkupmoyjjF8OwMpzLyz1iUWaj7gGVoBzJc48bSHXGvY/Czh56UsB3KgKWw==}
+  /@varlet/axle@0.0.15:
+    resolution: {integrity: sha512-GZQnMcUDYXo6NszcP/XX8wK3oqBG1HVoudt+S+oJnwjC5jyduThABL4E9G4I0wqbpFeW0fpTq5ed9V4HodC/dw==}
     engines: {pnpm: '>=8.0'}
     dependencies:
       '@varlet/shared': 2.12.2
