@@ -98,13 +98,13 @@ function closeMenu() {
   }
 
   &-username {
-    margin-top: 12px;
+    margin-top: 10px;
     font-weight: 500;
     font-size: 18px;
   }
 
   &-email {
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 14px;
   }
 

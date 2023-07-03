@@ -34,6 +34,7 @@ declare module '@vue/runtime-core' {
     VarCel: typeof import('@varlet/ui')['_CelComponent']
     VarCell: typeof import('@varlet/ui')['_CellComponent']
     VarDivider: typeof import('@varlet/ui')['_DividerComponent']
+    VarEllipsis: typeof import('@varlet/ui')['_EllipsisComponent']
     VarIcon: typeof import('@varlet/ui')['_IconComponent']
     VarIndexAnchor: typeof import('@varlet/ui')['_IndexAnchorComponent']
     VarIndexBar: typeof import('@varlet/ui')['_IndexBarComponent']

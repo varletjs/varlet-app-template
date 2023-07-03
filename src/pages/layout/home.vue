@@ -5,7 +5,6 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const active = ref(0)
 const isRefresh = ref(false)
-const items = ref()
 
 function refresh() {
   setTimeout(() => {
@@ -38,7 +37,55 @@ function handleClick() {
     </app-header>
 
     <var-pull-refresh v-model="isRefresh" @refresh="refresh">
-      <var-tabs-items ref="items" v-model:active="active">
+      <var-tabs-items v-model:active="active">
+        <var-tab-item class="home-tab-item">
+          <var-space class="home-tab-item-space" direction="column" size="large">
+            <var-card
+              :title="$t('Card Title')"
+              :subtitle="$t('Card Subtitle')"
+              src="@/assets/material-2.png"
+              ripple
+              v-for="i in 5"
+              :key="i"
+              @click="handleClick"
+            >
+              <template #description>
+                <var-ellipsis class="var-card__description" :line-clamp="6" :tooltip="false">
+                  {{ $t('Card Description') }}
+                </var-ellipsis>
+              </template>
+              <template #extra>
+                <var-space>
+                  <var-button text type="primary" @touchstart.stop @click.stop>ACTION 1</var-button>
+                  <var-button text type="primary" @touchstart.stop @click.stop>ACTION 2</var-button>
+                </var-space>
+              </template>
+            </var-card>
+          </var-space>
+        </var-tab-item>
+        <var-tab-item class="home-tab-item">
+          <var-space class="home-tab-item-space" direction="column" size="large">
+            <var-card
+              title="Dangerous"
+              subtitle="The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."
+              src="@/assets/material-1.png"
+              layout="row"
+              ripple
+              v-for="i in 10"
+              :key="i"
+              @click="handleClick"
+            >
+              <template #extra>
+                <var-button text round @touchstart.stop @click.stop>
+                  <var-icon name="star" />
+                </var-button>
+                <var-button round text @touchstart.stop @click.stop>
+                  <var-icon name="heart" />
+                </var-button>
+              </template>
+            </var-card>
+          </var-space>
+        </var-tab-item>
         <var-tab-item class="home-tab-item">
           <var-space class="home-tab-item-space" direction="column" size="large">
             <var-card
@@ -50,50 +97,6 @@ function handleClick() {
               :key="i"
               @click="handleClick"
             />
-          </var-space>
-        </var-tab-item>
-        <var-tab-item class="home-tab-item">
-          <var-space class="home-tab-item-space" direction="column" size="large">
-            <var-card
-              title="Dangerous"
-              subtitle="The girl was dangerous"
-              description="The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."
-              src="https://varlet.gitee.io/varlet-ui/cat.jpg"
-              ripple
-              v-for="i in 5"
-              :key="i"
-              @click="handleClick"
-            >
-              <template #extra>
-                <var-space>
-                  <var-button text type="warning">ACTION 1</var-button>
-                  <var-button text type="warning">ACTION 2</var-button>
-                </var-space>
-              </template>
-            </var-card>
-          </var-space>
-        </var-tab-item>
-        <var-tab-item class="home-tab-item">
-          <var-space class="home-tab-item-space" direction="column" size="large">
-            <var-card
-              title="Dangerous"
-              subtitle="The way she came into the place I knew right then and there.There was something different about this girl.The way she moved her hair her face her lines.Divinity in motion as she stalked the room.I could feel the aura of her presence.Every head turned feeling passion and lust.The girl was persuasive the girl I could not trust.The girl was bad.The girl was dangerous."
-              src="https://varlet.gitee.io/varlet-ui/cat.jpg"
-              layout="row"
-              ripple
-              v-for="i in 10"
-              :key="i"
-              @click="handleClick"
-            >
-              <template #extra>
-                <var-button text round>
-                  <var-icon name="star" />
-                </var-button>
-                <var-button round text>
-                  <var-icon name="heart" />
-                </var-button>
-              </template>
-            </var-card>
           </var-space>
         </var-tab-item>
       </var-tabs-items>
