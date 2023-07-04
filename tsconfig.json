@@ -15,8 +15,7 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["./src/assets/*"]
+      "@/*": ["./src/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

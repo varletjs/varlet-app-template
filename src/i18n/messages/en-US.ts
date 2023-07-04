@@ -3,6 +3,7 @@ export default {
   Menu: 'Menu',
   Settings: 'Settings',
   Close: 'Close',
+  ACTION: 'ACTION',
   'Card Title': 'Dangerous',
   'Card Subtitle': 'The girl was dangerous',
   'Card Description':
@@ -10,5 +11,9 @@ export default {
   'Your Name': 'Your Name',
   'Your Email Address': 'Your Email Address',
   'Card List': 'Card List',
-  'Please use mobile visit': 'Please use mobile visit'
+  'Please use mobile visit': 'Please use mobile visit',
+  'Comment Information Area': 'Comment Information Area',
+  'This is a comment': 'This is a comment',
+  'A total of {count} comments': 'A total of {count} comments',
+  'ACTION BUTTON': 'ACTION BUTTON'
 }

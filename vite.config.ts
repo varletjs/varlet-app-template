@@ -12,8 +12,7 @@ export default defineConfig(() => {
     lintOnSave: false,
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '~': fileURLToPath(new URL('./src/assets', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
     build: {
@@ -23,6 +22,9 @@ export default defineConfig(() => {
       vue({
         template: {
           transformAssetUrls: {
+            img: ['src'],
+            video: ['src'],
+            audio: ['src'],
             'var-image': ['src'],
             'var-avatar': ['src'],
             'var-card': ['src'],

@@ -11,7 +11,7 @@ function closeMenu() {
 </script>
 
 <template>
-  <var-button class="app-side-menu" text round @click="showMenu">
+  <var-button class="app-side-menu" text round @click="showMenu" v-bind="$attrs">
     <var-icon class="app-side-menu-icon" name="menu" />
   </var-button>
 

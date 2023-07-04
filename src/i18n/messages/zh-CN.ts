@@ -3,6 +3,7 @@ export default {
   Menu: '菜单',
   Settings: '设置',
   Close: '关闭',
+  ACTION: '动作',
   'Card Title': '本草纲目',
   'Card Subtitle': '我表情悠哉 跳个大概',
   'Card Description':
@@ -10,5 +11,9 @@ export default {
   'Your Name': '你的名字',
   'Your Email Address': '你的邮箱地址',
   'Card List': '卡片列表',
-  'Please use mobile visit': '请使用移动设备访问'
+  'Please use mobile visit': '请使用移动设备访问',
+  'Comment Information Area': '评论信息区域',
+  'This is a comment': '一条评论',
+  'A total of {count} comments': '一共 {count} 条评论',
+  'ACTION BUTTON': '动作按钮'
 }

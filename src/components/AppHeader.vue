@@ -1,14 +1,21 @@
 <script setup lang="ts">
+import { AppBarProps } from '@varlet/ui'
+import { PropType } from 'vue'
+
 defineProps({
   title: {
-    type: String
+    type: String as PropType<AppBarProps['title']>
+  },
+  titlePosition: {
+    type: String as PropType<AppBarProps['titlePosition']>,
+    default: 'center'
   }
 })
 </script>
 
 <template>
   <header class="app-header">
-    <var-app-bar safe-area-top :title="title" title-position="center">
+    <var-app-bar safe-area-top :title="title" :title-position="titlePosition">
       <template #left>
         <slot name="left" />
       </template>

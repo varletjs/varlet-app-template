@@ -60,8 +60,7 @@ const [rowCard, loadRowCard, isRowCardLoading] = useApiGetRowCards<CardList>({
 function dataTransformer(response: Response<CardModel[]>, prev: CardList) {
   if (response.code !== 200) {
     return {
-      data: prev.data,
-      current: prev.current,
+      ...prev,
       finished: false,
       error: true
     }
@@ -77,27 +76,30 @@ function dataTransformer(response: Response<CardModel[]>, prev: CardList) {
 
 async function handleRefresh() {
   const value = { data: [], current: 1, error: false, finished: false }
+  const loaders = {
+    card: loadCard,
+    rowCard: loadRowCard,
+    plainCard: loadPlainCard
+  }
 
   if (active.value === 'card') {
     card.value = value
-    await loadCard({ params: { current: 1 } })
   }
 
   if (active.value === 'rowCard') {
     rowCard.value = value
-    await loadRowCard({ params: { current: 1 } })
   }
 
   if (active.value === 'plainCard') {
     plainCard.value = value
-    await loadPlainCard({ params: { current: 1 } })
   }
 
+  await loaders[active.value as keyof typeof loaders]({ params: { current: 1 } })
   isRefresh.value = false
 }
 
 function handleClick() {
-  router.push('/layout/home/list')
+  router.push('/layout/home/detail')
 }
 </script>
 
