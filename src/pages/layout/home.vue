@@ -15,7 +15,7 @@ const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [cardList, apiGetCards, isCardsLoading] = useApiGetCards<CardList>({
+const [cardList, apiGetCards, isCardsLoading] = useApiGetCards({
   data: {
     data: [],
     current: 1,
@@ -29,7 +29,7 @@ const [cardList, apiGetCards, isCardsLoading] = useApiGetCards<CardList>({
   }
 })
 
-const [plainCardList, apiGetPlainCards, isPlainCardsLoading] = useApiGetPlainCards<CardList>({
+const [plainCardList, apiGetPlainCards, isPlainCardsLoading] = useApiGetPlainCards({
   data: {
     data: [],
     current: 1,
@@ -43,7 +43,7 @@ const [plainCardList, apiGetPlainCards, isPlainCardsLoading] = useApiGetPlainCar
   }
 })
 
-const [rowCardList, apiGetRowCards, isRowCardsLoading] = useApiGetRowCards<CardList>({
+const [rowCardList, apiGetRowCards, isRowCardsLoading] = useApiGetRowCards({
   data: {
     data: [],
     current: 1,

@@ -27,7 +27,7 @@
   "dependencies": {
     "@varlet/ui": "2.12.2",
     "@varlet/use": "^2.12.2",
-    "@varlet/axle": "^0.0.17",
+    "@varlet/axle": "^0.0.21",
     "@varlet/touch-emulator": "2.11.8",
     "@varlet/bounce-fixer": "^0.0.2",
     "cypress": "^12.13.0",

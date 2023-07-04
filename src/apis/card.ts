@@ -1,6 +1,5 @@
 import { useAxle, axle } from '@/request'
-import { UseAxleOptions } from '@varlet/axle/use'
-import { Response } from './types'
+import { Response, UseApiOptions } from './types'
 
 export interface CardModel {
   id: number
@@ -10,7 +9,7 @@ export interface ApiPageParams {
   current?: number
 }
 
-export function useApiGetCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
+export function useApiGetCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
   return useAxle({
     url: '/card',
     runner: axle.get,
@@ -18,7 +17,7 @@ export function useApiGetCards<D>(options?: UseAxleOptions<D, ApiPageParams, Res
   })
 }
 
-export function useApiGetPlainCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
+export function useApiGetPlainCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
   return useAxle({
     url: '/plain-card',
     runner: axle.get,
@@ -26,7 +25,7 @@ export function useApiGetPlainCards<D>(options?: UseAxleOptions<D, ApiPageParams
   })
 }
 
-export function useApiGetRowCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
+export function useApiGetRowCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
   return useAxle({
     url: '/row-card',
     runner: axle.get,
