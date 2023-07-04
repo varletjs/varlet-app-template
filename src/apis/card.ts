@@ -12,24 +12,24 @@ export interface ApiPageParams {
 
 export function useApiGetCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
   return useAxle({
-    runner: axle.get,
     url: '/card',
+    runner: axle.get,
     ...options
   })
 }
 
 export function useApiGetPlainCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
   return useAxle({
-    runner: axle.get,
     url: '/plain-card',
+    runner: axle.get,
     ...options
   })
 }
 
 export function useApiGetRowCards<D>(options?: UseAxleOptions<D, ApiPageParams, Response<CardModel[]>>) {
   return useAxle({
-    runner: axle.get,
     url: '/row-card',
+    runner: axle.get,
     ...options
   })
 }

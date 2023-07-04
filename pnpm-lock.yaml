@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.0.15
-    version: 0.0.15
+    specifier: ^0.0.17
+    version: 0.0.17
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
@@ -18,8 +18,8 @@ dependencies:
     specifier: 2.12.2
     version: 2.12.2(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.12.1
-    version: 2.12.1(vue@3.3.4)
+    specifier: ^2.12.2
+    version: 2.12.2(vue@3.3.4)
   cypress:
     specifier: ^12.13.0
     version: 12.13.0
@@ -951,8 +951,8 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@varlet/axle@0.0.15:
-    resolution: {integrity: sha512-GZQnMcUDYXo6NszcP/XX8wK3oqBG1HVoudt+S+oJnwjC5jyduThABL4E9G4I0wqbpFeW0fpTq5ed9V4HodC/dw==}
+  /@varlet/axle@0.0.17:
+    resolution: {integrity: sha512-OmWbYhXCdilrxJkCo3xDJEMKzQYzZmXiA824HEJK1V1x+jNANZlebhNxWtgX1S3L8w9P0sKGsPRcM7HO+n5yjw==}
     engines: {pnpm: '>=8.0'}
     dependencies:
       '@varlet/shared': 2.12.2
@@ -968,10 +968,6 @@ packages:
 
   /@varlet/icons@2.12.2:
     resolution: {integrity: sha512-j8qvwDRYQ6xojbG2ZdAjd9msJLff9A0GOKoZhT2wOtBQngooBCJQCyLajLceLVBpuEdLnFizXIa7o4Jc4W66Dw==}
-    dev: false
-
-  /@varlet/shared@2.12.1:
-    resolution: {integrity: sha512-L5sBFVWMmEpff8ZydZvQmMM5AhAQTRbePB++nAZHZL2n7vTyiWh7Qk7ctf/fjU8b6/pSx+QlxMGo9yHe+vkFUQ==}
     dev: false
 
   /@varlet/shared@2.12.2:
@@ -993,15 +989,6 @@ packages:
       '@varlet/use': 2.12.2(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
-      vue: 3.3.4
-    dev: false
-
-  /@varlet/use@2.12.1(vue@3.3.4):
-    resolution: {integrity: sha512-ASI1eATWvE2qoXoVy0fX/tnPqH0gkpjIoI/mhweqnl8vxIS4QbOV1P0RoKzFlihopeDpiNYygahridXOuI9uLg==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@varlet/shared': 2.12.1
       vue: 3.3.4
     dev: false
 

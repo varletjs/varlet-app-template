@@ -15,49 +15,49 @@ const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [card, loadCard, isCardLoading] = useApiGetCards<CardList>({
+const [cardList, apiGetCards, isCardsLoading] = useApiGetCards<CardList>({
   data: {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  dataTransformer,
-  errorTransformer(error) {
-    card.value.error = true
+  onSuccess,
+  onError(error) {
+    cardList.value.error = true
     return error
   }
 })
 
-const [plainCard, loadPlainCard, isPlainCardLoading] = useApiGetPlainCards<CardList>({
+const [plainCardList, apiGetPlainCards, isPlainCardsLoading] = useApiGetPlainCards<CardList>({
   data: {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  dataTransformer,
-  errorTransformer(error) {
-    plainCard.value.error = true
+  onSuccess,
+  onError(error) {
+    plainCardList.value.error = true
     return error
   }
 })
 
-const [rowCard, loadRowCard, isRowCardLoading] = useApiGetRowCards<CardList>({
+const [rowCardList, apiGetRowCards, isRowCardsLoading] = useApiGetRowCards<CardList>({
   data: {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  dataTransformer,
-  errorTransformer(error) {
-    rowCard.value.error = true
+  onSuccess,
+  onError(error) {
+    rowCardList.value.error = true
     return error
   }
 })
 
-function dataTransformer(response: Response<CardModel[]>, prev: CardList) {
+function onSuccess(response: Response<CardModel[]>, prev: CardList) {
   if (response.code !== 200) {
     return {
       ...prev,
@@ -77,21 +77,21 @@ function dataTransformer(response: Response<CardModel[]>, prev: CardList) {
 async function handleRefresh() {
   const value = { data: [], current: 1, error: false, finished: false }
   const loaders = {
-    card: loadCard,
-    rowCard: loadRowCard,
-    plainCard: loadPlainCard
+    card: apiGetCards,
+    rowCard: apiGetRowCards,
+    plainCard: apiGetPlainCards
   }
 
   if (active.value === 'card') {
-    card.value = value
+    cardList.value = value
   }
 
   if (active.value === 'rowCard') {
-    rowCard.value = value
+    rowCardList.value = value
   }
 
   if (active.value === 'plainCard') {
-    plainCard.value = value
+    plainCardList.value = value
   }
 
   await loaders[active.value as keyof typeof loaders]({ params: { current: 1 } })
@@ -126,10 +126,10 @@ function handleClick() {
       <var-tabs-items v-model:active="active">
         <var-tab-item class="home-tab-item" name="card">
           <var-list
-            :finished="card.finished"
-            v-model:loading="isCardLoading"
-            v-model:error="card.error"
-            @load="() => loadCard({ params: { current: card.current } })"
+            :finished="cardList.finished"
+            v-model:loading="isCardsLoading"
+            v-model:error="cardList.error"
+            @load="() => apiGetCards({ params: { current: cardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card
@@ -137,7 +137,7 @@ function handleClick() {
                 :subtitle="$t('Card Subtitle')"
                 src="@/assets/material-2.png"
                 ripple
-                v-for="i in card.data"
+                v-for="i in cardList.data"
                 :key="i"
                 @click="handleClick"
               >
@@ -158,10 +158,10 @@ function handleClick() {
         </var-tab-item>
         <var-tab-item class="home-tab-item" name="rowCard">
           <var-list
-            :finished="rowCard.finished"
-            v-model:loading="isRowCardLoading"
-            v-model:error="rowCard.error"
-            @load="() => loadRowCard({ params: { current: rowCard.current } })"
+            :finished="rowCardList.finished"
+            v-model:loading="isRowCardsLoading"
+            v-model:error="rowCardList.error"
+            @load="() => apiGetRowCards({ params: { current: rowCardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card
@@ -170,7 +170,7 @@ function handleClick() {
                 src="@/assets/material-1.png"
                 layout="row"
                 ripple
-                v-for="i in rowCard.data"
+                v-for="i in rowCardList.data"
                 :key="i"
                 @click="handleClick"
               >
@@ -188,17 +188,17 @@ function handleClick() {
         </var-tab-item>
         <var-tab-item class="home-tab-item" name="plainCard">
           <var-list
-            :finished="plainCard.finished"
-            v-model:loading="isPlainCardLoading"
-            v-model:error="plainCard.error"
-            @load="() => loadPlainCard({ params: { current: plainCard.current } })"
+            :finished="plainCardList.finished"
+            v-model:loading="isPlainCardsLoading"
+            v-model:error="plainCardList.error"
+            @load="() => apiGetPlainCards({ params: { current: plainCardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 ripple
-                v-for="i in plainCard.data"
+                v-for="i in plainCardList.data"
                 :key="i"
                 @click="handleClick"
               >
