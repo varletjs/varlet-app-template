@@ -148,8 +148,8 @@ function handleClick() {
                 </template>
                 <template #extra>
                   <var-space>
-                    <var-button text type="primary" @touchstart.stop @click.stop>ACTION 1</var-button>
-                    <var-button text type="primary" @touchstart.stop @click.stop>ACTION 2</var-button>
+                    <var-button text type="primary" @touchstart.stop @click.stop>{{ $t('ACTION') }}</var-button>
+                    <var-button text type="primary" @touchstart.stop @click.stop>{{ $t('ACTION') }}</var-button>
                   </var-space>
                 </template>
               </var-card>

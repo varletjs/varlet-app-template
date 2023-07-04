@@ -27,9 +27,9 @@ watch(
 
     <var-bottom-navigation border safe-area fixed v-model:active="active">
       <var-bottom-navigation-item label="HOME" icon="home" name="/layout/home" />
-      <var-bottom-navigation-item label="TODO" icon="magnify" name="/layout/search" />
-      <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/heart" />
-      <var-bottom-navigation-item label="TODO" icon="account-circle" name="/layout/account" />
+      <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
+      <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
+      <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
     </var-bottom-navigation>
   </div>
 </template>

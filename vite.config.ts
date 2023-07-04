@@ -9,6 +9,7 @@ import { extendRoute } from './src/router/extendRoute'
 
 export default defineConfig(() => {
   return {
+    base: './',
     lintOnSave: false,
     resolve: {
       alias: {
