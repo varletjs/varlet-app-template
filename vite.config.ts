@@ -7,7 +7,7 @@ import eruda from 'vite-plugin-eruda'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vitest/config'
-import { extendRoute } from './src/router/extendRoute'
+import { extendRoute } from './build/extendRoute'
 
 export default defineConfig(() => {
   return {
@@ -23,7 +23,7 @@ export default defineConfig(() => {
 
     server: {
       host: '0.0.0.0',
-      port: 9988
+      port: 10086
     },
 
     build: {
