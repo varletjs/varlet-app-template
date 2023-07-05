@@ -6,5 +6,8 @@ export interface Response<T> {
   message: string
 }
 
-export type UseApiOptions<D = any, R = any, P = Record<string, any>> = Pick<UseAxleOptions<D, R, P>, 'data'> &
-  Partial<Omit<UseAxleOptions<D, R, P>, 'data'>>
+export interface PageParams {
+  current?: number
+}
+
+export type Options<D = any, R = any, P = Record<string, any>> = Partial<Omit<UseAxleOptions<D, R, P>, 'data'>>

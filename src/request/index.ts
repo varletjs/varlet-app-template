@@ -5,20 +5,22 @@ const axle = createAxle({
   baseURL: '/api'
 })
 
-const useAxle = createUseAxle()
-
 axle.axios.interceptors.response.use(
   (response) => {
-    if (response.status === 200) {
-      return response.data
+    if (response.data.code !== 200) {
+      Snackbar.warning(response.data.message)
     }
 
-    Snackbar.warning(response.data.message)
+    return response.data
   },
   (error) => {
     Snackbar.error(error.message)
     return Promise.reject(error)
   }
 )
+
+const useAxle = createUseAxle({
+  onTransform: (response) => response.data
+})
 
 export { axle, useAxle }

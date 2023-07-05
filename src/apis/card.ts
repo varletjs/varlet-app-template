@@ -1,32 +1,31 @@
 import { useAxle, axle } from '@/request'
-import { Response, UseApiOptions } from './types'
+import { PageParams, Response, Options } from './types'
 
-export interface CardModel {
+export interface Card {
   id: number
 }
 
-export interface ApiPageParams {
-  current?: number
-}
-
-export function useApiGetCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
+export function useApiGetCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
+    data,
     url: '/card',
     runner: axle.get,
     ...options
   })
 }
 
-export function useApiGetPlainCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
+export function useApiGetPlainCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
+    data,
     url: '/plain-card',
     runner: axle.get,
     ...options
   })
 }
 
-export function useApiGetRowCards<D>(options: UseApiOptions<D, Response<CardModel[]>, ApiPageParams>) {
+export function useApiGetRowCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
+    data,
     url: '/row-card',
     runner: axle.get,
     ...options

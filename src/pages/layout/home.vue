@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, CardModel } from '@/apis/card'
+import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card } from '@/apis/card'
 import { Response } from '@/apis/types'
 
 interface CardList {
-  data: CardModel[]
+  data: Card[]
   current: number
   finished: boolean
   error: boolean
@@ -15,49 +15,52 @@ const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [cardList, apiGetCards, isCardsLoading] = useApiGetCards<CardList>({
-  data: {
+const [cardList, apiGetCards, { loading: isCardsLoading }] = useApiGetCards<CardList>(
+  {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  onSuccess,
-  onError(error) {
-    cardList.value.error = true
-    return error
+  {
+    onTransform,
+    onError() {
+      cardList.value.error = true
+    }
   }
-})
+)
 
-const [plainCardList, apiGetPlainCards, isPlainCardsLoading] = useApiGetPlainCards<CardList>({
-  data: {
+const [plainCardList, apiGetPlainCards, { loading: isPlainCardsLoading }] = useApiGetPlainCards<CardList>(
+  {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  onSuccess,
-  onError(error) {
-    plainCardList.value.error = true
-    return error
+  {
+    onTransform,
+    onError() {
+      plainCardList.value.error = true
+    }
   }
-})
+)
 
-const [rowCardList, apiGetRowCards, isRowCardsLoading] = useApiGetRowCards<CardList>({
-  data: {
+const [rowCardList, apiGetRowCards, { loading: isRowCardsLoading }] = useApiGetRowCards<CardList>(
+  {
     data: [],
     current: 1,
     error: false,
     finished: false
   },
-  onSuccess,
-  onError(error) {
-    rowCardList.value.error = true
-    return error
+  {
+    onTransform,
+    onError() {
+      rowCardList.value.error = true
+    }
   }
-})
+)
 
-function onSuccess(response: Response<CardModel[]>, prev: CardList) {
+function onTransform(response: Response<Card[]>, prev: CardList) {
   if (response.code !== 200) {
     return {
       ...prev,
