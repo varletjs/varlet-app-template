@@ -45,7 +45,7 @@ function toggleHeart() {
               <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
             <var-swipe-item>
-              <var-image fit="cover" height="54vmin" src="@/assets/images./material-2.png" />
+              <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
           </var-swipe>
 
