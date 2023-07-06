@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card, useBlob } from '@/apis/card'
+import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card } from '@/apis/card'
 import { Response } from '@/apis/types'
+import { UseAxleRefs } from '@varlet/axle/use'
 
 interface CardList {
-  data: Card[]
+  cards: Card[]
   current: number
   finished: boolean
   error: boolean
@@ -17,68 +18,66 @@ const isRefresh = ref(false)
 
 const [cardList, apiGetCards, { loading: isCardsLoading }] = useApiGetCards<CardList>(
   {
-    data: [],
+    cards: [],
     current: 1,
     error: false,
     finished: false
   },
   {
     onTransform,
-    onError() {
-      cardList.value.error = true
-    }
+    onError
   }
 )
 
 const [plainCardList, apiGetPlainCards, { loading: isPlainCardsLoading }] = useApiGetPlainCards<CardList>(
   {
-    data: [],
+    cards: [],
     current: 1,
     error: false,
     finished: false
   },
   {
     onTransform,
-    onError() {
-      plainCardList.value.error = true
-    }
+    onError
   }
 )
 
 const [rowCardList, apiGetRowCards, { loading: isRowCardsLoading }] = useApiGetRowCards<CardList>(
   {
-    data: [],
+    cards: [],
     current: 1,
     error: false,
     finished: false
   },
   {
     onTransform,
-    onError() {
-      rowCardList.value.error = true
-    }
+    onError
   }
 )
 
-function onTransform(response: Response<Card[]>, prev: CardList) {
+function onTransform(response: Response<Card[]>, { data }: UseAxleRefs<CardList>) {
   if (response.code !== 200) {
     return {
-      ...prev,
+      ...data.value,
       finished: false,
       error: true
     }
   }
 
   return {
-    data: [...prev.data, ...response.data],
-    current: prev.current + 1,
+    cards: [...data.value.cards, ...response.data],
+    current: data.value.current + 1,
     finished: response.data.length < 10,
     error: false
   }
 }
 
+function onError(error: Error, { data }: UseAxleRefs<CardList>) {
+  data.value.error = true
+}
+
 async function handleRefresh() {
-  const value = { data: [], current: 1, error: false, finished: false }
+  const value = { cards: [], current: 1, error: false, finished: false }
   const loaders = {
     card: apiGetCards,
     rowCard: apiGetRowCards,
@@ -140,7 +139,7 @@ function handleClick() {
                 :subtitle="$t('Card Subtitle')"
                 src="@/assets/images/material-2.png"
                 ripple
-                v-for="i in cardList.data"
+                v-for="i in cardList.cards"
                 :key="i"
                 @click="handleClick"
               >
@@ -173,7 +172,7 @@ function handleClick() {
                 src="@/assets/images/material-1.png"
                 layout="row"
                 ripple
-                v-for="i in rowCardList.data"
+                v-for="i in rowCardList.cards"
                 :key="i"
                 @click="handleClick"
               >
@@ -201,7 +200,7 @@ function handleClick() {
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 ripple
-                v-for="i in plainCardList.data"
+                v-for="i in plainCardList.cards"
                 :key="i"
                 @click="handleClick"
               >
