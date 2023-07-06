@@ -125,8 +125,6 @@ function handleClick() {
       </template>
     </app-header>
 
-    <h1>{{ downloadProgress }} {{ uploadProgress }}</h1>
-
     <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
       <var-tabs-items v-model:active="active">
         <var-tab-item class="home-tab-item" name="card">
