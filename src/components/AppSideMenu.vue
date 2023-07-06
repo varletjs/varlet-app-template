@@ -19,7 +19,7 @@ function closeMenu() {
     <div class="app-side-menu-content">
       <div class="app-side-menu-profile">
         <div class="app-side-menu-avatar">
-          <var-avatar src="@/assets/avatar.jpg" size="large" />
+          <var-avatar src="@/assets/images/avatar.jpg" size="large" />
         </div>
         <div class="app-side-menu-description">
           <div class="app-side-menu-username">{{ $t('Your Name') }}</div>
@@ -89,7 +89,7 @@ function closeMenu() {
     justify-content: center;
     padding: 0 20px;
     height: 170px;
-    background: url('@/assets/material.jpg');
+    background: url('@/assets/images/material.jpg');
     background-size: cover;
   }
 

@@ -2,12 +2,12 @@ import { createAxle } from '@varlet/axle'
 import { createUseAxle } from '@varlet/axle/use'
 
 const axle = createAxle({
-  baseURL: '/api'
+  baseURL: import.meta.env.VITE_MOCK_API_BASE
 })
 
 axle.axios.interceptors.response.use(
   (response) => {
-    if (response.data.code !== 200) {
+    if (response.data.code !== 200 && response.data.message) {
       Snackbar.warning(response.data.message)
     }
 

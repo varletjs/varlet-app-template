@@ -2,7 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import pages from 'vite-plugin-pages'
-import compression from 'vite-plugin-compression'
+import compression from 'vite-plugin-compression2'
 import eruda from 'vite-plugin-eruda'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
@@ -67,7 +67,10 @@ export default defineConfig(() => {
         extendRoute
       }),
 
-      compression(),
+      compression({
+        include: [/\.html$/, /\.css$/, /\.js$/, /\.ttf$/],
+        skipIfLargerOrEqual: true
+      }),
 
       eruda()
     ]

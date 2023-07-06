@@ -2,7 +2,8 @@
 /// <reference types="vite-plugin-pages/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_API_URL: string
+  readonly VITE_MOCK_API_BASE: string
+  readonly VITE_API_BASE: string
 }
 
 interface ImportMeta {

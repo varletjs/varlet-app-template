@@ -39,13 +39,13 @@ function toggleHeart() {
         <div class="detail-swipe">
           <var-swipe>
             <var-swipe-item>
-              <var-image fit="cover" height="54vmin" src="@/assets/material-2.png" />
+              <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
             <var-swipe-item>
-              <var-image fit="cover" height="54vmin" src="@/assets/material-2.png" />
+              <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
             <var-swipe-item>
-              <var-image fit="cover" height="54vmin" src="@/assets/material-2.png" />
+              <var-image fit="cover" height="54vmin" src="@/assets/images./material-2.png" />
             </var-swipe-item>
           </var-swipe>
 
@@ -77,7 +77,7 @@ function toggleHeart() {
             <var-space :size="['5vmin', '4vmin']">
               <var-chip v-for="i in 8" :key="i">
                 <template #left>
-                  <var-avatar class="detail-comment-avatar" src="@/assets/avatar.jpg" />
+                  <var-avatar class="detail-comment-avatar" src="@/assets/images/avatar.jpg" />
                 </template>
                 <var-ellipsis style="max-width: 26vmin">
                   {{ $t('This is a comment') }}

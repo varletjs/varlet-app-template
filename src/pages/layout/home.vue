@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card } from '@/apis/card'
+import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card, useBlob } from '@/apis/card'
 import { Response } from '@/apis/types'
 
 interface CardList {
@@ -125,6 +125,8 @@ function handleClick() {
       </template>
     </app-header>
 
+    <h1>{{ downloadProgress }} {{ uploadProgress }}</h1>
+
     <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
       <var-tabs-items v-model:active="active">
         <var-tab-item class="home-tab-item" name="card">
@@ -138,7 +140,7 @@ function handleClick() {
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
-                src="@/assets/material-2.png"
+                src="@/assets/images/material-2.png"
                 ripple
                 v-for="i in cardList.data"
                 :key="i"
@@ -170,7 +172,7 @@ function handleClick() {
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
-                src="@/assets/material-1.png"
+                src="@/assets/images/material-1.png"
                 layout="row"
                 ripple
                 v-for="i in rowCardList.data"
