@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useApiGetCards, useApiGetPlainCards, useApiGetRowCards, Card } from '@/apis/card'
+import { useGetCards, useGetPlainCards, useGetRowCards, Card } from '@/apis/card'
 import { Response } from '@/apis/types'
 import { UseAxleRefs } from '@varlet/axle/use'
 
@@ -16,7 +16,7 @@ const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [cardList, apiGetCards, { loading: isCardsLoading }] = useApiGetCards<CardList>(
+const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>(
   {
     cards: [],
     current: 1,
@@ -29,7 +29,7 @@ const [cardList, apiGetCards, { loading: isCardsLoading }] = useApiGetCards<Card
   }
 )
 
-const [plainCardList, apiGetPlainCards, { loading: isPlainCardsLoading }] = useApiGetPlainCards<CardList>(
+const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetPlainCards<CardList>(
   {
     cards: [],
     current: 1,
@@ -42,7 +42,7 @@ const [plainCardList, apiGetPlainCards, { loading: isPlainCardsLoading }] = useA
   }
 )
 
-const [rowCardList, apiGetRowCards, { loading: isRowCardsLoading }] = useApiGetRowCards<CardList>(
+const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCards<CardList>(
   {
     cards: [],
     current: 1,
@@ -79,9 +79,9 @@ function onError(error: Error, { data }: UseAxleRefs<CardList>) {
 async function handleRefresh() {
   const value = { cards: [], current: 1, error: false, finished: false }
   const loaders = {
-    card: apiGetCards,
-    rowCard: apiGetRowCards,
-    plainCard: apiGetPlainCards
+    card: getCards,
+    rowCard: getRowCards,
+    plainCard: getPlainCards
   }
 
   if (active.value === 'card') {
@@ -131,7 +131,7 @@ function handleClick() {
             :finished="cardList.finished"
             v-model:loading="isCardsLoading"
             v-model:error="cardList.error"
-            @load="() => apiGetCards({ params: { current: cardList.current } })"
+            @load="() => getCards({ params: { current: cardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card
@@ -163,7 +163,7 @@ function handleClick() {
             :finished="rowCardList.finished"
             v-model:loading="isRowCardsLoading"
             v-model:error="rowCardList.error"
-            @load="() => apiGetRowCards({ params: { current: rowCardList.current } })"
+            @load="() => getRowCards({ params: { current: rowCardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card
@@ -193,7 +193,7 @@ function handleClick() {
             :finished="plainCardList.finished"
             v-model:loading="isPlainCardsLoading"
             v-model:error="plainCardList.error"
-            @load="() => apiGetPlainCards({ params: { current: plainCardList.current } })"
+            @load="() => getPlainCards({ params: { current: plainCardList.current } })"
           >
             <var-space class="home-tab-item-space" direction="column" size="large">
               <var-card

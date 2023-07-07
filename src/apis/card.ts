@@ -5,7 +5,7 @@ export interface Card {
   id: number
 }
 
-export function useApiGetCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
+export function useGetCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
     data,
     url: '/card',
@@ -14,7 +14,7 @@ export function useApiGetCards<D>(data: D, options?: Options<D, Response<Card[]>
   })
 }
 
-export function useApiGetPlainCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
+export function useGetPlainCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
     data,
     url: '/plain-card',
@@ -23,7 +23,7 @@ export function useApiGetPlainCards<D>(data: D, options?: Options<D, Response<Ca
   })
 }
 
-export function useApiGetRowCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
+export function useGetRowCards<D>(data: D, options?: Options<D, Response<Card[]>, PageParams>) {
   return useAxle({
     data,
     url: '/row-card',
