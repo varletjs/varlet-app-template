@@ -16,44 +16,38 @@ const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>(
-  {
+const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>({
+  data: {
     cards: [],
     current: 1,
     error: false,
     finished: false
   },
-  {
-    onTransform,
-    onError
-  }
-)
+  onTransform,
+  onError
+})
 
-const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetPlainCards<CardList>(
-  {
+const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetPlainCards<CardList>({
+  data: {
     cards: [],
     current: 1,
     error: false,
     finished: false
   },
-  {
-    onTransform,
-    onError
-  }
-)
+  onTransform,
+  onError
+})
 
-const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCards<CardList>(
-  {
+const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCards<CardList>({
+  data: {
     cards: [],
     current: 1,
     error: false,
     finished: false
   },
-  {
-    onTransform,
-    onError
-  }
-)
+  onTransform,
+  onError
+})
 
 function onTransform(response: Response<Card[]>, { data }: UseAxleRefs<CardList>) {
   if (response.code !== 200) {

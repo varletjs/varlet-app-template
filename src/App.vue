@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { useDark } from './use'
 
-const { updateTheme } = useDark()
-
-updateTheme()
+useDark()
 </script>
 
 <template>

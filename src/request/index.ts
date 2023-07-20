@@ -7,8 +7,10 @@ const axle = createAxle({
 
 axle.axios.interceptors.response.use(
   (response) => {
-    if (response.data.code !== 200 && response.data.message) {
-      Snackbar.warning(response.data.message)
+    const { code, message } = response.data
+
+    if (code !== 200 && message) {
+      Snackbar.warning(message)
     }
 
     return response.data
