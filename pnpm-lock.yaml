@@ -6,20 +6,20 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.0.26
-    version: 0.0.26
+    specifier: ^0.1.1
+    version: 0.1.1
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
   '@varlet/touch-emulator':
-    specifier: 2.13.0
-    version: 2.13.0
+    specifier: ^2.13.1
+    version: 2.13.1
   '@varlet/ui':
-    specifier: 2.13.1-alpha.1689663779667
-    version: 2.13.1-alpha.1689663779667(vue@3.3.4)
+    specifier: ^2.13.1
+    version: 2.13.1(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.13.0
-    version: 2.13.0(vue@3.3.4)
+    specifier: ^2.13.1
+    version: 2.13.1(vue@3.3.4)
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
@@ -895,8 +895,8 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@varlet/axle@0.0.26:
-    resolution: {integrity: sha512-11J72ugmEhPdevvrXzCQho4H0Zrx/6GNZ6kwQPeTFxIXNcq6r6eotOYEtpZgGQmx91P4WUIjBQFTEJz7yg62KQ==}
+  /@varlet/axle@0.1.1:
+    resolution: {integrity: sha512-r1aliqtaVXQVSRbzu+QKaChAXeZWEtR9UCEq0bVYS/I9pjw5+W0jtBMJjVmLIlgboUwf4kjrRPFu1mViH9a23g==}
     engines: {pnpm: '>=8.0'}
     dependencies:
       '@varlet/shared': 2.13.0
@@ -910,51 +910,42 @@ packages:
     resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
     dev: false
 
-  /@varlet/icons@2.13.1-alpha.1689663779667:
-    resolution: {integrity: sha512-IhHh7abJA1xwMUxjrIxUkR1xbGlDnYwktfDpSIW3LaIs44H0BCiWL625VfHB+ZKipVaMeEx9WQFDz7NP2ImOxw==}
+  /@varlet/icons@2.13.1:
+    resolution: {integrity: sha512-WcnOohGWHECG3e4NZ+R8BTWSbrRN88HEsYuOYIpOrb13f8ZKmdjAepR7arHLdMIA+IuXoFb/9UObdopMLluMVA==}
     dev: false
 
   /@varlet/shared@2.13.0:
     resolution: {integrity: sha512-Qi7c/FXBrKf1Z1qdyTvNc+ctwU1UZ4JaERnDW3Sfq5bmu+7fPvC8qRO1z8rrNkehcRTqBu1W4wOwK/ADJEXAkw==}
     dev: false
 
-  /@varlet/shared@2.13.1-alpha.1689663779667:
-    resolution: {integrity: sha512-ePk9rr+o6UUkFn4FDEXzhhgU+QLLFkDQOywpRDpcz5LO+9W/fCNJmTpn6NaJojvcWc0DmIUm8W7YlHSP3HkYtw==}
+  /@varlet/shared@2.13.1:
+    resolution: {integrity: sha512-6iR1tj7/lC0UB9Z3T+/LXCpJH3O77Vgndr/7AQTZ7ogPWo49EF1YrmijXdAvlbUKDhBq+5tTc90IyKL7wGh8Mw==}
     dev: false
 
-  /@varlet/touch-emulator@2.13.0:
-    resolution: {integrity: sha512-sj8RqCDoOmdm9oOQ1Qs70wrp+qF62Uw9vmWmwKpB5aGXCGFARO1I5OtcWJ3P4OjrkTX6GTI66+TLd3gmFH+vuQ==}
+  /@varlet/touch-emulator@2.13.1:
+    resolution: {integrity: sha512-hAUzokXm/GrR20wFnBjVpyJL0yk1GltflIZhU0i73tZR/tuiYDgTpGznJ7CF/FfDREQAem/mgFZEHgso0/k4gg==}
     dev: false
 
-  /@varlet/ui@2.13.1-alpha.1689663779667(vue@3.3.4):
-    resolution: {integrity: sha512-FLfmb+8MKR76EPpAX/ciXjd5qU3s7KO2jePNUbpgsiVVR6UPvP05QzJ7vTGpE3lhcNFZkWbY4BXMsE1pc7F6hw==}
+  /@varlet/ui@2.13.1(vue@3.3.4):
+    resolution: {integrity: sha512-xeglY3MjtzOp2x4lsId4kBrlfFBWwzo6z6NLZirwVbdMVH8G31Dzm+WXH9ZXrLQmrNcCpT7RPxsDCm5HgeGBJA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.13.1-alpha.1689663779667
-      '@varlet/shared': 2.13.1-alpha.1689663779667
-      '@varlet/use': 2.13.1-alpha.1689663779667(vue@3.3.4)
+      '@varlet/icons': 2.13.1
+      '@varlet/shared': 2.13.1
+      '@varlet/use': 2.13.1(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.13.0(vue@3.3.4):
-    resolution: {integrity: sha512-ifugHrkPJBfKNXR7Tp2PU8LXzMjmCLcJEeaszGzOC73WiA/1gtkBq0ngrslsRtTRpMrBRn7/pWV9O4OFAOEGOg==}
+  /@varlet/use@2.13.1(vue@3.3.4):
+    resolution: {integrity: sha512-OCyhMbqeATDb1BQ4J9fS5UmZwGXsl8Sq6kOVVKxk9+OFNpd0ZsZJBLjJRJVQK49k2Ai6vJ5jr/KPJkR9Q3LVKQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.13.0
-      vue: 3.3.4
-    dev: false
-
-  /@varlet/use@2.13.1-alpha.1689663779667(vue@3.3.4):
-    resolution: {integrity: sha512-LqLQri+7vA3a2UFxFC2jZIG8hbzkt0XYbMxnzuxDQSqxjEoiJcJHFXHT2oyP5Wt8NcPrzAUQaxF4WKEysr9M+w==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@varlet/shared': 2.13.1-alpha.1689663779667
+      '@varlet/shared': 2.13.1
       vue: 3.3.4
     dev: false
 
