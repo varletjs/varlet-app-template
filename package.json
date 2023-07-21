@@ -25,7 +25,7 @@
     "*.{vue,ts,tsx,js,jsx}": "pnpm lint"
   },
   "dependencies": {
-    "@varlet/axle": "^0.1.1",
+    "@varlet/axle": "0.1.2",
     "@varlet/bounce-fixer": "^0.0.2",
     "@varlet/touch-emulator": "^2.13.1",
     "@varlet/ui": "^2.13.1",
