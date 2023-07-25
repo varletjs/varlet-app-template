@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 const isRefresh = ref(false)
 const activeHeart = ref(false)
+const detailSwipeRef = ref()
 
 function handleRefresh() {
   isRefresh.value = false
@@ -36,7 +37,7 @@ function toggleHeart() {
       </app-header>
 
       <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
-        <div class="detail-swipe">
+        <div ref="detailSwipeRef" class="detail-swipe">
           <var-swipe>
             <var-swipe-item>
               <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
@@ -48,19 +49,6 @@ function toggleHeart() {
               <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
           </var-swipe>
-
-          <var-fab :fixed="false" bottom="-7vmin">
-            <template #trigger>
-              <var-button class="detail-fab" type="primary" color="#EC407A" round @click="toggleHeart">
-                <var-icon
-                  :name="activeHeart ? 'heart' : 'heart-outline'"
-                  animation-class="detail-fade-animation"
-                  :transition="300"
-                  size="6vmin"
-                />
-              </var-button>
-            </template>
-          </var-fab>
         </div>
 
         <div class="detail-info">
@@ -79,7 +67,7 @@ function toggleHeart() {
                 <template #left>
                   <var-avatar class="detail-comment-avatar" src="@/assets/images/avatar.jpg" />
                 </template>
-                <var-ellipsis style="max-width: 26vmin">
+                <var-ellipsis style="max-width: 26vmin" :tooltip="{ sameWidth: false }">
                   {{ $t('This is a comment') }}
                 </var-ellipsis>
               </var-chip>
@@ -112,6 +100,19 @@ function toggleHeart() {
           </var-button>
         </div>
       </var-pull-refresh>
+
+      <var-fab :fixed="false" :teleport="detailSwipeRef" bottom="-7vmin">
+        <template #trigger>
+          <var-button class="detail-fab" type="primary" color="#EC407A" round @click="toggleHeart">
+            <var-icon
+              :name="activeHeart ? 'heart' : 'heart-outline'"
+              animation-class="detail-fade-animation"
+              :transition="300"
+              size="6vmin"
+            />
+          </var-button>
+        </template>
+      </var-fab>
     </div>
   </router-stack>
 </template>

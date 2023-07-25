@@ -8,6 +8,7 @@ export function useDark() {
 
   function updateTheme() {
     StyleProvider(isDark.value ? darkTheme : null)
+    document.documentElement.style.setProperty('color-scheme', isDark.value ? 'dark' : 'light')
   }
 
   function toggleDark() {

@@ -26,10 +26,10 @@ watch(
     </router-view>
 
     <var-bottom-navigation border safe-area fixed v-model:active="active">
-      <var-bottom-navigation-item label="HOME" icon="home" name="/layout/home" />
+      <var-bottom-navigation-item :label="$t('HOME')" icon="home" name="/layout/home" />
       <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
       <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
-      <var-bottom-navigation-item label="TODO" icon="heart" name="/layout/todo" />
+      <var-bottom-navigation-item :label="$t('PROFILE')" icon="heart" name="/layout/profile" />
     </var-bottom-navigation>
   </div>
 </template>

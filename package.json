@@ -27,9 +27,9 @@
   "dependencies": {
     "@varlet/axle": "0.1.2",
     "@varlet/bounce-fixer": "^0.0.2",
-    "@varlet/touch-emulator": "^2.13.1",
-    "@varlet/ui": "^2.13.1",
-    "@varlet/use": "^2.13.1",
+    "@varlet/touch-emulator": "^2.13.3",
+    "@varlet/ui": "2.13.4-alpha.1690280210151",
+    "@varlet/use": "^2.13.3",
     "mockjs": "^1.1.0",
     "pinia": "^2.1.3",
     "vue": "^3.3.4",

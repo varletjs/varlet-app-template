@@ -1,9 +1,18 @@
 export default {
+  HOME: 'HOME',
+  PROFILE: 'PROFILE',
   Warning: 'Warning',
   Menu: 'Menu',
   Settings: 'Settings',
   Close: 'Close',
   ACTION: 'ACTION',
+  Male: 'Male',
+  Followers: 'Followers',
+  Likes: 'Likes',
+  Modules: 'Modules',
+  Profile: 'Profile',
+  Module: 'Module',
+  'Module introductory text': 'Module introductory text',
   'Card Title': 'Dangerous',
   'Card Subtitle': 'The girl was dangerous',
   'Card Description':

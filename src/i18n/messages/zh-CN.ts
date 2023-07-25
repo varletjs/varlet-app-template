@@ -1,9 +1,18 @@
 export default {
+  HOME: '首页',
+  PROFILE: '我的',
   Warning: '警告',
   Menu: '菜单',
   Settings: '设置',
   Close: '关闭',
   ACTION: '动作',
+  Male: '男孩纸',
+  Followers: '关注者',
+  Likes: '点赞数',
+  Modules: '模块视图',
+  Profile: '我的信息',
+  Module: '模块',
+  'Module introductory text': '模块引导性文字',
   'Card Title': '本草纲目',
   'Card Subtitle': '我表情悠哉 跳个大概',
   'Card Description':
