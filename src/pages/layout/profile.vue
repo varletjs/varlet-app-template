@@ -20,11 +20,11 @@ function handleRefresh() {
         </template>
         <template #content>
           <div class="profile-header-content">
-            <div class="profile-user-container">
+            <div class="profile-user">
               <var-avatar class="profile-user-avatar" src="@/assets/images/avatar.jpg" size="22vmin" bordered />
               <div class="profile-user-suffix">
-                <div class="profile-username">{{ $t('Your Name') }}</div>
-                <var-space class="profile-user-extra-container" :size="[0, '1.6vmin']">
+                <div class="profile-user-name">{{ $t('Your Name') }}</div>
+                <var-space class="profile-user-extra" :size="[0, '1.6vmin']">
                   <span>{{ $t('Male') }}</span>
                   <span>/</span>
                   <span>100 {{ $t('Followers') }}</span>
@@ -42,7 +42,7 @@ function handleRefresh() {
       </app-header>
       <var-tabs-items class="profile-tabs-items" v-model:active="active">
         <var-tab-item name="module">
-          <var-space direction="column" :size="['6vmin', 0]">
+          <var-space class="profile-module" direction="column" :size="['1.8vmin', 0]">
             <var-space class="profile-module-grid" :size="['3.5vmin', '3.5vmin']">
               <div class="profile-module-grid-item" v-for="i in 9" :key="i">
                 <var-paper
@@ -77,7 +77,66 @@ function handleRefresh() {
           </var-space>
         </var-tab-item>
 
-        <var-tab-item name="profile"> </var-tab-item>
+        <var-tab-item name="profile">
+          <var-space class="profile-detail" direction="column" :size="['6vmin', 0]">
+            <div class="profile-detail-section">
+              <div class="profile-detail-section-subtitle">{{ $t('About Me') }}</div>
+              <div class="profile-detail-section-description">{{ $t('Section Text') }}</div>
+            </div>
+
+            <div class="profile-detail-section">
+              <div class="profile-detail-section-subtitle">{{ $t('Section') }}</div>
+              <var-cell
+                border
+                ripple
+                :title="$t('Section title')"
+                :description="$t('Section subtitle')"
+                :border-offset="0"
+                v-for="i in 4"
+                :key="i"
+              >
+                <template #icon>
+                  <var-icon class="profile-detail-section-icon" name="account-circle" size="10vmin" />
+                </template>
+              </var-cell>
+            </div>
+
+            <div class="profile-detail-section">
+              <div class="profile-detail-section-subtitle">{{ $t('Section') }}</div>
+              <var-cell
+                border
+                ripple
+                :title="$t('Section title')"
+                :description="$t('Section subtitle')"
+                :border-offset="0"
+                v-for="i in 4"
+                :key="i"
+              >
+                <template #icon>
+                  <var-icon class="profile-detail-section-icon" name="shopping" size="10vmin" />
+                </template>
+              </var-cell>
+            </div>
+
+            <div class="profile-detail-section">
+              <div class="profile-detail-section-subtitle">{{ $t('Followers') }} (10086)</div>
+              <var-avatar-group class="profile-detail-section-avatar-group" offset="-2vmin">
+                <var-avatar src="https://varlet.gitee.io/varlet-ui/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
+                <var-avatar size="13vmin">+10086</var-avatar>
+              </var-avatar-group>
+            </div>
+
+            <var-divider />
+
+            <div class="profile-detail-section">
+              <div class="profile-detail-section-subtitle">{{ $t('Following') }} (10086)</div>
+              <var-avatar-group class="profile-detail-section-avatar-group">
+                <var-avatar src="https://varlet.gitee.io/varlet-ui/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
+                <var-avatar size="13vmin">+10086</var-avatar>
+              </var-avatar-group>
+            </div>
+          </var-space>
+        </var-tab-item>
       </var-tabs-items>
     </var-pull-refresh>
 
@@ -99,73 +158,108 @@ function handleRefresh() {
 .profile {
   --profile-header-height: 202px;
   --avatar-border: 3px solid #fff;
-  padding: calc(var(--profile-header-height) + 16px) 14px 16px;
+  padding-top: calc(var(--profile-header-height) + 16px);
 
-  &-user-container {
+  &-user {
     display: flex;
     align-items: center;
     padding: 0 20px;
     height: 104px;
+
+    &-suffix {
+      margin-left: 14px;
+    }
+
+    &-name {
+      font-size: 24px;
+    }
+
+    &-avatar {
+      flex-shrink: 0;
+    }
+
+    &-extra {
+      padding-top: 10px;
+      color: #ccc;
+      font-size: 14px;
+      align-items: baseline;
+    }
   }
 
-  &-user-suffix {
-    margin-left: 14px;
-  }
+  &-module {
+    padding: 0 14px 30px;
 
-  &-username {
-    font-size: 24px;
-  }
+    &-grid {
+      transform: translateX(1.75vmin);
 
-  &-user-avatar {
-    flex-shrink: 0;
-  }
+      &-item {
+        padding: 10px;
 
-  &-user-extra-container {
-    padding-top: 10px;
-    color: #ccc;
-    font-size: 14px;
-    align-items: baseline;
-  }
+        &-paper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
-  &-module-grid {
-    transform: translateX(1.75vmin);
+        &-text {
+          color: var(--app-title-color);
+          margin-top: 3px;
+        }
+      }
+    }
 
-    &-item {
+    &-cell {
       padding: 10px;
 
-      &-paper {
+      &-item {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+        padding: 16px 28px;
 
-      &-text {
-        color: var(--app-title-color);
-        margin-top: 3px;
+        &-suffix {
+          width: 50vmin;
+          margin-left: 24px;
+
+          &-title {
+            color: var(--app-title-color);
+          }
+
+          &-subtitle {
+            color: var(--app-subtitle-color);
+            margin-top: 2px;
+          }
+        }
       }
     }
   }
 
-  &-module-cell {
-    padding: 10px;
+  &-detail {
+    --cell-padding: 16px 20px;
+    padding-bottom: 30px;
+    margin-top: 4px;
 
-    &-item {
-      display: flex;
-      padding: 16px 28px;
+    &-section {
+      margin-top: 10px;
 
-      &-suffix {
-        width: 50vmin;
-        margin-left: 24px;
+      &-subtitle {
+        color: var(--app-subtitle-color);
+        margin-bottom: 14px;
+        padding: 0 24px;
+      }
 
-        &-title {
-          color: var(--app-title-color);
-        }
+      &-description {
+        font-size: 15px;
+        line-height: 28px;
+        padding: 0 24px;
+      }
 
-        &-subtitle {
-          color: var(--app-subtitle-color);
-          margin-top: 2px;
-        }
+      &-icon {
+        margin-right: 24px;
+      }
+
+      &-avatar-group {
+        margin-top: 12px;
+        padding: 0 20px;
       }
     }
   }
