@@ -1,17 +1,9 @@
 <script setup lang="ts">
 const show = ref(false)
-
-function showMenu() {
-  show.value = true
-}
-
-function closeMenu() {
-  show.value = false
-}
 </script>
 
 <template>
-  <var-button class="app-side-menu" text round @click="showMenu" v-bind="$attrs">
+  <var-button class="app-side-menu" text round @click="show = !show" v-bind="$attrs">
     <var-icon class="app-side-menu-icon" name="menu" />
   </var-button>
 
@@ -29,7 +21,22 @@ function closeMenu() {
 
       <div class="app-side-menu-cell-list">
         <var-space direction="column">
-          <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
+          <var-cell
+            class="app-side-menu-cell"
+            :title="$t('Menu')"
+            v-ripple
+            @click="$router.push(`${$route.path}/sign-in`)"
+          >
+            <template #icon>
+              <var-icon class="app-side-menu-cell-icon" name="bell" />
+            </template>
+          </var-cell>
+          <var-cell
+            class="app-side-menu-cell"
+            :title="$t('Menu')"
+            v-ripple
+            @click="$router.push(`${$route.path}/sign-up`)"
+          >
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="bell" />
             </template>
@@ -37,32 +44,12 @@ function closeMenu() {
           <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="bell" />
-            </template>
-          </var-cell>
-          <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
-            <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
-            </template>
-          </var-cell>
-          <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
-            <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
-            </template>
-          </var-cell>
-          <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
-            <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
-            </template>
-          </var-cell>
-          <var-cell class="app-side-menu-cell" :title="$t('Settings')" v-ripple>
-            <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="cog" />
             </template>
           </var-cell>
 
           <var-divider />
 
-          <var-cell class="app-side-menu-cell" :title="$t('Close')" v-ripple @click="closeMenu">
+          <var-cell class="app-side-menu-cell" :title="$t('Close')" v-ripple @click="show = false">
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="window-close" />
             </template>

@@ -140,7 +140,12 @@ function handleRefresh() {
       </var-tabs-items>
     </var-pull-refresh>
 
-    <var-fab type="primary" right="5vmin" bottom="20vmin" drag>
+    <var-fab
+      type="primary"
+      right="5vmin"
+      bottom="20vmin"
+      :drag="{ boundary: { left: '2vmin', right: '2vmin', top: '55vmin', bottom: '15vmin' } }"
+    >
       <var-button class="action" type="primary" round>
         <var-icon name="phone" />
       </var-button>
@@ -152,6 +157,8 @@ function handleRefresh() {
       </var-button>
     </var-fab>
   </div>
+
+  <router-stack-view />
 </template>
 
 <style lang="less" scoped>
@@ -265,3 +272,23 @@ function handleRefresh() {
   }
 }
 </style>
+
+<route>
+  {
+    meta: {
+      stacks: [
+        {
+          name: 'sign-in',
+          children: [
+            {
+              name: 'sign-up'
+            }
+          ]
+        },
+        {
+          name: 'sign-up'
+        }
+      ]
+    }
+  }
+</route>

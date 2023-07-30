@@ -1,18 +1,28 @@
-export function extendRoute(route: any) {
-  const views = (route.meta?.views ?? []) as string[]
+interface StackRoute {
+  name: string
+  children?: StackRoute[]
+}
 
-  if (!views.length) {
-    return
+export function extendRoute(route: any) {
+  const stacks = (route.meta?.stacks ?? []) as StackRoute[]
+
+  console.log(stacks)
+
+  const processStacks = (route: any, stacks: StackRoute[]) => {
+    stacks.forEach((stack) => {
+      const newRoute = {
+        name: `${route.name}-${stack.name}`,
+        path: stack.name,
+        component: `/src/stacks/${stack.name}.vue`
+      }
+      route.children ??= []
+      route.children.push(newRoute)
+
+      if (stack.children) {
+        processStacks(newRoute, stack.children)
+      }
+    })
   }
 
-  views.forEach((view: string) => {
-    const path = `${route.path}/${view}`
-
-    route.children ??= []
-    route.children.push({
-      name: `${route.name}-${view}`,
-      path,
-      component: `/src/views/${view}.vue`
-    })
-  })
+  processStacks(route, stacks)
 }

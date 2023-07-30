@@ -32,22 +32,24 @@ function handlePush() {
   emit('push')
 }
 
+function restoreParent() {
+  setTimeout(async () => {
+    showParent.value = true
+    await nextTick()
+    stack.value?.scrollTo(savedPosition)
+  }, 250)
+}
+
+function saveParent() {
+  showParent.value = false
+  savedPosition.top = stack.value!.scrollTop
+  savedPosition.left = stack.value!.scrollLeft
+}
+
 watch(
   () => length.value,
   async (value) => {
-    const shouldShowParent = value === 0
-
-    if (shouldShowParent) {
-      setTimeout(async () => {
-        showParent.value = shouldShowParent
-        await nextTick()
-        stack.value?.scrollTo(savedPosition)
-      }, 250)
-    } else {
-      showParent.value = shouldShowParent
-      savedPosition.top = stack.value!.scrollTop
-      savedPosition.left = stack.value!.scrollLeft
-    }
+    value === 0 ? restoreParent() : saveParent()
   }
 )
 </script>

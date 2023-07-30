@@ -211,7 +211,7 @@ function handleClick() {
     </var-pull-refresh>
   </div>
 
-  <router-stack-view animation="slide-y" />
+  <router-stack-view />
 </template>
 
 <style lang="less" scoped>
@@ -228,3 +228,23 @@ function handleClick() {
   }
 }
 </style>
+
+<route>
+  {
+    meta: {
+      stacks: [
+        {
+          name: 'sign-in',
+          children: [
+            {
+              name: 'sign-up'
+            }
+          ]
+        },
+        {
+          name: 'sign-up'
+        }
+      ]
+    }
+  }
+</route>
