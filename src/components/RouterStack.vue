@@ -3,6 +3,8 @@ import { Context } from '@varlet/ui'
 import { useParent, useChildren } from '@varlet/use'
 import { watch, ref, nextTick } from 'vue'
 
+Context.zIndex++
+
 defineProps({
   keepAlive: {
     type: Boolean,
@@ -13,7 +15,7 @@ defineProps({
   }
 })
 
-const emit = defineEmits(['push', 'pushed', 'pop', 'popped'])
+defineEmits(['push', 'pushed', 'pop', 'popped'])
 
 const stack = ref<HTMLElement>()
 const showParent = ref(true)
@@ -25,12 +27,6 @@ bindChildren({})
 bindParent?.({})
 
 const savedPosition = { top: 0, left: 0 }
-
-function handlePush() {
-  Context.zIndex += 1
-  zIndex.value = Context.zIndex
-  emit('push')
-}
 
 function restoreParent() {
   setTimeout(async () => {
@@ -67,7 +63,7 @@ watch(
 
     <router-stack-view
       :animation="animation"
-      @push="handlePush"
+      @push="$emit('push')"
       @pushed="$emit('pushed')"
       @pop="$emit('pop')"
       @popped="$emit('popped')"

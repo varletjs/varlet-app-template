@@ -9,17 +9,19 @@ defineProps({
 </script>
 
 <template>
-  <router-view v-slot="{ Component }">
-    <transition
-      :name="`router-stack-view-${animation}`"
-      @before-enter="$emit('push')"
-      @after-enter="$emit('pushed')"
-      @before-leave="$emit('pop')"
-      @after-leave="$emit('popped')"
-    >
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <teleport to="body">
+    <router-view v-slot="{ Component }">
+      <transition
+        :name="`router-stack-view-${animation}`"
+        @before-enter="$emit('push')"
+        @after-enter="$emit('pushed')"
+        @before-leave="$emit('pop')"
+        @after-leave="$emit('popped')"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </teleport>
 </template>
 
 <script lang="ts">
