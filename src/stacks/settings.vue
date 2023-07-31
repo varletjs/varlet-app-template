@@ -18,7 +18,7 @@ const sliderValue = ref(0)
             <var-icon class="settings-icon" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch size="5.2vmin" v-model="value" />
+            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')">
@@ -26,7 +26,7 @@ const sliderValue = ref(0)
             <var-icon class="settings-icon" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch size="5.2vmin" v-model="value" />
+            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
@@ -34,7 +34,7 @@ const sliderValue = ref(0)
             <var-icon class="settings-icon" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch size="5.2vmin" v-model="value" />
+            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
@@ -42,7 +42,7 @@ const sliderValue = ref(0)
             <var-icon class="settings-icon" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch size="5.2vmin" v-model="value" />
+            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')">
@@ -83,6 +83,10 @@ const sliderValue = ref(0)
 
   &-slider-icon {
     margin-bottom: 10px;
+  }
+
+  &-switch {
+    margin-right: 4px;
   }
 }
 </style>
