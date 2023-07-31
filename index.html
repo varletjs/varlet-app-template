@@ -14,44 +14,8 @@
     <meta property="og:image" content="/vite.svg" />
     <meta property="og:description" content="A Varlet app template" />
     <title>Varlet App Template</title>
-    <style>
-      .app-global-loading-container {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-
-      .app-global-loading {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        display: inline-block;
-        border-top: 3px solid #6200EE;
-        border-right: 3px solid transparent;
-        box-sizing: border-box;
-        animation: app-global-rotation .6s linear infinite;
-      }
-
-      @keyframes app-global-rotation {
-        0% {
-          transform: rotate(0deg);
-        }
-        
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div id="app-global-loading" class="app-global-loading-container">
-      <span class="app-global-loading"></span>
-    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

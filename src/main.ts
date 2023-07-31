@@ -5,8 +5,8 @@ import { createApp } from 'vue'
 import { createBounceFixer } from '@varlet/bounce-fixer'
 import { removeGlobalLoading } from './utils/globalLoading'
 
-import '@/styles/common.less'
 import '@/mocks'
+import '@/styles/common.less'
 import '@varlet/touch-emulator'
 
 createBounceFixer().enable()

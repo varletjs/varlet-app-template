@@ -21,8 +21,8 @@ export const loadMessages = () => {
 
 export const i18n = createI18n<false>({
   legacy: false,
-  locale: localStorage.get('locale') ?? 'zh-CN',
-  fallbackLocale: 'zh-CN',
+  locale: localStorage.get('locale') ?? 'en-US',
+  fallbackLocale: 'en-US',
   messages: loadMessages()
 })
 
