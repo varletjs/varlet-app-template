@@ -245,6 +245,9 @@ function handleClick() {
           ]
         },
         {
+          name: 'detail'
+        },
+        {
           name: 'sign-up'
         },
         {
