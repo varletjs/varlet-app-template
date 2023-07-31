@@ -2,8 +2,9 @@
 const account = reactive({
   username: '',
   password: '',
+  confirmPassword: '',
   email: '',
-  confirmPassword: ''
+  verifyCode: ''
 })
 
 const isViewPassword = ref(false)
@@ -13,7 +14,7 @@ const isViewConfirmPassword = ref(false)
 <template>
   <router-stack>
     <div class="sign-up">
-      <app-header title="SignUp">
+      <app-header :title="$t('Sign Up')">
         <template #left>
           <app-back />
         </template>
@@ -21,19 +22,18 @@ const isViewConfirmPassword = ref(false)
 
       <var-form class="sign-up-form">
         <var-space direction="column" :size="['8vmin', 0]">
-          <var-input variant="outlined" placeholder="请输入用户名" v-model="account.username">
-            <template #prepend-icon>
-              <var-icon class="sign-up-form-input-icon" name="account-circle" />
-            </template>
-          </var-input>
-          <var-input variant="outlined" placeholder="请输入邮箱" v-model="account.email">
+          <var-input
+            variant="outlined"
+            :placeholder="$t('Please input {field}', { field: $t('username') })"
+            v-model="account.username"
+          >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="account-circle" />
             </template>
           </var-input>
           <var-input
             variant="outlined"
-            placeholder="请输入密码"
+            :placeholder="$t('Please input {field}', { field: $t('password') })"
             :type="isViewPassword ? 'text' : 'password'"
             v-model="account.password"
           >
@@ -50,7 +50,7 @@ const isViewConfirmPassword = ref(false)
           </var-input>
           <var-input
             variant="outlined"
-            placeholder="请再次输入密码"
+            :placeholder="$t('Please input {field}', { field: $t('confirm password') })"
             :type="isViewConfirmPassword ? 'text' : 'password'"
             v-model="account.confirmPassword"
           >
@@ -65,8 +65,26 @@ const isViewConfirmPassword = ref(false)
               />
             </template>
           </var-input>
+          <var-input
+            variant="outlined"
+            :placeholder="$t('Please input {field}', { field: $t('email') })"
+            v-model="account.email"
+          >
+            <template #prepend-icon>
+              <var-icon class="sign-up-form-input-icon" name="email" />
+            </template>
+          </var-input>
+          <var-input
+            variant="outlined"
+            :placeholder="$t('Please input {field}', { field: $t('verify code') })"
+            v-model="account.verifyCode"
+          >
+            <template #prepend-icon>
+              <var-icon class="sign-up-form-input-icon" name="card-account-details" />
+            </template>
+          </var-input>
 
-          <var-button type="primary" block size="large">注册</var-button>
+          <var-button type="primary" block size="large">{{ $t('Sign Up') }}</var-button>
         </var-space>
       </var-form>
     </div>

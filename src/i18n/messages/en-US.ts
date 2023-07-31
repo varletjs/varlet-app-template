@@ -17,6 +17,13 @@ export default {
   MESSAGE: 'MESSAGE',
   TOPIC: 'TOPIC',
   Topic: 'Topic',
+  username: 'username',
+  password: 'password',
+  email: 'email',
+  Submit: 'Submit',
+  'confirm password': 'confirm password',
+  'Sign In': 'Sign In',
+  'Sign Up': 'Sign Up',
   'Child topic': 'Child topic',
   'About Me': 'About Me',
   'Section title': 'Section title',
@@ -35,5 +42,10 @@ export default {
   'Comment Information Area': 'Comment Information Area',
   'This is a comment': 'This is a comment',
   'A total of {count} comments': 'A total of {count} comments',
-  'ACTION BUTTON': 'ACTION BUTTON'
+  'ACTION BUTTON': 'ACTION BUTTON',
+  'Please input {field}': 'Please input {field}',
+  'Remember Me': 'Remember Me',
+  'Forgot Password': 'Forgot Password',
+  'Click to sign up': 'Click to sign up',
+  'verify code': 'verify code'
 }

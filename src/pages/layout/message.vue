@@ -101,11 +101,17 @@ function handleRefresh() {
           children: [
             {
               name: 'sign-up'
+            },
+            {
+              name: 'forgot-password'
             }
           ]
         },
         {
           name: 'sign-up'
+        },
+        {
+          name: 'settings'
         }
       ]
     }

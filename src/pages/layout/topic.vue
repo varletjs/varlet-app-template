@@ -55,15 +55,15 @@ function handleRefresh() {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 56px;
-      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
     }
 
     &-child {
       display: flex;
       align-items: center;
-      height: 56px;
+      height: 50px;
       padding-left: 74px;
       font-size: var(--collapse-header-font-size);
     }
@@ -84,11 +84,17 @@ function handleRefresh() {
           children: [
             {
               name: 'sign-up'
+            },
+            {
+              name: 'forgot-password'
             }
           ]
         },
         {
           name: 'sign-up'
+        },
+        {
+          name: 'settings'
         }
       ]
     }

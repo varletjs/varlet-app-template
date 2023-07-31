@@ -17,6 +17,13 @@ export default {
   MESSAGE: '消息',
   TOPIC: '话题',
   Topic: '话题',
+  username: '用户名',
+  password: '密码',
+  email: '邮箱',
+  Submit: '提交',
+  'confirm password': '确认密码',
+  'Sign In': '登录',
+  'Sign Up': '注册',
   'Child topic': '子话题',
   'About Me': '关于我',
   'Section title': '段落标题',
@@ -35,5 +42,10 @@ export default {
   'Comment Information Area': '评论信息区域',
   'This is a comment': '一条评论',
   'A total of {count} comments': '一共 {count} 条评论',
-  'ACTION BUTTON': '动作按钮'
+  'ACTION BUTTON': '动作按钮',
+  'Please input {field}': '请输入{field}',
+  'Remember Me': '记住密码',
+  'Forgot Password': '忘记密码',
+  'Click to sign up': '还没有账号？点击注册',
+  'verify code': '验证码'
 }

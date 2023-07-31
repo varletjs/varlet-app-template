@@ -1,12 +1,10 @@
-interface StackRoute {
+export interface StackRoute {
   name: string
   children?: StackRoute[]
 }
 
 export function extendRoute(route: any) {
   const stacks = (route.meta?.stacks ?? []) as StackRoute[]
-
-  console.log(stacks)
 
   const processStacks = (route: any, stacks: StackRoute[]) => {
     stacks.forEach((stack) => {

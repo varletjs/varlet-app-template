@@ -23,27 +23,32 @@ const show = ref(false)
         <var-space direction="column">
           <var-cell
             class="app-side-menu-cell"
-            :title="$t('Menu')"
+            :title="$t('Sign In')"
             v-ripple
             @click="$router.push(`${$route.path}/sign-in`)"
           >
             <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
+              <var-icon class="app-side-menu-cell-icon" name="image" />
             </template>
           </var-cell>
           <var-cell
             class="app-side-menu-cell"
-            :title="$t('Menu')"
+            :title="$t('Sign Up')"
             v-ripple
             @click="$router.push(`${$route.path}/sign-up`)"
           >
             <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
+              <var-icon class="app-side-menu-cell-icon" name="image" />
             </template>
           </var-cell>
-          <var-cell class="app-side-menu-cell" :title="$t('Menu')" v-ripple>
+          <var-cell
+            class="app-side-menu-cell"
+            :title="$t('Settings')"
+            v-ripple
+            @click="$router.push(`${$route.path}/settings`)"
+          >
             <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="bell" />
+              <var-icon class="app-side-menu-cell-icon" name="image" />
             </template>
           </var-cell>
 

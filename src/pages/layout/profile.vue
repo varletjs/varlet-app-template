@@ -211,6 +211,7 @@ function handleRefresh() {
 
         &-text {
           color: var(--app-title-color);
+          font-size: 15px;
           margin-top: 3px;
         }
       }
@@ -228,10 +229,13 @@ function handleRefresh() {
           margin-left: 24px;
 
           &-title {
+            font-size: 15px;
             color: var(--app-title-color);
+            margin-top: 2px;
           }
 
           &-subtitle {
+            font-size: 14px;
             color: var(--app-subtitle-color);
             margin-top: 2px;
           }
@@ -250,6 +254,7 @@ function handleRefresh() {
 
       &-subtitle {
         color: var(--app-subtitle-color);
+        font-size: 15px;
         margin-bottom: 14px;
         padding: 0 24px;
       }
@@ -282,11 +287,17 @@ function handleRefresh() {
           children: [
             {
               name: 'sign-up'
+            },
+            {
+              name: 'forgot-password'
             }
           ]
         },
         {
           name: 'sign-up'
+        },
+        {
+          name: 'settings'
         }
       ]
     }

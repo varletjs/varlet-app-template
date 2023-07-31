@@ -10,7 +10,7 @@ const isViewPassword = ref(false)
 <template>
   <router-stack>
     <div class="sign-in">
-      <app-header title="SignIn">
+      <app-header :title="$t('Sign In')">
         <template #left>
           <app-back />
         </template>
@@ -20,14 +20,18 @@ const isViewPassword = ref(false)
 
       <var-form class="sign-in-form">
         <var-space direction="column" :size="['8vmin', 0]">
-          <var-input variant="outlined" placeholder="请输入用户名" v-model="account.username">
+          <var-input
+            variant="outlined"
+            :placeholder="$t('Please input {field}', { field: $t('username') })"
+            v-model="account.username"
+          >
             <template #prepend-icon>
               <var-icon class="sign-in-form-input-icon" name="account-circle" />
             </template>
           </var-input>
           <var-input
             variant="outlined"
-            placeholder="请输入密码"
+            :placeholder="$t('Please input {field}', { field: $t('password') })"
             :type="isViewPassword ? 'text' : 'password'"
             v-model="account.password"
           >
@@ -44,13 +48,13 @@ const isViewPassword = ref(false)
           </var-input>
 
           <var-space class="sign-in-form-text" justify="space-between" align="center">
-            <var-checkbox>记住密码</var-checkbox>
-            <span>忘记密码?</span>
+            <var-checkbox>{{ $t('Remember Me') }}</var-checkbox>
+            <span @click="$router.push(`${$route.path}/forgot-password`)">{{ $t('Forgot Password') }}?</span>
           </var-space>
-          <var-button type="primary" block size="large">登录</var-button>
-          <var-space class="sign-in-form-text" justify="center" @click="$router.push(`${$route.path}/sign-up`)"
-            >还没有账号？点击注册</var-space
-          >
+          <var-button type="primary" block size="large">{{ $t('Sign In') }}</var-button>
+          <var-space class="sign-in-form-text" justify="center" @click="$router.push(`${$route.path}/sign-up`)">
+            {{ $t('Click to sign up') }}
+          </var-space>
         </var-space>
       </var-form>
     </div>
