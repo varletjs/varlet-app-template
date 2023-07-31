@@ -1,10 +1,27 @@
 <script setup lang="ts">
+import { Form } from '@varlet/ui'
+import { validateNotEmpty } from '@/utils/validate'
+
+const { t } = useI18n()
+const form = ref<Form>()
+const isViewPassword = ref(false)
 const account = reactive({
   username: '',
   password: ''
 })
 
-const isViewPassword = ref(false)
+async function submit() {
+  const valid = await form.value?.validate()
+
+  if (valid) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        Snackbar.success(t('Submit Success'))
+        resolve(undefined)
+      }, 1000)
+    })
+  }
+}
 </script>
 
 <template>
@@ -18,11 +35,12 @@ const isViewPassword = ref(false)
 
       <var-image src="@/assets/images/logo.svg" width="24vmin" height="24vmin" />
 
-      <var-form class="sign-in-form">
+      <var-form ref="form" class="sign-in-form">
         <var-space direction="column" :size="['8vmin', 0]">
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
+            :rules="[validateNotEmpty()]"
             v-model="account.username"
           >
             <template #prepend-icon>
@@ -32,6 +50,7 @@ const isViewPassword = ref(false)
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
+            :rules="[validateNotEmpty()]"
             :type="isViewPassword ? 'text' : 'password'"
             v-model="account.password"
           >
@@ -51,7 +70,7 @@ const isViewPassword = ref(false)
             <var-checkbox>{{ $t('Remember Me') }}</var-checkbox>
             <span @click="$router.push(`${$route.path}/forgot-password`)">{{ $t('Forgot Password') }}?</span>
           </var-space>
-          <var-button type="primary" block size="large">{{ $t('Sign In') }}</var-button>
+          <var-button type="primary" block size="large" auto-loading @click="submit">{{ $t('Sign In') }}</var-button>
           <var-space class="sign-in-form-text" justify="center" @click="$router.push(`${$route.path}/sign-up`)">
             {{ $t('Click to sign up') }}
           </var-space>

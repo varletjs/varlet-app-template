@@ -58,7 +58,7 @@ export default defineConfig(() => {
       }),
 
       autoImport({
-        imports: ['vue', 'vue-router', 'pinia'],
+        imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
         resolvers: [VarletUIResolver({ autoImport: true })],
         eslintrc: { enabled: true }
       }),

@@ -48,7 +48,7 @@ const show = ref(false)
             @click="$router.push(`${$route.path}/settings`)"
           >
             <template #icon>
-              <var-icon class="app-side-menu-cell-icon" name="image" />
+              <var-icon class="app-side-menu-cell-icon" name="cog" />
             </template>
           </var-cell>
 

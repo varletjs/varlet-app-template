@@ -19,7 +19,7 @@ export const loadMessages = () => {
   }, {} as Record<string, any>)
 }
 
-export const i18n = createI18n({
+export const i18n = createI18n<false>({
   legacy: false,
   locale: localStorage.get('locale') ?? 'zh-CN',
   fallbackLocale: 'zh-CN',

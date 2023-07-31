@@ -79,6 +79,7 @@
     "Varlet": true,
     "StyleProvider": true,
     "Locale": true,
-    "Snackbar": true
+    "Snackbar": true,
+    "useI18n": true
   }
 }

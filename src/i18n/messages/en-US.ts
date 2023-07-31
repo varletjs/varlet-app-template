@@ -47,5 +47,12 @@ export default {
   'Remember Me': 'Remember Me',
   'Forgot Password': 'Forgot Password',
   'Click to sign up': 'Click to sign up',
-  'verify code': 'verify code'
+  'verify code': 'verify code',
+  'Setting Name': 'Setting Name',
+  'Setting Description': 'Setting Description',
+  'Value cannot be empty': 'Value cannot be empty',
+  'Email format error': 'Email format error',
+  'Length must be {length}': 'Length must be {length}',
+  'Not match the password': 'Not match the password',
+  'Submit Success': 'Submit Success'
 }

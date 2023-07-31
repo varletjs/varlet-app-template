@@ -31,8 +31,13 @@ function handleRefresh() {
             </div>
           </template>
 
-          <div class="topic-item-child" v-for="j in 5" :key="j" v-ripple="{ color: 'var(--color-primary)' }">
-            <span class="topic-item-child-title">{{ $t('Child topic') }} {{ i }} - {{ j }}</span>
+          <div class="topic-item-child">
+            <div class="topic-item" v-for="j in 5" :key="j" v-ripple="{ color: 'var(--color-primary)' }">
+              <div class="topic-item-icon">
+                <var-icon name="star" size="6vmin" />
+              </div>
+              <span class="topic-item-title">{{ $t('Child topic') }} {{ i }} - {{ j }}</span>
+            </div>
           </div>
         </var-collapse-item>
       </var-collapse>
@@ -60,16 +65,12 @@ function handleRefresh() {
       margin-right: 15px;
     }
 
-    &-child {
-      display: flex;
-      align-items: center;
-      height: 50px;
-      padding-left: 74px;
-      font-size: var(--collapse-header-font-size);
-    }
-
     &-active {
       color: var(--color-primary);
+    }
+
+    &-child {
+      padding: 0 7px;
     }
   }
 }

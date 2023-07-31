@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { Form } from '@varlet/ui'
+import { validateNotEmpty, validateEmail, validateLength } from '@/utils/validate'
+
+const { t } = useI18n()
+const form = ref<Form>()
+const isViewPassword = ref(false)
+const isViewConfirmPassword = ref(false)
 const account = reactive({
   username: '',
   password: '',
@@ -7,8 +14,18 @@ const account = reactive({
   verifyCode: ''
 })
 
-const isViewPassword = ref(false)
-const isViewConfirmPassword = ref(false)
+async function submit() {
+  const valid = await form.value?.validate()
+
+  if (valid) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        Snackbar.success(t('Submit Success'))
+        resolve(undefined)
+      }, 1000)
+    })
+  }
+}
 </script>
 
 <template>
@@ -20,11 +37,12 @@ const isViewConfirmPassword = ref(false)
         </template>
       </app-header>
 
-      <var-form class="sign-up-form">
+      <var-form ref="form" class="sign-up-form">
         <var-space direction="column" :size="['8vmin', 0]">
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
+            :rules="[validateNotEmpty()]"
             v-model="account.username"
           >
             <template #prepend-icon>
@@ -35,6 +53,7 @@ const isViewConfirmPassword = ref(false)
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
             :type="isViewPassword ? 'text' : 'password'"
+            :rules="[validateNotEmpty()]"
             v-model="account.password"
           >
             <template #prepend-icon>
@@ -52,6 +71,7 @@ const isViewConfirmPassword = ref(false)
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('confirm password') })"
             :type="isViewConfirmPassword ? 'text' : 'password'"
+            :rules="[validateNotEmpty(), (v) => v === account.password || $t('Not match the password')]"
             v-model="account.confirmPassword"
           >
             <template #prepend-icon>
@@ -68,6 +88,7 @@ const isViewConfirmPassword = ref(false)
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('email') })"
+            :rules="[validateEmail()]"
             v-model="account.email"
           >
             <template #prepend-icon>
@@ -77,6 +98,7 @@ const isViewConfirmPassword = ref(false)
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('verify code') })"
+            :rules="[validateLength(6)]"
             v-model="account.verifyCode"
           >
             <template #prepend-icon>
@@ -84,7 +106,7 @@ const isViewConfirmPassword = ref(false)
             </template>
           </var-input>
 
-          <var-button type="primary" block size="large">{{ $t('Sign Up') }}</var-button>
+          <var-button type="primary" block size="large" auto-loading @click="submit">{{ $t('Sign Up') }}</var-button>
         </var-space>
       </var-form>
     </div>
@@ -101,7 +123,7 @@ const isViewConfirmPassword = ref(false)
 
   &-form {
     width: 280px;
-    margin-top: 50px;
+    margin-top: 20px;
 
     &-input-icon {
       margin-right: 10px;

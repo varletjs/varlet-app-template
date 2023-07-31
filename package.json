@@ -28,7 +28,7 @@
     "@varlet/axle": "0.1.2",
     "@varlet/bounce-fixer": "^0.0.2",
     "@varlet/touch-emulator": "^2.13.5",
-    "@varlet/ui": "2.13.6-alpha.1690775236152",
+    "@varlet/ui": "2.13.6-alpha.1690786066950",
     "@varlet/use": "^2.13.5",
     "mockjs": "^1.1.0",
     "pinia": "^2.1.3",

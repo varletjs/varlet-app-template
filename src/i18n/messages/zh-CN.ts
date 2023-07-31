@@ -47,5 +47,12 @@ export default {
   'Remember Me': '记住密码',
   'Forgot Password': '忘记密码',
   'Click to sign up': '还没有账号？点击注册',
-  'verify code': '验证码'
+  'verify code': '验证码',
+  'Setting Name': '设置名称',
+  'Setting Description': '设置描述',
+  'Value cannot be empty': '值不能为空',
+  'Email format error': '邮箱格式错误',
+  'Length must be {length}': '长度必须为{length}',
+  'Not match the password': '与密码不一致',
+  'Submit Success': '提交成功'
 }
