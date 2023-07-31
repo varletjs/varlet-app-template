@@ -37,7 +37,7 @@ function toggleHeart() {
 
       <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
         <div class="detail-swipe">
-          <var-swipe @click="$router.push(`${$route.path}/sign-in`)">
+          <var-swipe>
             <var-swipe-item>
               <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
             </var-swipe-item>
