@@ -43,7 +43,7 @@ function handleRefresh() {
       <var-tabs-items class="profile-tabs-items" v-model:active="active">
         <var-tab-item name="module">
           <var-space class="profile-module" direction="column" :size="['1.8vmin', 0]">
-            <var-space class="profile-module-grid" :size="['3.5vmin', '3.5vmin']">
+            <var-space class="profile-module-grid" :size="['2.6vmin', '2.6vmin']">
               <div class="profile-module-grid-item" v-for="i in 9" :key="i">
                 <var-paper
                   class="profile-module-grid-item-paper"
