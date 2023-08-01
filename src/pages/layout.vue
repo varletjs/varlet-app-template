@@ -38,6 +38,6 @@ watch(
 .layout {
   padding-bottom: 51px;
   overflow-y: auto;
-  height: 100vh;
+  height: var(--app-height);
 }
 </style>
