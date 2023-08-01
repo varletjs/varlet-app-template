@@ -15,7 +15,7 @@ const isMobile = ref(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera M
 <style lang="less" scoped>
 .result-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: var(--app-height);
   display: flex;
   justify-content: center;
   align-items: center;

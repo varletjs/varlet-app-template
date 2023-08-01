@@ -220,7 +220,7 @@ function handleClick() {
   padding: calc(var(--home-header-height) + 16px) 14px 16px;
 
   &-tab-item {
-    min-height: calc(100vh - 190px);
+    min-height: calc(var(--app-height) - 190px);
   }
 
   &-tab-item-space {

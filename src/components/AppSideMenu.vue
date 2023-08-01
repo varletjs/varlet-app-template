@@ -102,7 +102,7 @@ const show = ref(false)
 
   &-cell-list {
     padding: 10px 4px;
-    height: calc(100vh - 170px);
+    height: calc(var(--app-height) - 170px);
     overflow: auto;
   }
 
