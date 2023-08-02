@@ -14,6 +14,7 @@ This project is based on the `MIT` license
 ### Features
 
 - 🚀 &nbsp; Developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`
+- 🛠️ &nbsp; Automatic and on-demand import of built-in component libraries and third-party libraries
 - 🛠️ &nbsp; Built-in stack routing navigation similar to native apps
 - 🛠️ &nbsp; Built-in conventional routing based on file directory structure
 - 🌍 &nbsp; Built-in application-level internationalization

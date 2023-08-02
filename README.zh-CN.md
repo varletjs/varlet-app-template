@@ -14,6 +14,7 @@ varlet-app-template 是一个开箱即用的轻量化移动端 Web 模板，基�
 ### 特性
 
 - 🚀 &nbsp; 基于 `Vue3`、 `Varlet`、 `Vite`、`Typescript` 开发
+- 🛠️ &nbsp; 内置组件库和常用第三方库的自动引入和按需引入
 - 🛠️ &nbsp; 内置与原生应用类似的堆栈路由导航
 - 🛠️ &nbsp; 内置基于文件目录结构的约定式路由
 - 🌍 &nbsp; 内置应用级国际化
