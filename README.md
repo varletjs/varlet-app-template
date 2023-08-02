@@ -1,5 +1,8 @@
 # varlet-app-template
 
+<span>English</span> |
+<a href="https://github.com/varletjs/varlet-app-admin/blob/main/README.zh-CN.md">中文</a>
+
 ### Intro
 
 varlet-app-template is an out-of-the-box lightweight mobile web template, developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`.
