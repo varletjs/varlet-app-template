@@ -1,7 +1,7 @@
 # varlet-app-template
 
 <span>English</span> |
-<a href="https://github.com/varletjs/varlet-app-admin/blob/main/README.zh-CN.md">中文</a>
+<a href="https://github.com/varletjs/varlet-app-template/blob/main/README.zh-CN.md">中文</a>
 
 ### Intro
 
