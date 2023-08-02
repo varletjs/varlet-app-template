@@ -108,8 +108,8 @@ We recommend that [issue](https://github.com/varletjs/varlet/issues) be used for
 
 ### Thanks to contributors
 
-<a href="https://github.com/varletjs/varlet/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=varletjs/varlet" />
+<a href="https://github.com/varletjs/varlet-app-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=varletjs/varlet-app-template" />
 </a>
 
 ### Thanks to the following sponsors
