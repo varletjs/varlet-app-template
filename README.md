@@ -13,18 +13,18 @@ This project is based on the `MIT` license
 
 ### Features
 
-- 🚀 &nbsp; Developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`
-- 🛠️ &nbsp; Automatic and on-demand import of built-in component libraries and third-party libraries
-- 🛠️ &nbsp; Built-in stack routing navigation similar to native apps
-- 🛠️ &nbsp; Built-in conventional routing based on file directory structure
+- ⚡️ &nbsp; Developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`
+- 📦 &nbsp; Automatic and on-demand import of built-in component libraries and third-party libraries
+- 🗂 &nbsp; Built-in stack routing navigation similar to native apps
+- 🗂 &nbsp; Built-in conventional routing based on file directory structure
 - 🌍 &nbsp; Built-in application-level internationalization
-- 🛠️ &nbsp; Built-in request library integrated, support composition api
-- 🛠️ &nbsp; Built-in theme customization
-- 🛠️ &nbsp; Built-in mobile debugging tool
-- 🛠️ &nbsp; Built-in `pinia` for state management
-- 🛠️ &nbsp; Built-in `mockjs` for data mocking
-- 🛠️ &nbsp; Built-in `vitest` for unit testing
-- 🛠️ &nbsp; Built-in `eslint`, `commitlint`, `lint-staged`, `prettier` and other code checking/formatting tools
+- 📦 &nbsp; Built-in request library integrated, support composition api
+- 📦 &nbsp; Built-in theme customization
+- 📦 &nbsp; Built-in mobile debugging tool
+- 📦 &nbsp; Built-in `pinia` for state management
+- 📦 &nbsp; Built-in `mockjs` for data mocking
+- 📦 &nbsp; Built-in `vitest` for unit testing
+- 📦 &nbsp; Built-in `eslint`, `commitlint`, `lint-staged`, `prettier` and other code checking/formatting tools
 - 💪 &nbsp; Officially maintained by `varletjs`, the first party provides support for `varlet`
 
 ### Page Preview Address
