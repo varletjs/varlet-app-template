@@ -5,6 +5,7 @@ import pages from 'vite-plugin-pages'
 import compression from 'vite-plugin-compression2'
 import eruda from 'vite-plugin-eruda'
 import progress from 'vite-plugin-progress'
+import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vitest/config'
@@ -80,7 +81,10 @@ export default defineConfig(() => {
 
       progress(),
 
-      eruda()
+      unoCSS()
+
+      // Enable when debugging is needed
+      // eruda()
     ]
   }
 })

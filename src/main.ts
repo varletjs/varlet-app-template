@@ -8,6 +8,7 @@ import { setupAppHeight } from './utils/elements'
 import '@/mocks'
 import '@/styles/common.less'
 import '@varlet/touch-emulator'
+import 'virtual:uno.css'
 
 setupAppHeight()
 
