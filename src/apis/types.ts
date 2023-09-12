@@ -10,5 +10,4 @@ export interface PageParams {
   current?: number
 }
 
-export type Options<D, R = any, P = Record<string, any>> = Partial<Omit<UseAxleOptions<D, R, P>, 'data'>> &
-  Pick<UseAxleOptions<D, R, P>, 'data'>
+export type Options<V, R, P> = Partial<UseAxleOptions<V, R, P>>

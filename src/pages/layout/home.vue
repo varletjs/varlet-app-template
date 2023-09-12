@@ -17,7 +17,7 @@ const active = ref('card')
 const isRefresh = ref(false)
 
 const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>({
-  data: {
+  value: {
     cards: [],
     current: 1,
     error: false,
@@ -28,7 +28,7 @@ const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>(
 })
 
 const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetPlainCards<CardList>({
-  data: {
+  value: {
     cards: [],
     current: 1,
     error: false,
@@ -39,7 +39,7 @@ const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetP
 })
 
 const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCards<CardList>({
-  data: {
+  value: {
     cards: [],
     current: 1,
     error: false,
@@ -49,25 +49,25 @@ const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCard
   onError
 })
 
-function onTransform(response: Response<Card[]>, { data }: UseAxleRefs<CardList>) {
+function onTransform(response: Response<Card[]>, { value }: UseAxleRefs<CardList>) {
   if (response.code !== 200) {
     return {
-      ...data.value,
+      ...value.value,
       finished: false,
       error: true
     }
   }
 
   return {
-    cards: [...data.value.cards, ...response.data],
-    current: data.value.current + 1,
+    cards: [...value.value.cards, ...response.data],
+    current: value.value.current + 1,
     finished: response.data.length < 10,
     error: false
   }
 }
 
-function onError(error: Error, { data }: UseAxleRefs<CardList>) {
-  data.value.error = true
+function onError(error: Error, { value }: UseAxleRefs<CardList>) {
+  value.value.error = true
 }
 
 async function handleRefresh() {

@@ -23,6 +23,7 @@ axle.axios.interceptors.response.use(
 )
 
 const useAxle = createUseAxle({
+  axle,
   onTransform: (response) => response.data
 })
 
