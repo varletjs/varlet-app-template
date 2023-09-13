@@ -6,19 +6,19 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: 0.2.0
-    version: 0.2.0
+    specifier: ^0.2.1
+    version: 0.2.1
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
   '@varlet/touch-emulator':
-    specifier: ^2.16.4
-    version: 2.16.4
+    specifier: 2.16.5
+    version: 2.16.5
   '@varlet/ui':
-    specifier: ^2.16.5
+    specifier: 2.16.5
     version: 2.16.5(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.16.5
+    specifier: 2.16.5
     version: 2.16.5(vue@3.3.4)
   mockjs:
     specifier: ^1.1.0
@@ -1217,11 +1217,11 @@ packages:
       - rollup
     dev: true
 
-  /@varlet/axle@0.2.0:
-    resolution: {integrity: sha512-ZTP3dMysq3tZEzxC+7YlE8770cY5p0YHcGXzB5aMO6EDjf/ywKu0X2fnsx5ApCaqGqdjKwrk7fCqj5d0YWU/yA==}
+  /@varlet/axle@0.2.1:
+    resolution: {integrity: sha512-fiFQsj6v+eo463CKM0uWnoAM/guyTiXzyVt5eJR5fPAlQSPKfB48g8WGFWm+KVSYB0rvGQzV6iB8Y5qUQY890A==}
     engines: {pnpm: '>=8.0'}
     dependencies:
-      '@varlet/shared': 2.16.1
+      '@varlet/shared': 2.16.5
       axios: 1.4.0
       qs: 6.11.2
     transitivePeerDependencies:
@@ -1236,16 +1236,12 @@ packages:
     resolution: {integrity: sha512-w8XM64hfBJJ/gcQSZvAayRJPEiaMqr5fxZP4hHgDCO9fL1WHa1rQOGD82qYnyRJYt3LGkME0dy8LdvLBgEwItQ==}
     dev: false
 
-  /@varlet/shared@2.16.1:
-    resolution: {integrity: sha512-DfE1+yFTEkvFTcRFR9MWLbiBCkrmZLQ8oKs+pZw0VzwZ+YREarukphBcz4VYFc6EzmDJML0IDlWIQYBUxM1TTQ==}
-    dev: false
-
   /@varlet/shared@2.16.5:
     resolution: {integrity: sha512-DrfrTqWmDMlRFUTQiGk2wJVWd5Pzi5eE1/bVJOOq6p6MrAeW6y2Ohtrtaz+ohCQf4EU0dQTmtICEVBFoHGJfEw==}
     dev: false
 
-  /@varlet/touch-emulator@2.16.4:
-    resolution: {integrity: sha512-8KVfFU3LGrq0zyLnSmJd+KgHOVbNPNB0k8TuJ1swH4l6/bgE7ZXbU3dGwDjeMsUeXVzRemOdW8XF8reKyVKhtA==}
+  /@varlet/touch-emulator@2.16.5:
+    resolution: {integrity: sha512-RUhl5r2k4B+XJF9wooFoFFme8mCGQIYyge7LVum3g7x+S2hkXCf/pnV359KdCBmPcTpPe6fwhKloR7BcJn0D6g==}
     dev: false
 
   /@varlet/ui@2.16.5(vue@3.3.4):
