@@ -12,14 +12,14 @@ dependencies:
     specifier: ^0.0.2
     version: 0.0.2
   '@varlet/touch-emulator':
-    specifier: 2.17.0
-    version: 2.17.0
+    specifier: ^2.18.0
+    version: 2.18.0
   '@varlet/ui':
-    specifier: 2.17.0
-    version: 2.17.0(vue@3.3.4)
+    specifier: ^2.18.0
+    version: 2.18.0(vue@3.3.4)
   '@varlet/use':
-    specifier: 2.17.0
-    version: 2.17.0(vue@3.3.4)
+    specifier: ^2.18.0
+    version: 2.18.0(vue@3.3.4)
   mockjs:
     specifier: ^1.1.0
     version: 1.1.0
@@ -111,7 +111,7 @@ devDependencies:
     version: 5.0.2
   unocss:
     specifier: ^0.55.6
-    version: 0.55.6(postcss@8.4.24)(vite@4.3.9)
+    version: 0.55.6(postcss@8.4.31)(vite@4.3.9)
   unplugin-auto-import:
     specifier: ^0.16.4
     version: 0.16.4
@@ -1080,7 +1080,7 @@ packages:
       sirv: 2.0.3
     dev: true
 
-  /@unocss/postcss@0.55.6(postcss@8.4.24):
+  /@unocss/postcss@0.55.6(postcss@8.4.31):
     resolution: {integrity: sha512-7/+nBNLGN0okZPfxCR115b5EQunWrtjyEC0nRS9/Ls5u8fwwkq05X5qUeqDLzVR/iSpQpk+4Ij9cKjsMD540ig==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1091,7 +1091,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.3.1
       magic-string: 0.30.3
-      postcss: 8.4.24
+      postcss: 8.4.31
     dev: true
 
   /@unocss/preset-attributify@0.55.6:
@@ -1232,42 +1232,42 @@ packages:
     resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
     dev: false
 
-  /@varlet/icons@2.17.0:
-    resolution: {integrity: sha512-gT88DJEJysEgL/JTzKV024l+qZJaYxFIlcmmfEitC3SpIxRwUHGWp+bmpkg3UTJBD3L1pSOXtttO3UF2/hJN5Q==}
+  /@varlet/icons@2.18.0:
+    resolution: {integrity: sha512-4amMsHiExNUYq8pyz1llhr9zvlvQRpxyUI7C04uZtE4UO+UOaIPbMHFNp/lwxO/WvwDKyglLWpiWjqZzPSV7bg==}
     dev: false
 
   /@varlet/shared@2.16.5:
     resolution: {integrity: sha512-DrfrTqWmDMlRFUTQiGk2wJVWd5Pzi5eE1/bVJOOq6p6MrAeW6y2Ohtrtaz+ohCQf4EU0dQTmtICEVBFoHGJfEw==}
     dev: false
 
-  /@varlet/shared@2.17.0:
-    resolution: {integrity: sha512-liU5p9zUdDcrkGr8N0aiTLJqglnhuPTLW1PK2U0QZbxfTvK2YPyn5Sq9iOSuSmNA7WPrdCQ061aRWgkceEN8tg==}
+  /@varlet/shared@2.18.0:
+    resolution: {integrity: sha512-D0Zj+ks3PEJIPu1o6Dbfyk+PLYXcyCCfsGzOGFv2nINwOlWOtKszCRX8E86592+IH77YQpKmvJidK4RidWJ5/g==}
     dev: false
 
-  /@varlet/touch-emulator@2.17.0:
-    resolution: {integrity: sha512-N0+r+iSrEX55zX4uYXj+heu45YcXoe+T4QRgqDwA6P2XQLnkJ+yc722EGjMC5+rHedA3Fy9B3Ui1kLM2U84QlA==}
+  /@varlet/touch-emulator@2.18.0:
+    resolution: {integrity: sha512-QuVc7Eh2WBVwG1cor2vKjhzng50vm1ZZzuJk3GrrE1bhirm0Gksuc7QMdCcSQwZOtheUzTvu6h5OUUbDgqPyFA==}
     dev: false
 
-  /@varlet/ui@2.17.0(vue@3.3.4):
-    resolution: {integrity: sha512-OsezE2dStyfwN392MCXz2Fcl7PgolaXMbkONL2rMF777mdYIAo4XhPa/ocTBbKIHnOJrPQJf/pQJ/CDKujfdow==}
+  /@varlet/ui@2.18.0(vue@3.3.4):
+    resolution: {integrity: sha512-Y5AEfkiWEaALs7jXTmMJ1b2G82J5nvt0MKUcDV9JRJKFdwG4LSr+JgybTOfdbIEOPUxvdWbenhTiFxSwryKLdg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.17.0
-      '@varlet/shared': 2.17.0
-      '@varlet/use': 2.17.0(vue@3.3.4)
+      '@varlet/icons': 2.18.0
+      '@varlet/shared': 2.18.0
+      '@varlet/use': 2.18.0(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.17.0(vue@3.3.4):
-    resolution: {integrity: sha512-0KM4Y2XpwXmhQsi3JrGEm4fUbFjKNStqdDrpxCsR9C1ln5TgGhsJA556S6PYHzK3O0KNRL1+O/C2Pa/Hc8n3TA==}
+  /@varlet/use@2.18.0(vue@3.3.4):
+    resolution: {integrity: sha512-TLlOXl09iV6hAwa/EyY7dqBnkyrxdivEoCEwKQ3Z9++Hy4foC2GApDD5kMEzblzwRTF+qghU5Pl48agECFzemg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.17.0
+      '@varlet/shared': 2.18.0
       vue: 3.3.4
     dev: false
 
@@ -1825,7 +1825,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /clean-stack@2.2.0:
@@ -2815,8 +2815,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -4256,6 +4256,15 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /postcss@8.4.31:
+    resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /prelude-ls@1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
     engines: {node: '>= 0.8.0'}
@@ -4476,7 +4485,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /run-parallel@1.2.0:
@@ -5070,7 +5079,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.55.6(postcss@8.4.24)(vite@4.3.9):
+  /unocss@0.55.6(postcss@8.4.31)(vite@4.3.9):
     resolution: {integrity: sha512-Wg1pWeWleb/U6cpL0R1CjbyQVKkFpxygPwQYfvUAAg2BP5ocXrw2TLURY/giMXHPUWzZfChdJFBs4XSVHe+3aQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5086,7 +5095,7 @@ packages:
       '@unocss/cli': 0.55.6
       '@unocss/core': 0.55.6
       '@unocss/extractor-arbitrary-variants': 0.55.6
-      '@unocss/postcss': 0.55.6(postcss@8.4.24)
+      '@unocss/postcss': 0.55.6(postcss@8.4.31)
       '@unocss/preset-attributify': 0.55.6
       '@unocss/preset-icons': 0.55.6
       '@unocss/preset-mini': 0.55.6
@@ -5306,7 +5315,7 @@ packages:
       postcss: 8.4.24
       rollup: 3.23.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest@0.31.4(jsdom@21.0.0)(less@4.1.3):
