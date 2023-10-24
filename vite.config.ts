@@ -3,7 +3,6 @@ import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import pages from 'vite-plugin-pages'
 import compression from 'vite-plugin-compression2'
-import eruda from 'vite-plugin-eruda'
 import progress from 'vite-plugin-progress'
 import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
@@ -11,6 +10,7 @@ import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vitest/config'
 import { extendRoute } from './build/extendRoute'
 import { isProduction } from './build/env'
+// import eruda from 'vite-plugin-eruda'
 
 export default defineConfig(() => {
   return {
@@ -40,6 +40,7 @@ export default defineConfig(() => {
     test: {
       environment: 'jsdom',
       setupFiles: ['tests/setup.ts'],
+      include: ['tests/**/*.spec.ts'],
       deps: {
         inline: ['@varlet/ui']
       }
