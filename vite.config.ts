@@ -10,7 +10,10 @@ import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vitest/config'
 import { extendRoute } from './build/extendRoute'
 import { isProduction } from './build/env'
+
+// Use as needed
 // import eruda from 'vite-plugin-eruda'
+// import { analyzer } from 'vite-bundle-analyzer'
 
 export default defineConfig(() => {
   return {
@@ -84,7 +87,7 @@ export default defineConfig(() => {
 
       unoCSS()
 
-      // Enable when debugging is needed
+      // analyzer()
       // eruda()
     ]
   }

@@ -127,6 +127,9 @@ devDependencies:
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@20.2.5)(less@4.1.3)
+  vite-bundle-analyzer:
+    specifier: ^0.0.1
+    version: 0.0.1
   vite-plugin-compression2:
     specifier: ^0.10.1
     version: 0.10.1
@@ -5816,6 +5819,12 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+    dev: true
+
+  /vite-bundle-analyzer@0.0.1:
+    resolution: {integrity: sha512-IRCSYc/xuwZhxEqO2VTUW8nHxR9Rl1qVI9uAlD39FQVi/YKDXgeyHov1T1xJl0vj++3ZVdaLWFayKci//lVS4A==}
+    dependencies:
+      fast-glob: 3.3.1
     dev: true
 
   /vite-node@0.31.4(@types/node@20.2.5)(less@4.1.3):
