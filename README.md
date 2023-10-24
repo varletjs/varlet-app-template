@@ -24,6 +24,7 @@ This project is based on the `MIT` license
 - 📦 &nbsp; Built-in `pinia` for state management
 - 📦 &nbsp; Built-in `mockjs` for data mocking
 - 📦 &nbsp; Built-in `vitest` for unit testing
+- 📦 &nbsp; Built-in `cypress` for e2e testing
 - 📦 &nbsp; Built-in `unocss` integration
 - 📦 &nbsp; Built-in `eslint`, `commitlint`, `lint-staged`, `prettier` and other code checking/formatting tools
 - 💪 &nbsp; Officially maintained by `varletjs`, the first party provides support for `varlet`
