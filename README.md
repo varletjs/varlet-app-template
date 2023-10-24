@@ -100,7 +100,7 @@ pnpm test:coverage
 
 ### Community
 
-We recommend that [issue](https://github.com/varletjs/varlet/issues) be used for problem feedback, or others:
+We recommend that `issue` be used for problem feedback, or others:
 
 * Wechat group 
 
