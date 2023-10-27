@@ -12,14 +12,14 @@ dependencies:
     specifier: ^0.0.2
     version: 0.0.2
   '@varlet/touch-emulator':
-    specifier: ^2.18.0
-    version: 2.18.0
+    specifier: ^2.18.1
+    version: 2.18.1
   '@varlet/ui':
-    specifier: ^2.18.0
-    version: 2.18.0(vue@3.3.4)
+    specifier: ^2.18.1
+    version: 2.18.1(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.18.0
-    version: 2.18.0(vue@3.3.4)
+    specifier: ^2.18.1
+    version: 2.18.1(vue@3.3.4)
   dayjs:
     specifier: ^1.11.8
     version: 1.11.8
@@ -1591,42 +1591,42 @@ packages:
     resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
     dev: false
 
-  /@varlet/icons@2.18.0:
-    resolution: {integrity: sha512-4amMsHiExNUYq8pyz1llhr9zvlvQRpxyUI7C04uZtE4UO+UOaIPbMHFNp/lwxO/WvwDKyglLWpiWjqZzPSV7bg==}
+  /@varlet/icons@2.18.1:
+    resolution: {integrity: sha512-wxY7n/pq8KAu5m+LTnuEXaK8g6UWPEQG1LwK2vdcNlAZL85OpQjmkUKEK9MPzaTQbYzF25hR6TU0zfHL7Cw6/A==}
     dev: false
 
   /@varlet/shared@2.16.5:
     resolution: {integrity: sha512-DrfrTqWmDMlRFUTQiGk2wJVWd5Pzi5eE1/bVJOOq6p6MrAeW6y2Ohtrtaz+ohCQf4EU0dQTmtICEVBFoHGJfEw==}
     dev: false
 
-  /@varlet/shared@2.18.0:
-    resolution: {integrity: sha512-D0Zj+ks3PEJIPu1o6Dbfyk+PLYXcyCCfsGzOGFv2nINwOlWOtKszCRX8E86592+IH77YQpKmvJidK4RidWJ5/g==}
+  /@varlet/shared@2.18.1:
+    resolution: {integrity: sha512-PLVV3QAPh9PasE0CHCouGXNW+IWeoiDsRMiY27uw6RKvcq04PD/73s+66o7OVakNzwOuHG6HFjUqDCxug+ET3Q==}
     dev: false
 
-  /@varlet/touch-emulator@2.18.0:
-    resolution: {integrity: sha512-QuVc7Eh2WBVwG1cor2vKjhzng50vm1ZZzuJk3GrrE1bhirm0Gksuc7QMdCcSQwZOtheUzTvu6h5OUUbDgqPyFA==}
+  /@varlet/touch-emulator@2.18.1:
+    resolution: {integrity: sha512-2pzsEPMAjR6UXCLzFVKKgkvIdblrkir3FNl/SrTRWZl0LpLmRRu9VUS1a//k7lbx6/jt+lfexPCnIKZIgy4Dww==}
     dev: false
 
-  /@varlet/ui@2.18.0(vue@3.3.4):
-    resolution: {integrity: sha512-Y5AEfkiWEaALs7jXTmMJ1b2G82J5nvt0MKUcDV9JRJKFdwG4LSr+JgybTOfdbIEOPUxvdWbenhTiFxSwryKLdg==}
+  /@varlet/ui@2.18.1(vue@3.3.4):
+    resolution: {integrity: sha512-btUNl2S+CkAC2yLY4rsMQViuEc/MReHbu+OfkPkSAEIvAotQ5kAdcWhOTAwIlnOY9TUdpzDI+WcYCrv96EOxew==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.18.0
-      '@varlet/shared': 2.18.0
-      '@varlet/use': 2.18.0(vue@3.3.4)
+      '@varlet/icons': 2.18.1
+      '@varlet/shared': 2.18.1
+      '@varlet/use': 2.18.1(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.18.0(vue@3.3.4):
-    resolution: {integrity: sha512-TLlOXl09iV6hAwa/EyY7dqBnkyrxdivEoCEwKQ3Z9++Hy4foC2GApDD5kMEzblzwRTF+qghU5Pl48agECFzemg==}
+  /@varlet/use@2.18.1(vue@3.3.4):
+    resolution: {integrity: sha512-xSrPK22poyTqWfSRYeLOuqvVPdyvWs92Q/w6tH4eqLiTm5aqRHsxua4nCLGYWW55GXI41jYYxDBi9MGsnU1x5Q==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.18.0
+      '@varlet/shared': 2.18.1
       vue: 3.3.4
     dev: false
 
@@ -1786,11 +1786,30 @@ packages:
       estree-walker: 2.0.2
       source-map-js: 1.0.2
 
+  /@vue/compiler-core@3.3.7:
+    resolution: {integrity: sha512-pACdY6YnTNVLXsB86YD8OF9ihwpolzhhtdLVHhBL6do/ykr6kKXNYABRtNMGrsQXpEXXyAdwvWWkuTbs4MFtPQ==}
+    requiresBuild: true
+    dependencies:
+      '@babel/parser': 7.23.0
+      '@vue/shared': 3.3.7
+      estree-walker: 2.0.2
+      source-map-js: 1.0.2
+    dev: true
+    optional: true
+
   /@vue/compiler-dom@3.3.4:
     resolution: {integrity: sha512-wyM+OjOVpuUukIq6p5+nwHYtj9cFroz9cwkfmP9O1nzH68BenTTv0u7/ndggT8cIQlnBeOo6sUT/gvHcIkLA5w==}
     dependencies:
       '@vue/compiler-core': 3.3.4
       '@vue/shared': 3.3.4
+
+  /@vue/compiler-dom@3.3.7:
+    resolution: {integrity: sha512-0LwkyJjnUPssXv/d1vNJ0PKfBlDoQs7n81CbO6Q0zdL7H1EzqYRrTVXDqdBVqro0aJjo/FOa1qBAPVI4PGSHBw==}
+    dependencies:
+      '@vue/compiler-core': 3.3.7
+      '@vue/shared': 3.3.7
+    dev: true
+    optional: true
 
   /@vue/compiler-sfc@3.3.4:
     resolution: {integrity: sha512-6y/d8uw+5TkCuzBkgLS0v3lSM3hJDntFEiUORM11pQ/hKvkhSKZrXW6i69UyXlJQisJxuUEJKAWEqWbWsLeNKQ==}
@@ -1811,6 +1830,15 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.3.4
       '@vue/shared': 3.3.4
+
+  /@vue/compiler-ssr@3.3.7:
+    resolution: {integrity: sha512-TxOfNVVeH3zgBc82kcUv+emNHo+vKnlRrkv8YvQU5+Y5LJGJwSNzcmLUoxD/dNzv0bhQ/F0s+InlgV0NrApJZg==}
+    requiresBuild: true
+    dependencies:
+      '@vue/compiler-dom': 3.3.7
+      '@vue/shared': 3.3.7
+    dev: true
+    optional: true
 
   /@vue/devtools-api@6.5.0:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
@@ -1852,8 +1880,25 @@ packages:
       '@vue/shared': 3.3.4
       vue: 3.3.4
 
+  /@vue/server-renderer@3.3.7(vue@3.3.4):
+    resolution: {integrity: sha512-UlpKDInd1hIZiNuVVVvLgxpfnSouxKQOSE2bOfQpBuGwxRV/JqqTCyyjXUWiwtVMyeRaZhOYYqntxElk8FhBhw==}
+    peerDependencies:
+      vue: 3.3.7
+    dependencies:
+      '@vue/compiler-ssr': 3.3.7
+      '@vue/shared': 3.3.7
+      vue: 3.3.4
+    dev: true
+    optional: true
+
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
+
+  /@vue/shared@3.3.7:
+    resolution: {integrity: sha512-N/tbkINRUDExgcPTBvxNkvHGu504k8lzlNQRITVnm6YjOjwa4r0nnbd4Jb01sNpur5hAllyRJzSK5PvB9PPwRg==}
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@vue/test-utils@2.3.2(vue@3.3.4):
     resolution: {integrity: sha512-hJnVaYhbrIm0yBS0+e1Y0Sj85cMyAi+PAbK4JHqMRUZ6S622Goa+G7QzkRSyvCteG8wop7tipuEbHoZo26wsSA==}
@@ -1863,8 +1908,8 @@ packages:
       js-beautify: 1.14.6
       vue: 3.3.4
     optionalDependencies:
-      '@vue/compiler-dom': 3.3.4
-      '@vue/server-renderer': 3.3.4(vue@3.3.4)
+      '@vue/compiler-dom': 3.3.7
+      '@vue/server-renderer': 3.3.7(vue@3.3.4)
     dev: true
 
   /JSONStream@1.3.5:
