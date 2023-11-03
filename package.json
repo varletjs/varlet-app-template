@@ -33,6 +33,7 @@
     "@varlet/touch-emulator": "^2.18.2",
     "@varlet/ui": "^2.18.2",
     "@varlet/use": "^2.18.2",
+    "@vueuse/core": "^10.5.0",
     "dayjs": "^1.11.8",
     "mockjs": "^1.1.0",
     "pinia": "^2.1.3",
