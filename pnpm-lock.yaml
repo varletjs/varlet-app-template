@@ -6,20 +6,20 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.3.2
-    version: 0.3.2(vue@3.3.4)
+    specifier: ^0.3.4
+    version: 0.3.4(vue@3.3.4)
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
   '@varlet/touch-emulator':
-    specifier: ^2.20.2
-    version: 2.20.2
+    specifier: ^2.20.3
+    version: 2.20.3
   '@varlet/ui':
-    specifier: ^2.20.2
-    version: 2.20.2(vue@3.3.4)
+    specifier: ^2.20.3
+    version: 2.20.3(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.20.2
-    version: 2.20.2(vue@3.3.4)
+    specifier: ^2.20.3
+    version: 2.20.3(vue@3.3.4)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.3.4)
@@ -1207,10 +1207,6 @@ packages:
     resolution: {integrity: sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==}
     dev: true
 
-  /@types/crypto-js@4.2.1:
-    resolution: {integrity: sha512-FSPGd9+OcSok3RsM0UZ/9fcvMOXJ1ENE/ZbLfOPlBWj7BgXtEAM8VYfTtT760GiLbQIMoVozwVuisjvsVwqYWw==}
-    dev: false
-
   /@types/debug@4.1.8:
     resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
@@ -1614,16 +1610,15 @@ packages:
       - rollup
     dev: true
 
-  /@varlet/axle@0.3.2(vue@3.3.4):
-    resolution: {integrity: sha512-UAdRdCuwHq8aIcODYCCzzk7/gbhgKLczGRzu6AI4Xoy6AbHTsKLFWF+vsKNTkWeDK18JmYYlbobLBusMeKLNEg==}
+  /@varlet/axle@0.3.4(vue@3.3.4):
+    resolution: {integrity: sha512-6SJysH3/klm8C4bWQ2W08L9EJMd28cHRDm63NiJdRd6R0O2OA4HVdYej6C0ybm8f2jmuVkqRH2iJeHjhjqGOtA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@types/crypto-js': 4.2.1
-      '@varlet/shared': 2.20.2
+      '@varlet/shared': 2.20.3
       axios: 1.4.0
       crypto-js: 4.2.0
-      lodash-es: 4.17.21
+      lodash: 4.17.21
       minimatch: 9.0.3
       qs: 6.11.2
       vue: 3.3.4
@@ -1635,38 +1630,38 @@ packages:
     resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
     dev: false
 
-  /@varlet/icons@2.20.2:
-    resolution: {integrity: sha512-lO6Q+Qz3LGtSRin1GY0KocG9RIvhpEkw0wdB5WEwYOl4U+OV4rtsk7ZMBH/LTDU87UUlYBzrQf4UC1Kp3WxBLA==}
+  /@varlet/icons@2.20.3:
+    resolution: {integrity: sha512-eX01LErRxAHf+sXNdBXOnP41I6orG957XfDpwQFdGfgl9Ud9YW8A6Dnr78Q3meumqhQ1uBHJoNzRpJdd1HtRiA==}
     dev: false
 
-  /@varlet/shared@2.20.2:
-    resolution: {integrity: sha512-kwM2q1JPR0P8IHSbkahjDAb2ULoUX6wpL3sXOt0OnNCtZZlYvTtza142WpDjbVtdyd/mfmmW7hrG+7OX907gYA==}
+  /@varlet/shared@2.20.3:
+    resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/touch-emulator@2.20.2:
-    resolution: {integrity: sha512-3mFC4UpVsjkDagqcrbKj44ZPiEywmvJxXWwDV0gQNuqe2OmcfSIi8NLFqGW7yE3nEDiR57W0BgyaIVfPy/ZJWg==}
+  /@varlet/touch-emulator@2.20.3:
+    resolution: {integrity: sha512-NnxVOe++NZdakuNP/voXxcmO8E4dTOiceeXwkdcumTV0Jk12QnwoMCAKFlfQa+XNRg98U3X2zjYNC/jiEWlXmA==}
     dev: false
 
-  /@varlet/ui@2.20.2(vue@3.3.4):
-    resolution: {integrity: sha512-Dbg7qKIk4WAgCa4YcA3eXIGN17gMLYHMy+RytjRuYVvJIfwWbtrvYbNy3TK+0/PFY0QmJh3OYBwudeTistxdig==}
+  /@varlet/ui@2.20.3(vue@3.3.4):
+    resolution: {integrity: sha512-ZWI6G8dMGwpFSaHIdsI391BAd9QztdBitEpxG3ympDiUm3Lx7VJ4s+BV6/OaN1rROLp0lWjS5AUDndazgzrBdQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.20.2
-      '@varlet/shared': 2.20.2
-      '@varlet/use': 2.20.2(vue@3.3.4)
+      '@varlet/icons': 2.20.3
+      '@varlet/shared': 2.20.3
+      '@varlet/use': 2.20.3(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.20.2(vue@3.3.4):
-    resolution: {integrity: sha512-E8u7Pee4av6r610OtUufGowGOiWFvtK/jbh28P824670bxGpTL+4QgRVI+PF8ypsqGe+4DjdYr1f3jcW27i+Iw==}
+  /@varlet/use@2.20.3(vue@3.3.4):
+    resolution: {integrity: sha512-9k6DVxPPhJvRjPwgnWShxVonAyHezVQpI5IIIrX0Tv51t2Hc4Oe5+t0mLW4+trXdPNiqCn6fRDP+f0P8B+a+sg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.20.2
+      '@varlet/shared': 2.20.3
       vue: 3.3.4
     dev: false
 
@@ -1818,12 +1813,12 @@ packages:
       - supports-color
     dev: true
 
-  /@vue/compiler-core@3.3.12:
-    resolution: {integrity: sha512-qAtjyG3GBLG0chzp5xGCyRLLe6wFCHmjI82aGzwuGKyznNP+GJJMxjc0wOYWDB2YKfho7niJFdoFpo0CZZQg9w==}
+  /@vue/compiler-core@3.3.13:
+    resolution: {integrity: sha512-bwi9HShGu7uaZLOErZgsH2+ojsEdsjerbf2cMXPwmvcgZfVPZ2BVZzCVnwZBxTAYd6Mzbmf6izcUNDkWnBBQ6A==}
     requiresBuild: true
     dependencies:
       '@babel/parser': 7.23.6
-      '@vue/shared': 3.3.12
+      '@vue/shared': 3.3.13
       estree-walker: 2.0.2
       source-map-js: 1.0.2
     dev: true
@@ -1837,11 +1832,11 @@ packages:
       estree-walker: 2.0.2
       source-map-js: 1.0.2
 
-  /@vue/compiler-dom@3.3.12:
-    resolution: {integrity: sha512-RdJU9oEYaoPKUdGXCy0l+i4clesdDeLmbvRlszoc9iagsnBnMmQtYfCPVQ5BHB6o7K4SCucDdJM2Dh3oXB0D6g==}
+  /@vue/compiler-dom@3.3.13:
+    resolution: {integrity: sha512-EYRDpbLadGtNL0Gph+HoKiYqXLqZ0xSSpR5Dvnu/Ep7ggaCbjRDIus1MMxTS2Qm0koXED4xSlvTZaTnI8cYAsw==}
     dependencies:
-      '@vue/compiler-core': 3.3.12
-      '@vue/shared': 3.3.12
+      '@vue/compiler-core': 3.3.13
+      '@vue/shared': 3.3.13
     dev: true
     optional: true
 
@@ -1865,12 +1860,12 @@ packages:
       postcss: 8.4.24
       source-map-js: 1.0.2
 
-  /@vue/compiler-ssr@3.3.12:
-    resolution: {integrity: sha512-adCiMJPznfWcQyk/9HSuXGja859IaMV+b8UNSVzDatqv7h0PvT9BEeS22+gjkWofDiSg5d78/ZLls3sLA+cn3A==}
+  /@vue/compiler-ssr@3.3.13:
+    resolution: {integrity: sha512-d/P3bCeUGmkJNS1QUZSAvoCIW4fkOKK3l2deE7zrp0ypJEy+En2AcypIkqvcFQOcw3F0zt2VfMvNsA9JmExTaw==}
     requiresBuild: true
     dependencies:
-      '@vue/compiler-dom': 3.3.12
-      '@vue/shared': 3.3.12
+      '@vue/compiler-dom': 3.3.13
+      '@vue/shared': 3.3.13
     dev: true
     optional: true
 
@@ -1911,13 +1906,13 @@ packages:
       '@vue/shared': 3.3.4
       csstype: 3.1.2
 
-  /@vue/server-renderer@3.3.12(vue@3.3.4):
-    resolution: {integrity: sha512-OZ0IEK5TU5GXb5J8/wSplyxvGGdIcwEmS8EIO302Vz8K6fGSgSJTU54X0Sb6PaefzZdiN3vHsLXO8XIeF8crQQ==}
+  /@vue/server-renderer@3.3.13(vue@3.3.4):
+    resolution: {integrity: sha512-vSnN+nuf6iSqTL3Qgx/9A+BT+0Zf/VJOgF5uMZrKjYPs38GMYyAU1coDyBNHauehXDaP+zl73VhwWv0vBRBHcg==}
     peerDependencies:
-      vue: 3.3.12
+      vue: 3.3.13
     dependencies:
-      '@vue/compiler-ssr': 3.3.12
-      '@vue/shared': 3.3.12
+      '@vue/compiler-ssr': 3.3.13
+      '@vue/shared': 3.3.13
       vue: 3.3.4
     dev: true
     optional: true
@@ -1931,8 +1926,8 @@ packages:
       '@vue/shared': 3.3.4
       vue: 3.3.4
 
-  /@vue/shared@3.3.12:
-    resolution: {integrity: sha512-6p0Yin0pclvnER7BLNOQuod9Z+cxSYh8pSh7CzHnWNjAIP6zrTlCdHRvSCb1aYEx6i3Q3kvfuWU7nG16CgG1ag==}
+  /@vue/shared@3.3.13:
+    resolution: {integrity: sha512-/zYUwiHD8j7gKx2argXEMCUXVST6q/21DFU0sTfNX0URJroCe3b1UF6vLJ3lQDfLNIiiRl2ONp7Nh5UVWS6QnA==}
     requiresBuild: true
     dev: true
     optional: true
@@ -1948,8 +1943,8 @@ packages:
       js-beautify: 1.14.6
       vue: 3.3.4
     optionalDependencies:
-      '@vue/compiler-dom': 3.3.12
-      '@vue/server-renderer': 3.3.12(vue@3.3.4)
+      '@vue/compiler-dom': 3.3.13
+      '@vue/server-renderer': 3.3.13(vue@3.3.4)
     dev: true
 
   /@vueuse/core@10.5.0(vue@3.3.4):
@@ -4572,10 +4567,6 @@ packages:
       p-locate: 5.0.0
     dev: true
 
-  /lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
-
   /lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
     dev: true
@@ -4622,7 +4613,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
