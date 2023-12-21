@@ -6,8 +6,6 @@ const router = useRouter()
 const route = useRoute()
 const active = ref()
 
-watch(() => active.value, router.replace)
-
 watch(
   () => route.path,
   (newValue) => {
@@ -15,6 +13,10 @@ watch(
   },
   { immediate: true }
 )
+
+function to(path: string) {
+  router.push(path)
+}
 </script>
 
 <template>
@@ -26,10 +28,30 @@ watch(
     </router-view>
 
     <var-bottom-navigation border safe-area fixed v-model:active="active">
-      <var-bottom-navigation-item :label="$t('HOME')" icon="home" name="/layout/home" />
-      <var-bottom-navigation-item :label="$t('TOPIC')" icon="heart" name="/layout/topic" />
-      <var-bottom-navigation-item :label="$t('MESSAGE')" icon="bell" name="/layout/message" />
-      <var-bottom-navigation-item :label="$t('PROFILE')" icon="account-circle" name="/layout/profile" />
+      <var-bottom-navigation-item
+        :label="$t('HOME')"
+        icon="home"
+        name="/layout/home"
+        @click="() => to('/layout/home')"
+      />
+      <var-bottom-navigation-item
+        :label="$t('TOPIC')"
+        icon="heart"
+        name="/layout/topic"
+        @click="() => to('/layout/topic')"
+      />
+      <var-bottom-navigation-item
+        :label="$t('MESSAGE')"
+        icon="bell"
+        name="/layout/message"
+        @click="() => to('/layout/message')"
+      />
+      <var-bottom-navigation-item
+        :label="$t('PROFILE')"
+        icon="account-circle"
+        name="/layout/profile"
+        @click="() => to('/layout/profile')"
+      />
     </var-bottom-navigation>
   </div>
 </template>
