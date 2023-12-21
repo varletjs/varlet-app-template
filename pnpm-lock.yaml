@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.3.4
-    version: 0.3.4(vue@3.3.4)
+    specifier: ^0.3.5
+    version: 0.3.5(vue@3.3.4)
   '@varlet/bounce-fixer':
     specifier: ^0.0.2
     version: 0.0.2
@@ -1610,8 +1610,8 @@ packages:
       - rollup
     dev: true
 
-  /@varlet/axle@0.3.4(vue@3.3.4):
-    resolution: {integrity: sha512-6SJysH3/klm8C4bWQ2W08L9EJMd28cHRDm63NiJdRd6R0O2OA4HVdYej6C0ybm8f2jmuVkqRH2iJeHjhjqGOtA==}
+  /@varlet/axle@0.3.5(vue@3.3.4):
+    resolution: {integrity: sha512-dN9PjbJT0sc3tekAA25QdhdDwQkhqE1VnbqadrZiavlm7qHTFIDZaSBBt25XgtvA6Q05fhESoJxE/IBq6ZNLjA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
