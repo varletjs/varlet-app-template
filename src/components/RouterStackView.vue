@@ -6,10 +6,20 @@ defineProps({
     default: 'slide-x'
   }
 })
+
+const activated = ref(true)
+
+onDeactivated(() => {
+  activated.value = false
+})
+
+onActivated(() => {
+  activated.value = true
+})
 </script>
 
 <template>
-  <teleport to="body">
+  <teleport to="body" v-if="activated">
     <router-view v-slot="{ Component }">
       <transition
         :name="`router-stack-view-${animation}`"
