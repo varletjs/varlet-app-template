@@ -1,30 +1,18 @@
-import { useAxle } from '@/request'
-import { PageParams, Response, Options } from './types'
+import { api } from '@/request'
 
 export interface Card {
   id: number
 }
 
-export function useGetCards<V>(options: Options<V, Response<Card[]>, PageParams>) {
-  return useAxle({
-    url: '/card',
-    method: 'get',
-    ...options
-  })
+export interface CardList {
+  cards: Card[]
+  current: number
+  finished: boolean
+  error: boolean
 }
 
-export function useGetPlainCards<V>(options: Options<V, Response<Card[]>, PageParams>) {
-  return useAxle({
-    url: '/plain-card',
-    method: 'get',
-    ...options
-  })
-}
+export const apiGetCards = api('/card', 'get')
 
-export function useGetRowCards<V>(options: Options<V, Response<Card[]>, PageParams>) {
-  return useAxle({
-    url: '/row-card',
-    method: 'get',
-    ...options
-  })
-}
+export const apiGetPlainCards = api('/plain-card', 'get')
+
+export const apiGetRowCards = api('/row-card', 'get')

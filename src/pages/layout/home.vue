@@ -1,22 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { useGetCards, useGetPlainCards, useGetRowCards, Card } from '@/apis/card'
-import { Response } from '@/apis/types'
+import { apiGetCards, apiGetPlainCards, apiGetRowCards, Card, CardList } from '@/apis'
 import { UseAxleRefs } from '@varlet/axle/use'
-
-interface CardList {
-  cards: Card[]
-  current: number
-  finished: boolean
-  error: boolean
-}
+import { Response } from '@/request'
 
 const router = useRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
-const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>({
+const [cardList, getCards, { loading: isCardsLoading }] = apiGetCards.use<CardList, Card[]>({
   value: {
     cards: [],
     current: 1,
@@ -27,7 +20,7 @@ const [cardList, getCards, { loading: isCardsLoading }] = useGetCards<CardList>(
   onError
 })
 
-const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetPlainCards<CardList>({
+const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = apiGetPlainCards.use<CardList, Card[]>({
   value: {
     cards: [],
     current: 1,
@@ -38,7 +31,7 @@ const [plainCardList, getPlainCards, { loading: isPlainCardsLoading }] = useGetP
   onError
 })
 
-const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = useGetRowCards<CardList>({
+const [rowCardList, getRowCards, { loading: isRowCardsLoading }] = apiGetRowCards.use<CardList, Card[]>({
   value: {
     cards: [],
     current: 1,
