@@ -16,82 +16,83 @@ import { isProduction } from './build/env'
 // import eruda from 'vite-plugin-eruda'
 // import { analyzer } from 'vite-bundle-analyzer'
 
-export default defineConfig(() => {
-  return {
-    base: './',
+export default defineConfig({
+  base: './',
 
-    lintOnSave: false,
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
 
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
+  server: {
+    host: '0.0.0.0',
+    port: 10086
+  },
+
+  build: {
+    target: ['ios12']
+  },
+
+  esbuild: {
+    drop: isProduction() ? ['console', 'debugger'] : []
+  },
+
+  test: {
+    environment: 'jsdom',
+    coverage: {
+      provider: 'istanbul'
     },
-
+    setupFiles: ['tests/setup.ts'],
+    include: ['tests/**/*.spec.ts'],
     server: {
-      host: '0.0.0.0',
-      port: 10086
-    },
-
-    build: {
-      target: ['ios12']
-    },
-
-    esbuild: {
-      drop: isProduction() ? ['console', 'debugger'] : []
-    },
-
-    test: {
-      environment: 'jsdom',
-      setupFiles: ['tests/setup.ts'],
-      include: ['tests/**/*.spec.ts'],
       deps: {
         inline: ['@varlet/ui']
       }
-    },
+    }
+  },
 
-    plugins: [
-      vue({
-        template: {
-          transformAssetUrls: {
-            img: ['src'],
-            video: ['src'],
-            audio: ['src'],
-            'var-image': ['src'],
-            'var-avatar': ['src'],
-            'var-card': ['src'],
-            'var-app-bar': ['image']
-          }
+  plugins: [
+    vue({
+      template: {
+        transformAssetUrls: {
+          img: ['src'],
+          video: ['src'],
+          audio: ['src'],
+          'var-image': ['src'],
+          'var-avatar': ['src'],
+          'var-card': ['src'],
+          'var-app-bar': ['image']
         }
-      }),
+      }
+    }),
 
-      jsx(),
+    jsx(),
 
-      components({
-        resolvers: [VarletUIResolver()]
-      }),
+    components({
+      resolvers: [VarletUIResolver()]
+    }),
 
-      autoImport({
-        imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
-        resolvers: [VarletUIResolver({ autoImport: true })],
-        eslintrc: { enabled: true }
-      }),
+    autoImport({
+      imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
+      resolvers: [VarletUIResolver({ autoImport: true })],
+      eslintrc: { enabled: true }
+    }),
 
-      pages({
-        extendRoute
-      }),
+    pages({
+      extendRoute
+    }),
 
-      compression({
-        include: [/\.html$/, /\.css$/, /\.js$/, /\.ttf$/],
-        skipIfLargerOrEqual: true
-      }),
+    compression({
+      include: [/\.html$/, /\.css$/, /\.js$/, /\.ttf$/],
+      skipIfLargerOrEqual: true
+    }),
 
-      progress(),
+    progress(),
 
-      unoCSS()
+    unoCSS()
 
-      // analyzer()
-      // eruda()
-    ]
-  }
+    // analyzer()
+    // eruda()
+  ]
 })
