@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.4.0
     version: 0.4.0(vue@3.3.4)
   '@varlet/bounce-fixer':
-    specifier: ^0.0.2
-    version: 0.0.2
+    specifier: ^0.0.3
+    version: 0.0.3
   '@varlet/touch-emulator':
     specifier: ^2.20.4
     version: 2.20.4
@@ -1626,8 +1626,8 @@ packages:
       - debug
     dev: false
 
-  /@varlet/bounce-fixer@0.0.2:
-    resolution: {integrity: sha512-PtS5RhM/KoLwCgEaefaOVKngddm4icd/+0l4hDIdcoNmch35uaUrPD5UXuWLfI27dPb4EgdoUt5mzvJQXxYpbQ==}
+  /@varlet/bounce-fixer@0.0.3:
+    resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
   /@varlet/icons@2.20.4:
