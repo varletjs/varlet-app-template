@@ -14,7 +14,7 @@ import { isProduction } from './build/env'
 
 // Use as needed
 // import eruda from 'vite-plugin-eruda'
-// import { analyzer } from 'vite-bundle-analyzer'
+import { analyzer } from 'vite-bundle-analyzer'
 
 export default defineConfig({
   base: './',
@@ -90,9 +90,9 @@ export default defineConfig({
 
     progress(),
 
-    unoCSS()
+    unoCSS(),
 
-    // analyzer()
+    analyzer()
     // eruda()
   ]
 })
