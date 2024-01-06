@@ -28,11 +28,11 @@
     "*.{vue,ts,tsx,js,jsx}": "pnpm lint"
   },
   "dependencies": {
-    "@varlet/axle": "^0.5.2",
+    "@varlet/axle": "^0.6.0",
     "@varlet/bounce-fixer": "^0.0.3",
-    "@varlet/touch-emulator": "^2.20.5",
-    "@varlet/ui": "^2.20.5",
-    "@varlet/use": "^2.20.5",
+    "@varlet/touch-emulator": "^2.20.6",
+    "@varlet/ui": "^2.20.6",
+    "@varlet/use": "^2.20.6",
     "@vueuse/core": "^10.5.0",
     "dayjs": "^1.11.8",
     "mockjs": "^1.1.0",

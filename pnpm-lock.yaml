@@ -6,20 +6,20 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.5.2
-    version: 0.5.2(vue@3.3.4)
+    specifier: ^0.6.0
+    version: 0.6.0(vue@3.3.4)
   '@varlet/bounce-fixer':
     specifier: ^0.0.3
     version: 0.0.3
   '@varlet/touch-emulator':
-    specifier: ^2.20.5
-    version: 2.20.5
+    specifier: ^2.20.6
+    version: 2.20.6
   '@varlet/ui':
-    specifier: ^2.20.5
-    version: 2.20.5(vue@3.3.4)
+    specifier: ^2.20.6
+    version: 2.20.6(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.20.5
-    version: 2.20.5(vue@3.3.4)
+    specifier: ^2.20.6
+    version: 2.20.6(vue@3.3.4)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.3.4)
@@ -123,7 +123,7 @@ devDependencies:
     version: 5.0.2
   unocss:
     specifier: ^0.58.2
-    version: 0.58.2(postcss@8.4.32)(vite@5.0.10)
+    version: 0.58.2(postcss@8.4.33)(vite@5.0.10)
   unplugin-auto-import:
     specifier: ^0.16.4
     version: 0.16.4(@vueuse/core@10.5.0)
@@ -1660,7 +1660,7 @@ packages:
       sirv: 2.0.4
     dev: true
 
-  /@unocss/postcss@0.58.2(postcss@8.4.32):
+  /@unocss/postcss@0.58.2(postcss@8.4.33):
     resolution: {integrity: sha512-5x6W9WxxU2NtaKJfhIKBtZs+KhvP8dOg/jG0VV+jrlwq67gMxa2LHdF1qI8kRje9L5th3Yz7Gl3TP2x/l/sbPQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1672,7 +1672,7 @@ packages:
       css-tree: 2.3.1
       fast-glob: 3.3.2
       magic-string: 0.30.5
-      postcss: 8.4.32
+      postcss: 8.4.33
     dev: true
 
   /@unocss/preset-attributify@0.58.2:
@@ -1815,13 +1815,13 @@ packages:
       - rollup
     dev: true
 
-  /@varlet/axle@0.5.2(vue@3.3.4):
-    resolution: {integrity: sha512-jH0LtVAwicWE4zvRtIv/uO9mo2D106SqrNFIBiy1c87BR2waB8Aqdo39+mFRw2LanAdquN6DF5HzZ+N6azPQHQ==}
+  /@varlet/axle@0.6.0(vue@3.3.4):
+    resolution: {integrity: sha512-g+B0C5wlxvZXK3F5awbQ7xxaj0X4qhndIlBA/8SrAjnvOlq52Yi37OBoVkEcd6lBP8AvsHSJisKhn7GUN+JIVA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@varlet/shared': 2.20.3
-      axios: 1.6.3
+      axios: 1.6.5
       crypto-js: 4.2.0
       lodash: 4.17.21
       minimatch: 9.0.3
@@ -1835,42 +1835,42 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/icons@2.20.5:
-    resolution: {integrity: sha512-kChxqlCFjIdwXCghLC8OaPkE5HSEHKUEu5zBL6sGS7jCy3xdtME1BpcV9HZXtWzG9bkpdVZkkv6QhCQWCwTBhA==}
+  /@varlet/icons@2.20.6:
+    resolution: {integrity: sha512-q/Hxno3hdeS01Vnom9N2lYRsLDAXn820GPSqOTwI+/gg+dp7QgPrNnLKeYGYzH0UKRh6Qh38ZsnsgoFot/BiCw==}
     dev: false
 
   /@varlet/shared@2.20.3:
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/shared@2.20.5:
-    resolution: {integrity: sha512-Iyvaj3/GMLOsG7k3zNK2mvOapzjQ4AFmhJ4k5WMkaed7oN3nd4KXZ7NUY1o/MZJleRJM3vRGLIWv1DO7DsNUhg==}
+  /@varlet/shared@2.20.6:
+    resolution: {integrity: sha512-ChoyOMKX/iobb8bSttbQvncjMrTh2ieeAAddoQ6fn4NEOUHTLPtxJg7XI9AmCfFzMyxwOdzpDSi61b4EB7rrLA==}
     dev: false
 
-  /@varlet/touch-emulator@2.20.5:
-    resolution: {integrity: sha512-6SyePfkumlnpLvpcKia8RBQwfXa7WWLv1RJ5eOD1YSiEsQYrQvKiAgKS7IMNoM9BtITxX8l9yRJc79WQYjhZhg==}
+  /@varlet/touch-emulator@2.20.6:
+    resolution: {integrity: sha512-uw+1xNF90diwwKFkh7Gtui+VCktDUXb+EzXznDo1UVt6/7LNur+gVgzUqbwHb7DyCu2JVzP2nP3eOpiG7+lkBw==}
     dev: false
 
-  /@varlet/ui@2.20.5(vue@3.3.4):
-    resolution: {integrity: sha512-peMynDu+1kYCt40E4FYHh59FMzvUNf54FIqDZcvPnSjS6381pyIx1YhqpdlIrqCvP1mxck8Od6WfuQpLzFO93Q==}
+  /@varlet/ui@2.20.6(vue@3.3.4):
+    resolution: {integrity: sha512-bV25bSxMXqx0Qt5o2QEjGkDl9hssky4OARZrwJzOScL+mbSZ4RBsn4Yvfnt2TVrk6qkbJeMeGKEmIW70iNeXwA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.20.5
-      '@varlet/shared': 2.20.5
-      '@varlet/use': 2.20.5(vue@3.3.4)
+      '@varlet/icons': 2.20.6
+      '@varlet/shared': 2.20.6
+      '@varlet/use': 2.20.6(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.20.5(vue@3.3.4):
-    resolution: {integrity: sha512-+WuFyYyD+2xfFiuCArkIyqwPFPASxKtmIM9k6bE4UNa9Jju1UzraVCpZJhkJ3aiOlgM+JNZU0YZgckm3qYk74A==}
+  /@varlet/use@2.20.6(vue@3.3.4):
+    resolution: {integrity: sha512-fn03+GYmW6Dw6z1OYtO2kM6IwytznIe4ZHM3sk4kEXhGiFJSb3KYL0PPhzvOUYyXTixoVNQiED3hMUwd8JMzEQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.20.5
+      '@varlet/shared': 2.20.6
       vue: 3.3.4
     dev: false
 
@@ -2407,8 +2407,8 @@ packages:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
     dev: true
 
-  /axios@1.6.3:
-    resolution: {integrity: sha512-fWyNdeawGam70jXSVlKl+SUNVcL6j6W79CuSIPfi6HnDUmSCH6gyUys/HrqHeA/wU0Az41rRgean494d0Jb+ww==}
+  /axios@1.6.5:
+    resolution: {integrity: sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==}
     dependencies:
       follow-redirects: 1.15.4
       form-data: 4.0.0
@@ -5566,6 +5566,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postcss@8.4.33:
+    resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /prelude-ls@1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
     engines: {node: '>= 0.8.0'}
@@ -6495,7 +6504,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unocss@0.58.2(postcss@8.4.32)(vite@5.0.10):
+  /unocss@0.58.2(postcss@8.4.33)(vite@5.0.10):
     resolution: {integrity: sha512-M82hvJojUsjD98HWLhOU/SITD/9WuHhYoSrQYG6TAa7PuQKJbvxZnZP9hifVjiTSO/VN8MELcdwiuzTTa5GlKQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -6511,7 +6520,7 @@ packages:
       '@unocss/cli': 0.58.2
       '@unocss/core': 0.58.2
       '@unocss/extractor-arbitrary-variants': 0.58.2
-      '@unocss/postcss': 0.58.2(postcss@8.4.32)
+      '@unocss/postcss': 0.58.2(postcss@8.4.33)
       '@unocss/preset-attributify': 0.58.2
       '@unocss/preset-icons': 0.58.2
       '@unocss/preset-mini': 0.58.2
