@@ -6,6 +6,29 @@ const router = useRouter()
 const route = useRoute()
 const active = ref()
 
+const tabs = ref([
+  {
+    label: 'HOME',
+    icon: 'home',
+    name: '/layout/home'
+  },
+  {
+    label: 'TOPIC',
+    icon: 'heart',
+    name: '/layout/topic'
+  },
+  {
+    label: 'MESSAGE',
+    icon: 'bell',
+    name: '/layout/message'
+  },
+  {
+    label: 'PROFILE',
+    icon: 'account-circle',
+    name: '/layout/profile'
+  }
+])
+
 watch(
   () => route.path,
   (newValue) => {
@@ -29,28 +52,12 @@ function to(path: string) {
 
     <var-bottom-navigation border safe-area fixed v-model:active="active">
       <var-bottom-navigation-item
-        :label="$t('HOME')"
-        icon="home"
-        name="/layout/home"
-        @click="() => to('/layout/home')"
-      />
-      <var-bottom-navigation-item
-        :label="$t('TOPIC')"
-        icon="heart"
-        name="/layout/topic"
-        @click="() => to('/layout/topic')"
-      />
-      <var-bottom-navigation-item
-        :label="$t('MESSAGE')"
-        icon="bell"
-        name="/layout/message"
-        @click="() => to('/layout/message')"
-      />
-      <var-bottom-navigation-item
-        :label="$t('PROFILE')"
-        icon="account-circle"
-        name="/layout/profile"
-        @click="() => to('/layout/profile')"
+        v-for="item in tabs"
+        :key="item.label"
+        :label="$t(item.label)"
+        :icon="item.icon"
+        :name="item.name"
+        @click="() => to(item.name)"
       />
     </var-bottom-navigation>
   </div>
