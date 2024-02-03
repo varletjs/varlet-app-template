@@ -12,14 +12,14 @@ dependencies:
     specifier: ^0.0.3
     version: 0.0.3
   '@varlet/touch-emulator':
-    specifier: ^2.21.0
-    version: 2.21.0
+    specifier: ^2.22.2
+    version: 2.22.2
   '@varlet/ui':
-    specifier: ^2.21.0
-    version: 2.21.0(vue@3.3.4)
+    specifier: ^2.22.2
+    version: 2.22.2(vue@3.3.4)
   '@varlet/use':
-    specifier: ^2.21.0
-    version: 2.21.0(vue@3.3.4)
+    specifier: ^2.22.2
+    version: 2.22.2(vue@3.3.4)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.3.4)
@@ -1821,7 +1821,7 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@varlet/shared': 2.20.3
-      axios: 1.6.5
+      axios: 1.6.7
       crypto-js: 4.2.0
       lodash: 4.17.21
       minimatch: 9.0.3
@@ -1835,42 +1835,42 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/icons@2.21.0:
-    resolution: {integrity: sha512-8YvhyZbDLKFcdCBUTJM7BV9JNs1PBaeI9XHt3rbyZt7AVq+9u+HS+7lX8ModzOO/z8vUGiBSUj9GN7TFaXCj0A==}
+  /@varlet/icons@2.22.2:
+    resolution: {integrity: sha512-LNvJcahqlTYhLQ7M8gvbYf7yoAX3tHoXcs6y3c06jedFAmyTwPvUDW/259i2t+cdKtH1tOhk9n0e5WfR2rkR/g==}
     dev: false
 
   /@varlet/shared@2.20.3:
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/shared@2.21.0:
-    resolution: {integrity: sha512-n9Zg5LrwmZAC4uKgbdfmXBEGTtnGFtnejfV6wQhVlt0ryNTAtKduFNa1uBI3Ww3RLaWWnZKNeRNbETHluslOXA==}
+  /@varlet/shared@2.22.2:
+    resolution: {integrity: sha512-g3RRaVNqbIHsOfjl6T1IpTDrBZ/Ehe+0oUWYtgh0we3cuD09PytHviZGewwqiPso2wd/5wQJpkSm4hETRJoq0A==}
     dev: false
 
-  /@varlet/touch-emulator@2.21.0:
-    resolution: {integrity: sha512-0L0RvZc8YBXAk9Q1jZjRFI/m2rdmqC8JKiArRIk4+9WrQ6WquRgfO3y14YsFEDziSen4H/ywCMqEKG/jQKsbSw==}
+  /@varlet/touch-emulator@2.22.2:
+    resolution: {integrity: sha512-1NiT7rWICcssd+Ez6ZFuCLMgV+HbRTuv2uhH7eY/iuq5cfnavvzONr2IFSMgNZ5pzGkLV39R6Qq26NsOaV2wtQ==}
     dev: false
 
-  /@varlet/ui@2.21.0(vue@3.3.4):
-    resolution: {integrity: sha512-bkMa7NVyE32LL5guMrzGIVnvzAub+cxo7+vrGp7xkLVxO0JhgVOmayoZF2w4XwxLTGygeNpqny9Ef3YF2jZQVA==}
+  /@varlet/ui@2.22.2(vue@3.3.4):
+    resolution: {integrity: sha512-oyqvpW2zlHavgjYTCgjMZZs4tGa8NepfphzwjCYreFjgaBl4d/V1vK8FDn3mOxJHLPMhbfnUZd+UixmHHHosxQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 2.21.0
-      '@varlet/shared': 2.21.0
-      '@varlet/use': 2.21.0(vue@3.3.4)
+      '@varlet/icons': 2.22.2
+      '@varlet/shared': 2.22.2
+      '@varlet/use': 2.22.2(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@2.21.0(vue@3.3.4):
-    resolution: {integrity: sha512-8qQ1/s+12Ddh8Z6DcPWXSkee+h3QM+JxTlcWqVDnJ9euueFcMo98RF/CC/NKwg6NM6m6aKjzPzrW+R4F8MfNUQ==}
+  /@varlet/use@2.22.2(vue@3.3.4):
+    resolution: {integrity: sha512-iyCof9HX5dGh67y+7QiP3cCuF7hBMoKYfNo1Xn8D0tC9qaq5PSn+Es55HlguhW0bOe4f2fyAQD+eBM2q2oIRxg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 2.21.0
+      '@varlet/shared': 2.22.2
       vue: 3.3.4
     dev: false
 
@@ -2407,8 +2407,8 @@ packages:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
     dev: true
 
-  /axios@1.6.5:
-    resolution: {integrity: sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==}
+  /axios@1.6.7:
+    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
     dependencies:
       follow-redirects: 1.15.5
       form-data: 4.0.0
@@ -2522,6 +2522,14 @@ packages:
     dependencies:
       function-bind: 1.1.1
       get-intrinsic: 1.2.1
+    dev: true
+
+  /call-bind@1.0.5:
+    resolution: {integrity: sha512-C3nQxfFZxFRVoJoGKKI8y3MOEo129NQ+FgQ08iye+Mk4zNZZGdjfs06bVTr+DBSlA66Q2VEcMki/cUCP4SercQ==}
+    dependencies:
+      function-bind: 1.1.2
+      get-intrinsic: 1.2.3
+      set-function-length: 1.2.0
 
   /callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
@@ -3041,6 +3049,14 @@ packages:
       titleize: 3.0.0
     dev: true
 
+  /define-data-property@1.1.1:
+    resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      get-intrinsic: 1.2.3
+      gopd: 1.0.1
+      has-property-descriptors: 1.0.1
+
   /define-lazy-prop@3.0.0:
     resolution: {integrity: sha512-N+MeXYoqr3pOgn8xfyRPREN7gHakLYjhsHhWGT3fWAiL4IkAt0iDw14QiiEm2bE30c5XX5q0FtAA3CK5f9/BUg==}
     engines: {node: '>=12'}
@@ -3222,6 +3238,10 @@ packages:
       unbox-primitive: 1.0.2
       which-typed-array: 1.1.9
     dev: true
+
+  /es-errors@1.0.0:
+    resolution: {integrity: sha512-yHV74THqMJUyFKkHyN7hyENcEZM3Dj2a2IrdClY+IT4BFQHkIVwlh8s6uZfjsFydMdNHv0F5mWgAA3ajFbsvVQ==}
+    engines: {node: '>= 0.4'}
 
   /es-get-iterator@1.1.3:
     resolution: {integrity: sha512-sPZmqHBe6JIiTfN5q2pEi//TwxmAFHwj/XEuYjTuse78i8KxaqMTTzxPoFKuzRpDpTJ+0NAbpfenkmH2rePtuw==}
@@ -3844,6 +3864,9 @@ packages:
   /function-bind@1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
 
+  /function-bind@1.1.2:
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
+
   /function.prototype.name@1.1.5:
     resolution: {integrity: sha512-uN7m/BzVKQnCUF/iW8jYea67v++2u7m5UgENbHRtdDVclOUP+FMPlCNdmk0h/ysGyo2tavMJEDqJAkJdRa1vMA==}
     engines: {node: '>= 0.4'}
@@ -3879,6 +3902,16 @@ packages:
       has: 1.0.3
       has-proto: 1.0.1
       has-symbols: 1.0.3
+
+  /get-intrinsic@1.2.3:
+    resolution: {integrity: sha512-JIcZczvcMVE7AUOP+X72bh8HqHBRxFdz5PDHYtNG/lE3yk9b3KZBJlwFcTyPYjg3L4RLLmZJzvjxhaZVapxFrQ==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      es-errors: 1.0.0
+      function-bind: 1.1.2
+      has-proto: 1.0.1
+      has-symbols: 1.0.3
+      hasown: 2.0.0
 
   /get-stream@5.2.0:
     resolution: {integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==}
@@ -4015,7 +4048,6 @@ packages:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
       get-intrinsic: 1.2.1
-    dev: true
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -4061,6 +4093,11 @@ packages:
       get-intrinsic: 1.2.1
     dev: true
 
+  /has-property-descriptors@1.0.1:
+    resolution: {integrity: sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==}
+    dependencies:
+      get-intrinsic: 1.2.3
+
   /has-proto@1.0.1:
     resolution: {integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==}
     engines: {node: '>= 0.4'}
@@ -4081,6 +4118,12 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /hasown@2.0.0:
+    resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      function-bind: 1.1.2
 
   /he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
@@ -5242,6 +5285,10 @@ packages:
 
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
+    dev: true
+
+  /object-inspect@1.13.1:
+    resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==}
 
   /object-is@1.1.5:
     resolution: {integrity: sha512-3cyDsyHgtmi7I7DfSSI2LDp6SK2lwvtbg0p0R1e0RvTqF5ceGx+K2dfSjm1bKDMVCFEDAQvy+o8c6a7VujOddw==}
@@ -5932,6 +5979,16 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /set-function-length@1.2.0:
+    resolution: {integrity: sha512-4DBHDoyHlM1IRPGYcoxexgh67y4ueR53FKV1yyxwFMY7aCqcN/38M1+SwZ/qJQ8iLv7+ck385ot4CcisOAPT9w==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      define-data-property: 1.1.1
+      function-bind: 1.1.2
+      get-intrinsic: 1.2.3
+      gopd: 1.0.1
+      has-property-descriptors: 1.0.1
+
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -5947,9 +6004,9 @@ packages:
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
-      call-bind: 1.0.2
-      get-intrinsic: 1.2.1
-      object-inspect: 1.12.3
+      call-bind: 1.0.5
+      get-intrinsic: 1.2.3
+      object-inspect: 1.13.1
 
   /siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}

@@ -68,7 +68,6 @@ export default defineConfig({
     }),
 
     jsx(),
-
     components({
       resolvers: [VarletUIResolver()]
     }),
