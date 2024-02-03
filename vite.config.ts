@@ -82,6 +82,11 @@ export default defineConfig({
       extendRoute
     }),
 
+    pages({
+      dirs: 'src/stacks',
+      moduleId: '~stacks'
+    }),
+
     compression({
       include: [/\.html$/, /\.css$/, /\.js$/, /\.ttf$/],
       skipIfLargerOrEqual: true

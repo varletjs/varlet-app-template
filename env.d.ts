@@ -9,3 +9,10 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv
 }
+
+declare module '~stacks' {
+  import type { RouteRecordRaw } from 'vue-router'
+
+  const routes: RouteRecordRaw[]
+  export default routes
+}
