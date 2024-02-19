@@ -7,7 +7,7 @@ import compression from 'vite-plugin-compression2'
 import progress from 'vite-plugin-progress'
 import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
-import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
+import { VarletImportResolver } from '@varlet/import-resolver'
 import { defineConfig } from 'vitest/config'
 import { extendRoute } from './build/extendRoute'
 import { isProduction } from './build/env'
@@ -68,13 +68,14 @@ export default defineConfig({
     }),
 
     jsx(),
+
     components({
-      resolvers: [VarletUIResolver()]
+      resolvers: [VarletImportResolver()]
     }),
 
     autoImport({
       imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
-      resolvers: [VarletUIResolver({ autoImport: true })],
+      resolvers: [VarletImportResolver({ autoImport: true })],
       eslintrc: { enabled: true }
     }),
 

@@ -17,7 +17,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "cypress open",
     "test:e2e-run": "cypress run",
-    "bump": "pnpm update @varlet/touch-emulator @varlet/ui @varlet/use @varlet/axle @varlet/bounce-fixer --latest"
+    "bump": "pnpm update @varlet/touch-emulator @varlet/ui @varlet/use @varlet/axle @varlet/bounce-fixer @varlet/import-resolver --latest"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged --allow-empty --concurrent false",
@@ -30,9 +30,9 @@
   "dependencies": {
     "@varlet/axle": "^0.6.0",
     "@varlet/bounce-fixer": "^0.0.3",
-    "@varlet/touch-emulator": "^2.22.2",
-    "@varlet/ui": "^2.22.2",
-    "@varlet/use": "^2.22.2",
+    "@varlet/touch-emulator": "3.0.0-alpha.1708348990073",
+    "@varlet/ui": "3.0.0-alpha.1708348990073",
+    "@varlet/use": "3.0.0-alpha.1708348990073",
     "@vueuse/core": "^10.5.0",
     "dayjs": "^1.11.8",
     "mockjs": "^1.1.0",
@@ -69,8 +69,9 @@
     "simple-git-hooks": "^2.8.1",
     "typescript": "5.0.2",
     "unocss": "^0.58.2",
-    "unplugin-auto-import": "^0.16.4",
-    "unplugin-vue-components": "^0.25.0",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "@varlet/import-resolver": "3.0.0-alpha.1708348990073",
     "vite": "^5.0.10",
     "vite-bundle-analyzer": "^0.6.1",
     "vite-plugin-compression2": "^0.10.1",
