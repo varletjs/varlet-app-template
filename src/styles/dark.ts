@@ -1,6 +1,6 @@
 import { Themes } from '@varlet/ui'
 
-export const darkTheme = {
+export const darkTheme = Themes.toViewport({
   // varlet
   ...Themes.dark,
   '--color-primary': '#BB86FC',
@@ -10,4 +10,4 @@ export const darkTheme = {
   '--app-title-color': '#ffffff',
   '--app-subtitle-color': '#aaaaaa',
   '--app-description-color': '#aaaaaa'
-}
+})
