@@ -12,14 +12,14 @@ dependencies:
     specifier: ^0.0.3
     version: 0.0.3
   '@varlet/touch-emulator':
-    specifier: 3.0.5
-    version: 3.0.5
+    specifier: 3.0.6
+    version: 3.0.6
   '@varlet/ui':
-    specifier: 3.0.5
-    version: 3.0.5(vue@3.3.4)
+    specifier: 3.0.6
+    version: 3.0.6(vue@3.3.4)
   '@varlet/use':
-    specifier: 3.0.5
-    version: 3.0.5(vue@3.3.4)
+    specifier: 3.0.6
+    version: 3.0.6(vue@3.3.4)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.3.4)
@@ -68,8 +68,8 @@ devDependencies:
     specifier: ^0.58.2
     version: 0.58.2
   '@varlet/import-resolver':
-    specifier: 3.0.5
-    version: 3.0.5
+    specifier: 3.0.6
+    version: 3.0.6
   '@vitejs/plugin-vue':
     specifier: ^5.0.0
     version: 5.0.0(vite@5.0.10)(vue@3.3.4)
@@ -1838,47 +1838,47 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/icons@3.0.5:
-    resolution: {integrity: sha512-y2//03TrB2Ar4jwZEW2smftiP3BPTgjWIXt8SNQj1XaGeUyVl8GnEcAla31+8dE+01phB+azutY4RwJqyuIDBw==}
+  /@varlet/icons@3.0.6:
+    resolution: {integrity: sha512-FoC98e6+hW8eZbr9pQz9PNzhhw7T+PlSu7/90w6rupn8x7egWZFoUDvoSI2O5XRyNAL4miyDOlm0iSova48ZlA==}
     dev: false
 
-  /@varlet/import-resolver@3.0.5:
-    resolution: {integrity: sha512-oufATZGTyrdiTDsPLiM46kwqNZYXrbEs06vR6fhnH/dsEHhiBHN4mGO6EIo6H48OURPjctoIz6vpMKgGB4dOGw==}
+  /@varlet/import-resolver@3.0.6:
+    resolution: {integrity: sha512-uizLiqmu9h+K/QfZyAY0r0r84tjpWmM2KVMtTShIyGygxEbcRj3Si+0CjqYG7hHOmEqGQvUIeuB0CXd6pFXbFA==}
     dependencies:
-      '@varlet/shared': 3.0.5
+      '@varlet/shared': 3.0.6
     dev: true
 
   /@varlet/shared@2.20.3:
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/shared@3.0.5:
-    resolution: {integrity: sha512-Nl/l0rLjtgS+1NF1nyYep7oIsa1r8BRmSfG+xv/TaGXs5gaz9r1QZaBDEV34dZECPoDU08v5avZKb6kF9HFmwQ==}
+  /@varlet/shared@3.0.6:
+    resolution: {integrity: sha512-UFO1D85S0yl4S44lmzGks+4Ob9paqylasEDrN1sj0UYyNCdkq4Vr0Pn1HcTUzI8EuiM7obThnupFXR6hQJwuSg==}
 
-  /@varlet/touch-emulator@3.0.5:
-    resolution: {integrity: sha512-686wCYusc9exYVBgUr7xhcjVTfPq9xP4z7Szs+HR0fu2yxWm7M+IWm1ge8diXv/5eJymadMnkdAa1E3m/GzTPQ==}
+  /@varlet/touch-emulator@3.0.6:
+    resolution: {integrity: sha512-LxEra7/4fFNpqHrMjHM/zAgxV1Nd6V9YUnJ1tPgfOI0wtIOJmaODLv23v+LKAbdZcE3+5dEs7X8ItOl0t8zgXg==}
     dev: false
 
-  /@varlet/ui@3.0.5(vue@3.3.4):
-    resolution: {integrity: sha512-Ilm7An8YeXH+SMgmgzh6bHJgBkr7iyfu61W0CUrEVShehmtu7zjcJa24hCzmvG3HjS+t7rlMYTooIr8u2PSNlA==}
+  /@varlet/ui@3.0.6(vue@3.3.4):
+    resolution: {integrity: sha512-g/+fz08pbh3Y57rJayyOeUbzafKat+QdZ8frK1XJjzDEFzRfiaUbfIuCOBoFpFoTu/9SN3fK9c6bYmPfH3wdqA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.0.5
-      '@varlet/shared': 3.0.5
-      '@varlet/use': 3.0.5(vue@3.3.4)
+      '@varlet/icons': 3.0.6
+      '@varlet/shared': 3.0.6
+      '@varlet/use': 3.0.6(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
     dev: false
 
-  /@varlet/use@3.0.5(vue@3.3.4):
-    resolution: {integrity: sha512-fq/66uRy8w3d1nEPL010PxgMzJx6RoGT0S27BUO2fEm739tWlNApcmPiKa2qKvVd7iT9Vf37i0gTlpBjM7IzDg==}
+  /@varlet/use@3.0.6(vue@3.3.4):
+    resolution: {integrity: sha512-rL9rUHLAIV343L+NQNXubAF26+pvmgBJ4yn/orrJzdfpBQpzcT3hdeAaUT7SZK+us2fbSQUQi0mMahvCR4DBQw==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 3.0.5
+      '@varlet/shared': 3.0.6
       vue: 3.3.4
     dev: false
 
@@ -2555,7 +2555,6 @@ packages:
       function-bind: 1.1.2
       get-intrinsic: 1.2.4
       set-function-length: 1.2.1
-    dev: false
 
   /callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
@@ -3091,7 +3090,6 @@ packages:
       es-define-property: 1.0.0
       es-errors: 1.3.0
       gopd: 1.0.1
-    dev: false
 
   /define-lazy-prop@3.0.0:
     resolution: {integrity: sha512-N+MeXYoqr3pOgn8xfyRPREN7gHakLYjhsHhWGT3fWAiL4IkAt0iDw14QiiEm2bE30c5XX5q0FtAA3CK5f9/BUg==}
@@ -3280,7 +3278,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.4
-    dev: false
 
   /es-errors@1.0.0:
     resolution: {integrity: sha512-yHV74THqMJUyFKkHyN7hyENcEZM3Dj2a2IrdClY+IT4BFQHkIVwlh8s6uZfjsFydMdNHv0F5mWgAA3ajFbsvVQ==}
@@ -3290,7 +3287,6 @@ packages:
   /es-errors@1.3.0:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
-    dev: false
 
   /es-get-iterator@1.1.3:
     resolution: {integrity: sha512-sPZmqHBe6JIiTfN5q2pEi//TwxmAFHwj/XEuYjTuse78i8KxaqMTTzxPoFKuzRpDpTJ+0NAbpfenkmH2rePtuw==}
@@ -3978,7 +3974,6 @@ packages:
       has-proto: 1.0.3
       has-symbols: 1.0.3
       hasown: 2.0.1
-    dev: false
 
   /get-stream@5.2.0:
     resolution: {integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==}
@@ -4170,7 +4165,6 @@ packages:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
     dependencies:
       es-define-property: 1.0.0
-    dev: false
 
   /has-proto@1.0.1:
     resolution: {integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==}
@@ -4179,7 +4173,6 @@ packages:
   /has-proto@1.0.3:
     resolution: {integrity: sha512-SJ1amZAJUiZS+PhsVLf5tGydlaVB8EdFpaSO4gmiUKUOxk8qzn5AIy4ZeJUmh22znIdk/uMAUT2pl3FxzVUH+Q==}
     engines: {node: '>= 0.4'}
-    dev: false
 
   /has-symbols@1.0.3:
     resolution: {integrity: sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==}
@@ -4210,7 +4203,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
-    dev: false
 
   /he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
@@ -4362,7 +4354,7 @@ packages:
     dependencies:
       get-intrinsic: 1.2.1
       has: 1.0.3
-      side-channel: 1.0.4
+      side-channel: 1.0.5
     dev: true
 
   /is-arguments@1.1.1:
@@ -5804,7 +5796,7 @@ packages:
     resolution: {integrity: sha512-OQiU+C+Ds5qiH91qh/mg0w+8nwQuLjM4F4M/PbmhDOoYehPh+Fb0bDjtR1sOvy7YKxvj28Y/M0PhP5uVX0kB+g==}
     engines: {node: '>=0.6'}
     dependencies:
-      side-channel: 1.0.4
+      side-channel: 1.0.5
     dev: true
 
   /qs@6.11.2:
@@ -6101,7 +6093,6 @@ packages:
       get-intrinsic: 1.2.4
       gopd: 1.0.1
       has-property-descriptors: 1.0.2
-    dev: false
 
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -6131,7 +6122,6 @@ packages:
       es-errors: 1.3.0
       get-intrinsic: 1.2.4
       object-inspect: 1.13.1
-    dev: false
 
   /siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
