@@ -1,6 +1,5 @@
 import { localStorage } from '@/utils/storage'
 import { darkTheme } from '@/styles/dark'
-import { onMounted } from 'vue'
 
 export function useDark() {
   const saved = localStorage.get('prefer-dark')
@@ -17,7 +16,7 @@ export function useDark() {
     updateTheme()
   }
 
-  onMounted(updateTheme)
+  updateTheme()
 
   return {
     isDark,
