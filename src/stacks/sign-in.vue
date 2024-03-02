@@ -2,6 +2,7 @@
 import { Form } from '@varlet/ui'
 import { validateNotEmpty } from '@/utils/validate'
 
+const { pushStack } = useAppRouter()
 const { t } = useI18n()
 const form = ref<Form>()
 const isViewPassword = ref(false)
@@ -68,10 +69,10 @@ async function submit() {
 
           <var-space class="sign-in-form-text" justify="space-between" align="center">
             <var-checkbox>{{ $t('Remember Me') }}</var-checkbox>
-            <span @click="$router.push(`${$route.path}/forgot-password`)">{{ $t('Forgot Password') }}?</span>
+            <span @click="pushStack('/forgot-password')">{{ $t('Forgot Password') }}?</span>
           </var-space>
           <var-button type="primary" block size="large" auto-loading @click="submit">{{ $t('Sign In') }}</var-button>
-          <var-space class="sign-in-form-text" justify="center" @click="$router.push(`${$route.path}/sign-up`)">
+          <var-space class="sign-in-form-text" justify="center" @click="pushStack('/sign-up')">
             {{ $t('Click to sign up') }}
           </var-space>
         </var-space>

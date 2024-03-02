@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
 
-const router = useRouter()
-const route = useRoute()
+const { router, route } = useAppRouter()
 const active = ref()
 
 const tabs = ref([
@@ -38,7 +36,7 @@ watch(
 )
 
 function to(path: string) {
-  router.push(path)
+  router.replace(path)
 }
 </script>
 

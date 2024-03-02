@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { apiGetCards, apiGetPlainCards, apiGetRowCards, Card, CardList } from '@/apis'
 import { UseAxleRefs } from '@varlet/axle/use'
 import { Response } from '@/request'
 
-const router = useRouter()
+const { pushStack } = useAppRouter()
 const active = ref('card')
 const isRefresh = ref(false)
 
@@ -88,7 +87,7 @@ async function handleRefresh() {
 }
 
 function handleClick() {
-  router.push('/layout/home/detail')
+  pushStack('/detail')
 }
 </script>
 

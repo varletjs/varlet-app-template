@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { pushStack } = useAppRouter()
 const show = ref(false)
 </script>
 
@@ -21,32 +22,17 @@ const show = ref(false)
 
       <div class="app-side-menu-cell-list">
         <var-space direction="column">
-          <var-cell
-            class="app-side-menu-cell"
-            :title="$t('Sign In')"
-            v-ripple
-            @click="$router.push(`${$route.path}/sign-in`)"
-          >
+          <var-cell class="app-side-menu-cell" :title="$t('Sign In')" v-ripple @click="pushStack('/sign-in')">
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="image" />
             </template>
           </var-cell>
-          <var-cell
-            class="app-side-menu-cell"
-            :title="$t('Sign Up')"
-            v-ripple
-            @click="$router.push(`${$route.path}/sign-up`)"
-          >
+          <var-cell class="app-side-menu-cell" :title="$t('Sign Up')" v-ripple @click="pushStack('/sign-up')">
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="image" />
             </template>
           </var-cell>
-          <var-cell
-            class="app-side-menu-cell"
-            :title="$t('Settings')"
-            v-ripple
-            @click="$router.push(`${$route.path}/settings`)"
-          >
+          <var-cell class="app-side-menu-cell" :title="$t('Settings')" v-ripple @click="pushStack('/settings')">
             <template #icon>
               <var-icon class="app-side-menu-cell-icon" name="cog" />
             </template>
