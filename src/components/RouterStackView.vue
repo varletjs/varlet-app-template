@@ -7,6 +7,8 @@ defineProps({
   }
 })
 
+// When the router-stack-view is deactivated in keep-alive, it will still be matched by vue-router and may render the child route view multiple times.
+// So unmount the component when it is deactivated.
 const activated = ref(true)
 
 onDeactivated(() => {
