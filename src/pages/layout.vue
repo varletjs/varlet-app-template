@@ -17,7 +17,8 @@ const tabs = ref([
   },
   {
     label: 'MESSAGE',
-    icon: 'bell',
+    icon: 'border-radius',
+    namespace: 'i',
     name: '/layout/message'
   },
   {
@@ -55,6 +56,7 @@ function to(path: string) {
         :label="$t(item.label)"
         :icon="item.icon"
         :name="item.name"
+        :namespace="item.namespace"
         @click="() => to(item.name)"
       />
     </var-bottom-navigation>

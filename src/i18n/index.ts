@@ -1,33 +1,28 @@
-import { createI18n } from 'vue-i18n'
+import { I18nOptions, createI18n } from 'vue-i18n'
 import { localStorage } from '@/utils/storage'
-import { Locale as ComponentsLocale } from '@varlet/ui'
+import { Locale as VarLocale } from '@varlet/ui'
+import enUS from './messages/en-US.json'
+import zhCN from './messages/zh-CN.json'
 
-ComponentsLocale.add('en-US', ComponentsLocale.enUS)
-ComponentsLocale.use(localStorage.get('locale') ?? 'zh-CN')
+VarLocale.add('en-US', VarLocale.enUS)
+VarLocale.use(localStorage.get('locale') ?? 'zh-CN')
 
 export type Locale = 'zh-CN' | 'en-US'
 
-export const loadMessages = () => {
-  const modules: Record<string, any> = import.meta.glob('./messages/*.ts', {
-    eager: true
-  })
-
-  return Object.keys(modules).reduce((messages, path) => {
-    const locale = path.replace(/(\.\/messages\/|\.ts)/g, '')
-    messages[locale] = modules[path].default
-    return messages
-  }, {} as Record<string, any>)
-}
-
-export const i18n = createI18n<false>({
+const options: I18nOptions = {
   legacy: false,
   locale: localStorage.get('locale') ?? 'en-US',
   fallbackLocale: 'en-US',
-  messages: loadMessages()
-})
+  messages: {
+    'en-US': enUS,
+    'zh-CN': zhCN
+  }
+}
+
+export const i18n = createI18n<false, typeof options>(options)
 
 export function setLocale(locale: Locale) {
   localStorage.set('locale', locale)
   i18n.global.locale.value = locale
-  ComponentsLocale.use(locale)
+  VarLocale.use(locale)
 }
