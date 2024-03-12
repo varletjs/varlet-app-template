@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { useAppRouter } from '@/use'
+
+defineOptions({
+  inheritAttrs: false
+})
+
 defineProps({
   animation: {
     type: String,
@@ -7,9 +13,13 @@ defineProps({
   }
 })
 
+const emit = defineEmits(['push', 'pushed', 'pop', 'popped'])
+const { route } = useAppRouter()
+
 // When the router-stack-view is deactivated in keep-alive, it will still be matched by vue-router and may render the child route view multiple times.
 // So unmount the component when it is deactivated.
 const activated = ref(true)
+const pushedPath = ref()
 
 onDeactivated(() => {
   activated.value = false
@@ -18,6 +28,11 @@ onDeactivated(() => {
 onActivated(() => {
   activated.value = true
 })
+
+function handlePush() {
+  pushedPath.value = route.path
+  emit('push')
+}
 </script>
 
 <template>
@@ -25,24 +40,16 @@ onActivated(() => {
     <router-view v-slot="{ Component }">
       <transition
         :name="`router-stack-view-${animation}`"
-        @before-enter="$emit('push')"
+        @before-enter="handlePush"
         @after-enter="$emit('pushed')"
-        @before-leave="$emit('pop')"
-        @after-leave="$emit('popped')"
+        @before-leave="$emit('pop', pushedPath)"
+        @after-leave="$emit('popped', pushedPath)"
       >
         <component :is="Component" />
       </transition>
     </router-view>
   </teleport>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  inheritAttrs: false
-})
-</script>
 
 <style>
 .router-stack-view-slide-x-enter-active,
