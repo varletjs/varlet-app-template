@@ -31,7 +31,7 @@ varlet-app-template 是一个开箱即用的轻量化移动端 Web 模板，基�
 
 ### 预览地址
 
-https://varletjs.github.io/varlet-app-template
+https://varlet-app-template.vercel.app
 
 ### 安装使用
 

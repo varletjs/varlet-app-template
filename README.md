@@ -31,7 +31,7 @@ This project is based on the `MIT` license
 
 ### Page Preview Address
 
-https://varletjs.github.io/varlet-app-template
+https://varlet-app-template.vercel.app
 
 ### Install And Use
 
