@@ -18,8 +18,8 @@ function handleCellClick(locale: Locale) {
 
 <template>
   <var-menu close-on-click-reference placement="bottom" offset-y="2vmin" v-model:show="show">
-    <var-button class="app-locale-switch" text round>
-      <var-icon class="app-locale-switch-icon" name="translate" />
+    <var-button text round>
+      <var-icon class="text-[22px]!" name="translate" />
     </var-button>
 
     <template #menu>
@@ -28,11 +28,3 @@ function handleCellClick(locale: Locale) {
     </template>
   </var-menu>
 </template>
-
-<style lang="less" scoped>
-.app-locale-switch {
-  &-icon {
-    font-size: 22px;
-  }
-}
-</style>

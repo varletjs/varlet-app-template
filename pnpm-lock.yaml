@@ -11,15 +11,18 @@ dependencies:
   '@varlet/bounce-fixer':
     specifier: ^0.0.3
     version: 0.0.3
+  '@varlet/shared':
+    specifier: 3.1.3
+    version: 3.1.3
   '@varlet/touch-emulator':
-    specifier: 3.1.2
-    version: 3.1.2
+    specifier: 3.1.3
+    version: 3.1.3
   '@varlet/ui':
-    specifier: 3.1.2
-    version: 3.1.2(vue@3.4.21)
+    specifier: 3.1.3
+    version: 3.1.3(vue@3.4.21)
   '@varlet/use':
-    specifier: 3.1.2
-    version: 3.1.2(vue@3.4.21)
+    specifier: 3.1.3
+    version: 3.1.3(vue@3.4.21)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.4.21)
@@ -68,11 +71,14 @@ devDependencies:
     specifier: ^0.58.2
     version: 0.58.2
   '@varlet/cli':
-    specifier: ^3.1.2
-    version: 3.1.2(@types/node@20.2.5)(@varlet/icons@3.1.2)(@varlet/touch-emulator@3.1.2)(@varlet/ui@3.1.2)(@vitest/coverage-istanbul@1.1.0)(@vue/runtime-core@3.4.21)(@vue/test-utils@2.4.3)(clipboard@2.0.11)(jsdom@21.0.0)(live-server@1.2.2)(lodash-es@4.17.21)(vitest@1.1.0)(vue-router@4.2.2)(vue@3.4.21)
+    specifier: 3.1.3
+    version: 3.1.3(@types/node@20.2.5)(@varlet/icons@3.1.3)(@varlet/touch-emulator@3.1.3)(@varlet/ui@3.1.3)(@vitest/coverage-istanbul@1.1.0)(@vue/runtime-core@3.4.21)(@vue/test-utils@2.4.3)(clipboard@2.0.11)(jsdom@21.0.0)(live-server@1.2.2)(lodash-es@4.17.21)(vitest@1.1.0)(vue-router@4.2.2)(vue@3.4.21)
   '@varlet/import-resolver':
-    specifier: 3.1.2
-    version: 3.1.2
+    specifier: 3.1.3
+    version: 3.1.3
+  '@varlet/preset-unocss':
+    specifier: 3.1.3
+    version: 3.1.3(unocss@0.58.2)
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.0.10)(vue@3.4.21)
@@ -2225,7 +2231,7 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@varlet/shared': 2.20.3
-      axios: 1.6.7
+      axios: 1.6.8
       crypto-js: 4.2.0
       lodash: 4.17.21
       minimatch: 9.0.3
@@ -2239,14 +2245,14 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/cli@3.1.2(@types/node@20.2.5)(@varlet/icons@3.1.2)(@varlet/touch-emulator@3.1.2)(@varlet/ui@3.1.2)(@vitest/coverage-istanbul@1.1.0)(@vue/runtime-core@3.4.21)(@vue/test-utils@2.4.3)(clipboard@2.0.11)(jsdom@21.0.0)(live-server@1.2.2)(lodash-es@4.17.21)(vitest@1.1.0)(vue-router@4.2.2)(vue@3.4.21):
-    resolution: {integrity: sha512-fexjSC4qSHOC2YIKNacxNsBfvMIbPQfG4dhLONleJHUTKJrBfLj5hNhvJ8Ft5As4NPy8f/b1FjfdzwBHEvkHwg==}
+  /@varlet/cli@3.1.3(@types/node@20.2.5)(@varlet/icons@3.1.3)(@varlet/touch-emulator@3.1.3)(@varlet/ui@3.1.3)(@vitest/coverage-istanbul@1.1.0)(@vue/runtime-core@3.4.21)(@vue/test-utils@2.4.3)(clipboard@2.0.11)(jsdom@21.0.0)(live-server@1.2.2)(lodash-es@4.17.21)(vitest@1.1.0)(vue-router@4.2.2)(vue@3.4.21):
+    resolution: {integrity: sha512-XCEhtOvgZciZPQVoAmi9c52IuV98MjOA+xswBgCQ/E1vZObSOfse7izc4EGMchzqCRMOkyZ6ImJsarl9nTEvIA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
-      '@varlet/icons': 3.1.2
-      '@varlet/touch-emulator': 3.1.2
-      '@varlet/ui': 3.1.2
+      '@varlet/icons': 3.1.3
+      '@varlet/touch-emulator': 3.1.3
+      '@varlet/ui': 3.1.3
       '@vitest/coverage-istanbul': 1.1.0
       '@vue/runtime-core': 3.4.21
       '@vue/test-utils': 2.4.1
@@ -2260,12 +2266,12 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@babel/preset-typescript': 7.23.3(@babel/core@7.24.0)
-      '@varlet/icons': 3.1.2
+      '@varlet/icons': 3.1.3
       '@varlet/release': 0.2.5
-      '@varlet/shared': 3.1.2
-      '@varlet/touch-emulator': 3.1.2
-      '@varlet/ui': 3.1.2(vue@3.4.21)
-      '@varlet/vite-plugins': 3.1.2
+      '@varlet/shared': 3.1.3
+      '@varlet/touch-emulator': 3.1.3
+      '@varlet/ui': 3.1.3(vue@3.4.21)
+      '@varlet/vite-plugins': 3.1.3
       '@vitejs/plugin-vue': 5.0.4(vite@5.0.10)(vue@3.4.21)
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.0.10)(vue@3.4.21)
       '@vitest/coverage-istanbul': 1.1.0(vitest@1.1.0)
@@ -2282,7 +2288,7 @@ packages:
       fs-extra: 9.1.0
       glob: 7.2.3
       hash-sum: 2.0.0
-      inquirer: 9.2.15
+      inquirer: 9.2.16
       jsdom: 21.0.0
       less: 3.13.1
       live-server: 1.2.2
@@ -2309,13 +2315,21 @@ packages:
       - terser
     dev: true
 
-  /@varlet/icons@3.1.2:
-    resolution: {integrity: sha512-s7NLcF7Zw0e5Ba7RfTeGeZvqH2+J/C9SlBu6q5XQqlf9S3TUJKbhokITDrIQXIJcbxRHJTn1y9mUte2GO5DKJA==}
+  /@varlet/icons@3.1.3:
+    resolution: {integrity: sha512-KcGErcYaG+AYkGmWDhnhO0BHDOWnICDoDTHk4IYiYPTbYk4a14PuCAyPNPiGwJKgsz0i0gJ0OJZgM12DlhaIKQ==}
 
-  /@varlet/import-resolver@3.1.2:
-    resolution: {integrity: sha512-1/lndwcurgv2YXwMy8ilDRr5w7xYAHEkGAoflN/TEWGdSVvOF7N6dfT1tLiOP52h8jdF8kEtT4u1b4NuPtKc7A==}
+  /@varlet/import-resolver@3.1.3:
+    resolution: {integrity: sha512-t6PTsIUcH8LZV54L5wKAdmud+M0LrUza3GhOPCBOjmgS8xdlADjaFQ3VVjLiLN2YcHVkxU6Wu1yzFdmkhjYfTQ==}
     dependencies:
-      '@varlet/shared': 3.1.2
+      '@varlet/shared': 3.1.3
+    dev: true
+
+  /@varlet/preset-unocss@3.1.3(unocss@0.58.2):
+    resolution: {integrity: sha512-l1P9Qus34fp3L/eitDV+2MN4AadBEh0wA3MGh4WG4iLDsRDG29YJRkRXgVr0g0Gjyk2N+H3jK7tAD9hX8pCp8w==}
+    peerDependencies:
+      unocss: ^0.58.5
+    dependencies:
+      unocss: 0.58.2(postcss@8.4.35)(vite@5.0.10)
     dev: true
 
   /@varlet/release@0.2.5:
@@ -2328,7 +2342,7 @@ packages:
       execa: 8.0.1
       fs-extra: 11.2.0
       glob: 10.3.10
-      inquirer: 9.2.15
+      inquirer: 9.2.16
       nanospinner: 1.1.0
       picocolors: 1.0.0
       semver: 7.6.0
@@ -2338,37 +2352,37 @@ packages:
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/shared@3.1.2:
-    resolution: {integrity: sha512-yYlMboUrG4dBzJcEK5rOs9knTUfYi1CIqCRehLRhegoAqVW0mcQcvAwHpXCMUxHb2MJUDjt0i5gsMoiT4+6CuA==}
+  /@varlet/shared@3.1.3:
+    resolution: {integrity: sha512-wrcifKAQNHPdKkqYzh40RIKSkKaVwPfq8BnwsygljBGtV3EYHQXCxsVzI6UMi9FeqbnP3wg+wo37R55ssVMF4g==}
 
-  /@varlet/touch-emulator@3.1.2:
-    resolution: {integrity: sha512-ZlAYJZ3UDeSSgN2dJ/hgYOvMGUHtzDoPn0U6xqfJahqnu+CzRFIxxtHSAehoUlz+08ll0cHJBQIHM5BCDzQhZA==}
+  /@varlet/touch-emulator@3.1.3:
+    resolution: {integrity: sha512-iduMaS9iaJhiem7tI2C2P1pzJNL0dKw8FexZId+qkD/GQEXMSse9hzQ6D27zhGDWqWKp5VGI0jr3jE4iRVtuIg==}
 
-  /@varlet/ui@3.1.2(vue@3.4.21):
-    resolution: {integrity: sha512-vVY5QOc/cGeZNQ13vguqFJgufZv6QnG1hWxFHNXQv6AjKGJUv7y84QMpdVOFz5ntiMdiAzmhUBD9Qjm0kFpdjw==}
+  /@varlet/ui@3.1.3(vue@3.4.21):
+    resolution: {integrity: sha512-YTEO6wNlc6pzfCPLqGFmd0pAYPijEjAjjwCRTvC1qSJRLIzbUWZp92F7XuX8N7BhkxKRJjiyRdNqKSDyZLulhA==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.1.2
-      '@varlet/shared': 3.1.2
-      '@varlet/use': 3.1.2(vue@3.4.21)
+      '@varlet/icons': 3.1.3
+      '@varlet/shared': 3.1.3
+      '@varlet/use': 3.1.3(vue@3.4.21)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.0.2)
 
-  /@varlet/use@3.1.2(vue@3.4.21):
-    resolution: {integrity: sha512-ErHlD+YWKJw3iQXgsu4O77Owx7j/+IDdoHV5udmyBOq1UE4qiZ3HYba1Ie0go8NMPnh6E9CfzlEDaOdrU01h/w==}
+  /@varlet/use@3.1.3(vue@3.4.21):
+    resolution: {integrity: sha512-DgDDXzpdijsmDRehGJHKERp+Zd/Au72Ch8FTRZQ5TNqJKjTY4CD/7Sod3J9gfR7I/GZJ4QcduQqTKKDJOeH1Hw==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 3.1.2
+      '@varlet/shared': 3.1.3
       vue: 3.4.21(typescript@5.0.2)
 
-  /@varlet/vite-plugins@3.1.2:
-    resolution: {integrity: sha512-u/824mFkLRQJTFLD+NqYewZiYzlRi4gLZ35vEYQ2nCxg036vxn3ynnA18VN+isO4vxNCXi99H310TQEc3eCcOg==}
+  /@varlet/vite-plugins@3.1.3:
+    resolution: {integrity: sha512-21Hexo/IriqAIpBW8gVOxQrhxEaSE1G0HpUOBCFyjFlHnpxgToti+sgMrGjSp9ZDgcUZlIj02PBRIH7dcMJodg==}
     dependencies:
-      '@varlet/shared': 3.1.2
+      '@varlet/shared': 3.1.3
       ejs: 3.1.9
       fs-extra: 9.1.0
       highlight.js: 10.7.3
@@ -3037,10 +3051,10 @@ packages:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
     dev: true
 
-  /axios@1.6.7:
-    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
+  /axios@1.6.8:
+    resolution: {integrity: sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==}
     dependencies:
-      follow-redirects: 1.15.5
+      follow-redirects: 1.15.6
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -5121,8 +5135,8 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
-  /follow-redirects@1.15.5:
-    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -5628,6 +5642,13 @@ packages:
     dependencies:
       function-bind: 1.1.2
 
+  /hasown@2.0.2:
+    resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      function-bind: 1.1.2
+    dev: true
+
   /he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
@@ -5837,8 +5858,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /inquirer@9.2.15:
-    resolution: {integrity: sha512-vI2w4zl/mDluHt9YEQ/543VTCwPKWiHzKtm9dM2V0NdFcqEexDAjUHzO1oA60HRNaVifGXXM1tRRNluLVHa0Kg==}
+  /inquirer@9.2.16:
+    resolution: {integrity: sha512-qzgbB+yNjgSzk2omeqMDtO9IgJet/UL67luT1MaaggRpGK73DBQct5Q4pipwFQcIKK1GbMODYd4UfsRCkSP1DA==}
     engines: {node: '>=18'}
     dependencies:
       '@ljharb/through': 2.3.13
@@ -5871,7 +5892,7 @@ packages:
     resolution: {integrity: sha512-YBUanLI8Yoihw923YeFUS5fs0fF2f5TSFTNiYAAzhhDscDa3lEqYuz1pDOEP5KvX94I9ey3vsqjJcLVFVU+3QA==}
     engines: {node: '>= 0.10'}
     dependencies:
-      hasown: 2.0.1
+      hasown: 2.0.2
     dev: true
 
   /is-arguments@1.1.1:
@@ -5958,7 +5979,7 @@ packages:
     resolution: {integrity: sha512-bc4NlCDiCr28U4aEsQ3Qs2491gVq4V8G7MQyws968ImqjKuYtTJXrl7Vq7jsN7Ly/C3xj5KWFrY7sHNeDkAzXw==}
     engines: {node: '>= 0.4'}
     dependencies:
-      hasown: 2.0.1
+      hasown: 2.0.2
     dev: true
 
   /is-date-object@1.0.5:

@@ -5,49 +5,49 @@ const sliderValue = ref(0)
 
 <template>
   <router-stack>
-    <div class="settings">
+    <var-style-provider class="pt-[var(--app-bar-height)]" :style-vars="{ '--cell-padding': '16px 12px' }">
       <app-header :title="$t('Settings')">
         <template #left>
           <app-back />
         </template>
       </app-header>
 
-      <div class="settings-list">
+      <div class="py-[10px]">
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="settings-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
+            <var-switch class="mr-[4px]" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="settings-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
+            <var-switch class="mr-[4px]" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
           <template #icon>
-            <var-icon class="settings-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
+            <var-switch class="mr-[4px]" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
           <template #icon>
-            <var-icon class="settings-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
-            <var-switch class="settings-switch" size="5.2vmin" v-model="value" />
+            <var-switch class="mr-[4px]" size="5.2vmin" v-model="value" />
           </template>
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="settings-slider-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px] mb-[10px]" size="6vmin" name="image" />
           </template>
           <template #description>
             <var-slider v-model="sliderValue" />
@@ -55,27 +55,19 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="settings-slider-icon" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px] mb-[10px]" size="6vmin" name="image" />
           </template>
           <template #description>
             <var-slider v-model="sliderValue" />
           </template>
         </var-cell>
       </div>
-    </div>
+    </var-style-provider>
   </router-stack>
 </template>
 
 <style lang="less" scoped>
 .settings {
-  --cell-padding: 16px 12px;
-  padding: var(--app-bar-height) 0 0;
-
-  &-list {
-    padding: 10px 0;
-  }
-
-  &-icon,
   &-slider-icon {
     margin-right: 20px;
     margin-left: 8px;

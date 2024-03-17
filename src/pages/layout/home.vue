@@ -92,7 +92,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="home">
+  <div class="pt-[114px] pb-[16px] px-[14px]">
     <app-header>
       <template #left>
         <app-side-menu />
@@ -112,14 +112,14 @@ function handleClick() {
 
     <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
       <var-tabs-items v-model:active="active">
-        <var-tab-item class="home-tab-item" name="card">
+        <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="card">
           <var-list
             :finished="cardList.finished"
             v-model:loading="isCardsLoading"
             v-model:error="cardList.error"
             @load="() => getCards({ params: { current: cardList.current } })"
           >
-            <var-space class="home-tab-item-space" direction="column" size="large">
+            <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
@@ -144,14 +144,14 @@ function handleClick() {
             </var-space>
           </var-list>
         </var-tab-item>
-        <var-tab-item class="home-tab-item" name="rowCard">
+        <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="rowCard">
           <var-list
             :finished="rowCardList.finished"
             v-model:loading="isRowCardsLoading"
             v-model:error="rowCardList.error"
             @load="() => getRowCards({ params: { current: rowCardList.current } })"
           >
-            <var-space class="home-tab-item-space" direction="column" size="large">
+            <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
@@ -174,14 +174,14 @@ function handleClick() {
             </var-space>
           </var-list>
         </var-tab-item>
-        <var-tab-item class="home-tab-item" name="plainCard">
+        <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="plainCard">
           <var-list
             :finished="plainCardList.finished"
             v-model:loading="isPlainCardsLoading"
             v-model:error="plainCardList.error"
             @load="() => getPlainCards({ params: { current: plainCardList.current } })"
           >
-            <var-space class="home-tab-item-space" direction="column" size="large">
+            <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
@@ -205,21 +205,6 @@ function handleClick() {
 
   <router-stack-view />
 </template>
-
-<style lang="less" scoped>
-.home {
-  --home-header-height: 98px;
-  padding: calc(var(--home-header-height) + 16px) 14px 16px;
-
-  &-tab-item {
-    min-height: calc(var(--app-height) - 190px);
-  }
-
-  &-tab-item-space {
-    padding: 4px;
-  }
-}
-</style>
 
 <route>
   {

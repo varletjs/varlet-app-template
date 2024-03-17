@@ -14,14 +14,14 @@ defineProps({
 </script>
 
 <template>
-  <header class="app-header">
+  <header class="fixed top-0 left-0 w-full z-[100]">
     <var-app-bar safe-area-top :title="title" :title-position="titlePosition">
       <template #left>
         <slot name="left" />
       </template>
 
       <template #right>
-        <var-space class="app-header-right" :size="[0, '1.4vmin']">
+        <var-space class="pr-[8px]" :size="[0, '1.4vmin']">
           <slot name="right" />
         </var-space>
       </template>
@@ -32,17 +32,3 @@ defineProps({
     </var-app-bar>
   </header>
 </template>
-
-<style lang="less" scoped>
-.app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-
-  &-right {
-    padding-right: 8px;
-  }
-}
-</style>
