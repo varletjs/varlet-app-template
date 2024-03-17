@@ -3,8 +3,6 @@ import jsx from '@vitejs/plugin-vue-jsx'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import pages from 'vite-plugin-pages'
-import compression from 'vite-plugin-compression2'
-import progress from 'vite-plugin-progress'
 import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletImportResolver } from '@varlet/import-resolver'
@@ -14,7 +12,6 @@ import { isProduction } from './build/env'
 
 // Use as needed
 // import eruda from 'vite-plugin-eruda'
-// import { analyzer } from 'vite-bundle-analyzer'
 
 export default defineConfig({
   base: './',
@@ -96,16 +93,8 @@ export default defineConfig({
       moduleId: '~stacks'
     }),
 
-    compression({
-      include: [/\.html$/, /\.css$/, /\.js$/, /\.ttf$/],
-      skipIfLargerOrEqual: true
-    }),
-
-    progress(),
-
     unoCSS()
 
-    // analyzer()
     // eruda()
   ]
 })
