@@ -34,16 +34,16 @@ function handleRefresh() {
       </app-header>
       <var-tabs-items v-model:active="active">
         <var-tab-item name="module">
-          <cell-items />
-
-          <var-divider />
-
           <var-space class="pb-[30px] px-[14px]" direction="column" :size="['1.8vmin', 0]">
             <module-items />
 
             <var-divider />
 
             <module-row-items />
+
+            <var-divider />
+
+            <cell-items />
           </var-space>
         </var-tab-item>
 

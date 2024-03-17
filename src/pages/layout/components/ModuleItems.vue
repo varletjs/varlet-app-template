@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[10px] mt-[4px]">
+  <div class="px-[10px]">
     <var-space :size="['2.6vmin', '1.7vmin']">
       <div class="p-[10px]" v-for="i in 9" :key="i">
         <var-paper
