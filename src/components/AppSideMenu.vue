@@ -5,7 +5,7 @@ const show = ref(false)
 
 <template>
   <var-button text round @click="show = !show" v-bind="$attrs">
-    <var-icon class="text-[24px]!" name="menu" />
+    <var-icon class="text-[24px]! ml-[4px]" name="menu" />
   </var-button>
 
   <var-popup position="left" v-model:show="show">
