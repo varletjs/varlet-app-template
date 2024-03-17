@@ -35,7 +35,7 @@ const items = ref([
 
 <template>
   <div class="pt-[10px] pb-[16px] px-[24px]">
-    <var-paper>
+    <var-paper :elevation="2">
       <var-cell
         v-for="(item, index) in items"
         :key="item.name"
