@@ -5,6 +5,5 @@ export default defineConfig({
   namespace: 'i',
   fontFamilyClassName: 'i--set',
   entry: './src/svg-icons',
-  output: './src/assets/icons',
-  genPng: false
+  output: './src/assets/icons'
 })
