@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { Context } from '@varlet/ui'
+import { useZIndex } from '@/use'
 import { useParent, useChildren } from '@varlet/use'
 import { watch, ref, nextTick } from 'vue'
-
-Context.zIndex++
 
 defineProps({
   keepAlive: {
@@ -19,7 +17,7 @@ defineEmits(['push', 'pushed', 'pop', 'popped'])
 
 const stack = ref<HTMLElement>()
 const showParent = ref(true)
-const zIndex = ref(Context.zIndex)
+const zIndex = useZIndex(1)
 const { length, bindChildren } = useChildren<any, any>('__ROUTER_STACK__')
 const { bindParent } = useParent<any, any>('__ROUTER_STACK__')
 
