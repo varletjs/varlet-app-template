@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 
 const isRefresh = ref(false)
-const activeHeart = ref(false)
 
 function handleRefresh() {
   isRefresh.value = false

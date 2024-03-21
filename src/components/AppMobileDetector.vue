@@ -8,6 +8,11 @@ const isMobile = ref(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera M
   <slot v-if="isMobile" />
 
   <div class="flex flex-col min-h-screen justify-center items-center px-[14px]" v-else>
-    <var-result class="result" type="warning" :title="$t('Warning')" :description="$t('Please use mobile visit')" />
+    <var-result
+      class="max-w-[350px]"
+      type="warning"
+      :title="$t('Warning')"
+      :description="$t('Please use mobile visit')"
+    />
   </div>
 </template>
