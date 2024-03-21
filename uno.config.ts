@@ -4,6 +4,13 @@ import presetRemToPx from '@unocss/preset-rem-to-px'
 
 export default defineConfig({
   presets: [presetUno(), presetRemToPx(), presetIcons(), presetVarlet()],
+  theme: {
+    colors: {
+      secondary: 'var(--color-secondary)',
+      tertiary: 'var(--color-tertiary)',
+      muted: 'var(--color-muted)'
+    }
+  },
   rules: [
     [
       /^text-(.*)$/,

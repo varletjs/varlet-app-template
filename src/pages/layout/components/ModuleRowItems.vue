@@ -5,7 +5,7 @@
         <var-icon name="fire" color="var(--color-primary)" size="11vmin" />
         <div class="w-[50vmin] ml-[24px]">
           <div class="text-lg">{{ $t('Module') }}</div>
-          <div class="text-md text-on-surface-variant mt-[4px]">
+          <div class="text-md text-tertiary mt-[4px]">
             <var-ellipsis style="max-width: 100%" :tooltip="false">{{ $t('Module introductory text') }}</var-ellipsis>
           </div>
         </div>

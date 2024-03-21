@@ -29,9 +29,9 @@ function handleRefresh() {
           <div class="text-lg w-[190px] text-inverse-surface">
             <var-ellipsis style="max-width: 100%" :tooltip="false">{{ $t('Section title') }}</var-ellipsis>
           </div>
-          <div class="text-md text-on-surface-variant mb-[2px]">2023-07-27</div>
+          <div class="text-md text-tertiary mb-[2px]">2023-07-27</div>
         </div>
-        <div class="text-md text-on-surface-variant mt-[6px]">
+        <div class="text-md text-tertiary mt-[6px]">
           <var-ellipsis :line-clamp="2" :tooltip="false">{{ $t('Section Text') }}</var-ellipsis>
         </div>
       </div>

@@ -56,7 +56,7 @@ function handleRefresh() {
         <var-divider class="my-[30px]!" />
 
         <div class="px-[14px]">
-          <div class="text-md text-on-surface-variant">{{ $t('Comment Information Area') }}</div>
+          <div class="text-md text-tertiary">{{ $t('Comment Information Area') }}</div>
           <div class="mt-[28px]!">
             <var-space :size="['5vmin', '4vmin']">
               <var-chip class="p-0!" v-for="i in 8" :key="i">
@@ -83,7 +83,7 @@ function handleRefresh() {
               :model-value="3.5"
             />
 
-            <div class="text-on-surface-variant text-md">{{ $t('A total of {count} comments', { count: 100 }) }}</div>
+            <div class="text-tertiary text-md">{{ $t('A total of {count} comments', { count: 100 }) }}</div>
           </div>
         </div>
 
