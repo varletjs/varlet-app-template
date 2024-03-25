@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-pages/client" />
+import dayjs from 'dayjs'
 
 interface ImportMetaEnv {
   readonly VITE_MOCK_API_BASE: string
@@ -15,4 +16,10 @@ declare module '~stacks' {
 
   const routes: RouteRecordRaw[]
   export default routes
+}
+
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    $dayjs: typeof dayjs
+  }
 }
