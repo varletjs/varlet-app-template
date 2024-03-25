@@ -118,22 +118,11 @@ function handleRefresh() {
 {
   "meta": {
     "stacks": [
+      "sign-up",
+      "settings",
       {
         "name": "sign-in",
-        "children": [
-          {
-            "name": "sign-up"
-          },
-          {
-            "name": "forgot-password"
-          }
-        ]
-      },
-      {
-        "name": "sign-up"
-      },
-      {
-        "name": "settings"
+        "children": ["sign-up", "forgot-password"]
       }
     ]
   }
