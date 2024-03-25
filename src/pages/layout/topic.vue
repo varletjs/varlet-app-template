@@ -69,28 +69,28 @@ function handleRefresh() {
 }
 </style>
 
-<route>
-  {
-    meta: {
-      stacks: [
-        {
-          name: 'sign-in',
-          children: [
-            {
-              name: 'sign-up'
-            },
-            {
-              name: 'forgot-password'
-            }
-          ]
-        },
-        {
-          name: 'sign-up'
-        },
-        {
-          name: 'settings'
-        }
-      ]
-    }
+<route lang="json">
+{
+  "meta": {
+    "stacks": [
+      {
+        "name": "sign-in",
+        "children": [
+          {
+            "name": "sign-up"
+          },
+          {
+            "name": "forgot-password"
+          }
+        ]
+      },
+      {
+        "name": "sign-up"
+      },
+      {
+        "name": "settings"
+      }
+    ]
   }
+}
 </route>

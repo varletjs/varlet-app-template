@@ -206,31 +206,31 @@ function handleClick() {
   <router-stack-view />
 </template>
 
-<route>
-  {
-    meta: {
-      stacks: [
-        {
-          name: 'sign-in',
-          children: [
-            {
-              name: 'sign-up'
-            },
-            {
-              name: 'forgot-password'
-            }
-          ]
-        },
-        {
-          name: 'detail'
-        },
-        {
-          name: 'sign-up'
-        },
-        {
-          name: 'settings'
-        }
-      ]
-    }
+<route lang="json">
+{
+  "meta": {
+    "stacks": [
+      {
+        "name": "sign-in",
+        "children": [
+          {
+            "name": "sign-up"
+          },
+          {
+            "name": "forgot-password"
+          }
+        ]
+      },
+      {
+        "name": "detail"
+      },
+      {
+        "name": "sign-up"
+      },
+      {
+        "name": "settings"
+      }
+    ]
   }
+}
 </route>
