@@ -6,23 +6,23 @@ settings:
 
 dependencies:
   '@varlet/axle':
-    specifier: ^0.6.0
-    version: 0.6.0(vue@3.4.21)
+    specifier: ^0.7.1
+    version: 0.7.1(vue@3.4.21)
   '@varlet/bounce-fixer':
     specifier: ^0.0.3
     version: 0.0.3
   '@varlet/shared':
-    specifier: 3.2.5
-    version: 3.2.5
+    specifier: 3.2.6
+    version: 3.2.6
   '@varlet/touch-emulator':
-    specifier: 3.2.5
-    version: 3.2.5
+    specifier: 3.2.6
+    version: 3.2.6
   '@varlet/ui':
-    specifier: 3.2.5
-    version: 3.2.5(vue@3.4.21)
+    specifier: 3.2.6
+    version: 3.2.6(vue@3.4.21)
   '@varlet/use':
-    specifier: 3.2.5
-    version: 3.2.5(vue@3.4.21)
+    specifier: 3.2.6
+    version: 3.2.6(vue@3.4.21)
   '@vueuse/core':
     specifier: ^10.5.0
     version: 10.5.0(vue@3.4.21)
@@ -74,14 +74,14 @@ devDependencies:
     specifier: ^0.58.2
     version: 0.58.2
   '@varlet/icon-builder':
-    specifier: 0.0.3
-    version: 0.0.3
+    specifier: 0.0.4
+    version: 0.0.4
   '@varlet/import-resolver':
-    specifier: 3.2.5
-    version: 3.2.5
+    specifier: 3.2.6
+    version: 3.2.6
   '@varlet/preset-unocss':
-    specifier: 3.2.5
-    version: 3.2.5(unocss@0.58.2)
+    specifier: 3.2.6
+    version: 3.2.6(unocss@0.58.2)
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.0.10)(vue@3.4.21)
@@ -1817,8 +1817,8 @@ packages:
       - rollup
     dev: true
 
-  /@varlet/axle@0.6.0(vue@3.4.21):
-    resolution: {integrity: sha512-g+B0C5wlxvZXK3F5awbQ7xxaj0X4qhndIlBA/8SrAjnvOlq52Yi37OBoVkEcd6lBP8AvsHSJisKhn7GUN+JIVA==}
+  /@varlet/axle@0.7.1(vue@3.4.21):
+    resolution: {integrity: sha512-9WSIagplJPNJBBsurUYWGyNthX+wkRsoKQCEbe1fnCx904O6hq/5ymPIS6X6T4VTYsBsnGAAt05///RxO2R3TQ==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -1837,8 +1837,8 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/icon-builder@0.0.3:
-    resolution: {integrity: sha512-3Y7WN9mPDMQoBPSLBv+lGL+ZwsB7iuVOGIdP087X23jBy5Bgs+AXoeU5rHnXOhZxHBCSxZ0ehktvWEnFvpPlPw==}
+  /@varlet/icon-builder@0.0.4:
+    resolution: {integrity: sha512-reVGzjbXG8wmHATXkEirfVoycBB1zIh2sUnRs9ZDx+PhEFuBnaaIDxIFYdJ+fYtuGSnavqduvx/SK0x0nLOVIQ==}
     engines: {node: '>=16.0.0', pnpm: '>=8.0'}
     hasBin: true
     dependencies:
@@ -1850,18 +1850,18 @@ packages:
       webfont: 11.2.26(chokidar@3.6.0)
     dev: true
 
-  /@varlet/icons@3.2.5:
-    resolution: {integrity: sha512-AM3mstPhTZVlN8AJ1iYbJLRJxV2O3ZK5hwuSp77sHJtNJ6dT4//l6XlXBKexGZFtNotmj8u/W/Wi5ureVdxSMg==}
+  /@varlet/icons@3.2.6:
+    resolution: {integrity: sha512-704qo8x5jkbSqJMcspeai9grumEJ4Ri0WfSnfNJyNZ+8bEtNW7wZd/pppG8abJk9zxqBPHsFhcWEBGKbWSZ5DQ==}
     dev: false
 
-  /@varlet/import-resolver@3.2.5:
-    resolution: {integrity: sha512-FMql/Dr3xvRCS1a8T+BbbreBEQNFlAAvJ25wkj7T6zOWFaAxedzuRtqvtdBe6W9Sh1vnw0mmeKDEl93vNjChQA==}
+  /@varlet/import-resolver@3.2.6:
+    resolution: {integrity: sha512-nk216kM/G+5VSY4wZk1j5M3pd61QhP5gQvK3h8DMyaGLHmHQN3MUsESnvKxPiZuAiQU58YX76HUh4QdT8EQEpA==}
     dependencies:
-      '@varlet/shared': 3.2.5
+      '@varlet/shared': 3.2.6
     dev: true
 
-  /@varlet/preset-unocss@3.2.5(unocss@0.58.2):
-    resolution: {integrity: sha512-8/pEmMzQdGvDv2VrigfmsV25E76bdhqJr/i1Fj6PAZgAOlp1bXEMyemHWa1z97OsA1Knmqk3VXfOh8fz0Pp+kQ==}
+  /@varlet/preset-unocss@3.2.6(unocss@0.58.2):
+    resolution: {integrity: sha512-6j++sZ14rZI1TmfRqzdA2i3QMuEDYnc6bP0k36DJz9oYHIbDxPjQkEDyFAgd3Eb9iQBll9jTtw0fgw1qbdjxcg==}
     peerDependencies:
       unocss: ^0.58.5
     dependencies:
@@ -1872,33 +1872,33 @@ packages:
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
     dev: false
 
-  /@varlet/shared@3.2.5:
-    resolution: {integrity: sha512-xbXh5Di8x0MsJqy+cSaRzp885l+UlaBV/3ZC7jjert6+5bwg4ElTb6O8j2tEdSQ/W7YuSe7WJXS4q9lTGf/pqQ==}
+  /@varlet/shared@3.2.6:
+    resolution: {integrity: sha512-P4QL6Ys4cgih0yvcTAjpLc/QiVWSWPN9FPDUfxqPfEP0PtBbI6SUEClOFbLGXDzewCfsUkA+U2qXcKxcuknllA==}
 
-  /@varlet/touch-emulator@3.2.5:
-    resolution: {integrity: sha512-m0dNaGliLqzsttawK+6ha3JfiQG1zhgnNJUX//TJd31yXFDC1VvKGeQh0gRxL5YHOEX8PcGQxNiygNpysgf4bQ==}
+  /@varlet/touch-emulator@3.2.6:
+    resolution: {integrity: sha512-yvJx4Mj1GgkMibh3Yu3LEQZDaP4iWeE/wzxwY5Q+J/TCyR1GunAETwTre7IS+lY10/wVmga5NXpFHPEBIbQp8Q==}
     dev: false
 
-  /@varlet/ui@3.2.5(vue@3.4.21):
-    resolution: {integrity: sha512-KkMDu9C9FIT94Eb9uqA7UGT/jkQFPb0ul8tkeIuM54cpkEPr6pP+7HC/8Zs0gKVy+msID32jNForShMUA7AY3w==}
+  /@varlet/ui@3.2.6(vue@3.4.21):
+    resolution: {integrity: sha512-o8gvbWXY3T133S8gakqRL7lmsulUKJcJOVtTNFbO6bgA/Ch7Z4SuDXyVDdpMIEdEw/AzRpqVepfXfciGfzPO3g==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.2.5
-      '@varlet/shared': 3.2.5
-      '@varlet/use': 3.2.5(vue@3.4.21)
+      '@varlet/icons': 3.2.6
+      '@varlet/shared': 3.2.6
+      '@varlet/use': 3.2.6(vue@3.4.21)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.0.2)
     dev: false
 
-  /@varlet/use@3.2.5(vue@3.4.21):
-    resolution: {integrity: sha512-s3LfVnoo7N2lQr2KWLKuJrOnS0fEmsSCEXqvzhS4tVtpOATCCuhtz+KZiqqRwmWK9Fc8Ddc+WBSLz00/BtZxEg==}
+  /@varlet/use@3.2.6(vue@3.4.21):
+    resolution: {integrity: sha512-mDX3gVmK3v0C4Lukjw9vko90gb8TzFbYRpSrftu9McwuZfvo06+CLixIgNBjp/tOfCUHJP8xfYKQmk7/VIvarw==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
-      '@varlet/shared': 3.2.5
+      '@varlet/shared': 3.2.6
       vue: 3.4.21(typescript@5.0.2)
     dev: false
 
@@ -4159,7 +4159,7 @@ packages:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       minipass: 7.0.4
       path-scurry: 1.10.1
     dev: true
@@ -5380,7 +5380,6 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
-    dev: false
 
   /minimist-options@4.1.0:
     resolution: {integrity: sha512-Q4r8ghd80yhO/0j1O3B2BjweX3fiHg9cdOwjJd2J76Q135c+NDxGCqdYKQ1SKBuFfgWbAUzBfvYjPUEeNgqN1A==}
