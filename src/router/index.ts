@@ -1,6 +1,5 @@
-import routes from '~pages'
-import stacks from '~stacks'
-import { createRouter, createWebHashHistory, Router } from 'vue-router'
+import { Router, createRouter, createWebHashHistory } from 'vue-router'
+import { routes } from 'vue-router/auto-routes'
 
 const router: Router = createRouter({
   history: createWebHashHistory(),
@@ -9,7 +8,6 @@ const router: Router = createRouter({
       path: '/',
       redirect: '/layout/home'
     },
-    ...stacks,
     ...routes
   ]
 })

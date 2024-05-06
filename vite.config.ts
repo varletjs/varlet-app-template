@@ -1,17 +1,7 @@
-import vue from '@vitejs/plugin-vue'
-import jsx from '@vitejs/plugin-vue-jsx'
-import autoImport from 'unplugin-auto-import/vite'
-import components from 'unplugin-vue-components/vite'
-import pages from 'vite-plugin-pages'
-import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
-import { VarletImportResolver } from '@varlet/import-resolver'
 import { defineConfig } from 'vitest/config'
-import { extendRoute } from './build/extendRoute'
 import { isProduction } from './build/env'
-
-// Use as needed
-// import eruda from 'vite-plugin-eruda'
+import { createVitePlugins } from './build/plugins'
 
 export default defineConfig({
   base: './',
@@ -49,52 +39,5 @@ export default defineConfig({
     }
   },
 
-  plugins: [
-    vue({
-      template: {
-        transformAssetUrls: {
-          img: ['src'],
-          video: ['src'],
-          audio: ['src'],
-          'var-image': ['src'],
-          'var-avatar': ['src'],
-          'var-card': ['src'],
-          'var-app-bar': ['image']
-        }
-      }
-    }),
-
-    jsx(),
-
-    components({
-      resolvers: [VarletImportResolver()]
-    }),
-
-    autoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'pinia',
-        'vue-i18n',
-        {
-          '@/use': ['useAppRouter']
-        }
-      ],
-      resolvers: [VarletImportResolver({ autoImport: true })],
-      eslintrc: { enabled: true }
-    }),
-
-    pages({
-      extendRoute
-    }),
-
-    pages({
-      dirs: 'src/stacks',
-      moduleId: '~stacks'
-    }),
-
-    unoCSS()
-
-    // eruda()
-  ]
+  plugins: createVitePlugins()
 })

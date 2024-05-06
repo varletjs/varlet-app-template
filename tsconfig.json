@@ -3,7 +3,7 @@
     "module": "ESNext",
     "target": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "jsx": "preserve",
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,6 +14,9 @@
     "strict": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
+    "types": [
+      "unplugin-vue-router/client"
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
