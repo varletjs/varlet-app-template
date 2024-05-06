@@ -40,6 +40,7 @@ export function createVitePlugins() {
           path: 'stacks/'
         }
       ],
+      exclude: ['**/components/**', '**/use/**'],
       extendRoute(route) {
         const stacks = (route.meta?.stacks ?? []) as StackRoute[]
         const processStacks = (route: EditableTreeNode, stacks: (StackRoute | string)[]) => {
