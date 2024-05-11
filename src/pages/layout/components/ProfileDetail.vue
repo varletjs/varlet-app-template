@@ -43,7 +43,7 @@
       <div class="mt-[10px]">
         <div class="text-tertiary text-md mb-[14px] px-[24px]">{{ $t('Followers') }} (10086)</div>
         <var-avatar-group class="mt-[12px] px-[20px]" offset="-2vmin">
-          <var-avatar src="https://varlet.gitee.io/varlet-ui/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
+          <var-avatar src="https://varlet.pages.dev/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
           <var-avatar size="13vmin">+10086</var-avatar>
         </var-avatar-group>
       </div>
@@ -53,7 +53,7 @@
       <div class="mt-[10px]">
         <div class="text-tertiary text-md mb-[14px] px-[24px]">{{ $t('Following') }} (10086)</div>
         <var-avatar-group class="mt-[12px] px-[20px]">
-          <var-avatar src="https://varlet.gitee.io/varlet-ui/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
+          <var-avatar src="https://varlet.pages.dev/cat.jpg" size="12vmin" v-for="i in 7" :key="i" />
           <var-avatar size="13vmin">+10086</var-avatar>
         </var-avatar-group>
       </div>
