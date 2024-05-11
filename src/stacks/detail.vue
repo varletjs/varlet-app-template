@@ -33,13 +33,19 @@ function handleRefresh() {
       <var-pull-refresh v-model="isRefresh" @refresh="handleRefresh">
         <var-swipe>
           <var-swipe-item>
-            <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
+            <var-image
+              class="pointer-events-none"
+              @click="handleRefresh"
+              fit="cover"
+              height="54vmin"
+              src="@/assets/images/material-2.png"
+            />
           </var-swipe-item>
           <var-swipe-item>
-            <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
+            <var-image class="pointer-events-none" fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
           </var-swipe-item>
           <var-swipe-item>
-            <var-image fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
+            <var-image class="pointer-events-none" fit="cover" height="54vmin" src="@/assets/images/material-2.png" />
           </var-swipe-item>
         </var-swipe>
 

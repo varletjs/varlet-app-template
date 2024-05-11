@@ -5,7 +5,5 @@ useDark()
 </script>
 
 <template>
-  <app-mobile-detector>
-    <router-view />
-  </app-mobile-detector>
+  <router-view />
 </template>

@@ -18,7 +18,13 @@ export default defineConfig({
   },
 
   build: {
-    target: ['ios12']
+    target: ['ios12'],
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        desktop: fileURLToPath(new URL('./desktop.html', import.meta.url))
+      }
+    }
   },
 
   esbuild: {
