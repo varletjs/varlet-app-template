@@ -11,6 +11,7 @@ import { inMobile } from '@varlet/shared'
 import '@/styles/common.less'
 import '@varlet/touch-emulator'
 import 'virtual:uno.css'
+import 'virtual-icons'
 
 if (!inMobile() && window === window.parent) {
   window.location.replace('./desktop.html')

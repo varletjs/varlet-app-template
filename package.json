@@ -46,6 +46,9 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
+    "@varlet/unplugin-icon-builder": "0.2.0",
+    "@varlet/import-resolver": "3.2.9",
+    "@varlet/preset-unocss": "3.2.9",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@iconify-json/mdi": "^1.1.54",
@@ -54,9 +57,6 @@
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "@unocss/preset-rem-to-px": "^0.58.2",
-    "@varlet/icon-builder": "0.0.4",
-    "@varlet/import-resolver": "3.2.9",
-    "@varlet/preset-unocss": "3.2.9",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vitest/coverage-istanbul": "1.1.0",

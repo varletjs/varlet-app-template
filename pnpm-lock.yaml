@@ -73,15 +73,15 @@ devDependencies:
   '@unocss/preset-rem-to-px':
     specifier: ^0.58.2
     version: 0.58.2
-  '@varlet/icon-builder':
-    specifier: 0.0.4
-    version: 0.0.4
   '@varlet/import-resolver':
     specifier: 3.2.9
     version: 3.2.9
   '@varlet/preset-unocss':
     specifier: 3.2.9
     version: 3.2.9(unocss@0.58.2)
+  '@varlet/unplugin-icon-builder':
+    specifier: 0.2.0
+    version: 0.2.0(vite@5.0.10)
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.0.10)(vue@3.4.21)
@@ -1835,8 +1835,8 @@ packages:
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
     dev: false
 
-  /@varlet/icon-builder@0.0.4:
-    resolution: {integrity: sha512-reVGzjbXG8wmHATXkEirfVoycBB1zIh2sUnRs9ZDx+PhEFuBnaaIDxIFYdJ+fYtuGSnavqduvx/SK0x0nLOVIQ==}
+  /@varlet/icon-builder@0.2.0:
+    resolution: {integrity: sha512-qmbAze9B+g0oyWdReL5GF8DGjF77jVQ2aPaP2OlNeKRtKQqjlgVLi9WbsGupo1BGePVV0MxvYTuSN2yzsrwe0w==}
     engines: {node: '>=16.0.0', pnpm: '>=8.0'}
     hasBin: true
     dependencies:
@@ -1844,7 +1844,7 @@ packages:
       commander: 11.1.0
       fs-extra: 11.2.0
       picocolors: 1.0.0
-      slash: 5.1.0
+      unconfig: 0.3.13
       webfont: 11.2.26(chokidar@3.6.0)
     dev: true
 
@@ -1890,6 +1890,27 @@ packages:
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.0.2)
     dev: false
+
+  /@varlet/unplugin-icon-builder@0.2.0(vite@5.0.10):
+    resolution: {integrity: sha512-1Cl5MfcbDhP+UevmxkNRBQJDwE03EuQ7zlZmKx9zUDZX17wiUcB35V6USDB6Kw4BAN8VI3rbVdsDCSWQ7FOA2g==}
+    peerDependencies:
+      rollup: ^3
+      vite: '>=3'
+      webpack: ^4 || ^5
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      '@varlet/icon-builder': 0.2.0
+      chokidar: 3.6.0
+      fs-extra: 11.2.0
+      unplugin: 1.10.1
+      vite: 5.0.10(@types/node@20.2.5)(less@4.1.3)
+    dev: true
 
   /@varlet/use@3.2.9(vue@3.4.21):
     resolution: {integrity: sha512-3SBYqrFfMMYGG9AsF3BwS5O5S0rupFG/+aRPafjqM6Ti237ADro4YX+eznRt7CQyHyqYZiVjHLupf+tVTG4nRg==}
@@ -3251,6 +3272,10 @@ packages:
 
   /defu@6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
+    dev: true
+
+  /defu@6.1.4:
+    resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
     dev: true
 
   /delayed-stream@1.0.0:
@@ -6357,11 +6382,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /slash@5.1.0:
-    resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
-    engines: {node: '>=14.16'}
-    dev: true
-
   /slice-ansi@3.0.0:
     resolution: {integrity: sha512-pSyv7bSTC7ig9Dcgbw9AuRNUb5k5V6oDudjZoMBSr13qpLBG7tB+zgCkARjq7xIUgdz5P1Qe8u+rSGdouOOIyQ==}
     engines: {node: '>=8'}
@@ -6909,6 +6929,14 @@ packages:
       defu: 6.1.2
       jiti: 1.21.0
       mlly: 1.4.2
+    dev: true
+
+  /unconfig@0.3.13:
+    resolution: {integrity: sha512-N9Ph5NC4+sqtcOjPfHrRcHekBCadCXWTBzp2VYYbySOHW0PfD9XLCeXshTXjkPYwLrBr9AtSeU0CZmkYECJhng==}
+    dependencies:
+      '@antfu/utils': 0.7.7
+      defu: 6.1.4
+      jiti: 1.21.0
     dev: true
 
   /unimport@3.7.1:

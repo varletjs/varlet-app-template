@@ -32,3 +32,4 @@ auto-imports.d.ts
 typed-router.d.ts
 .eslintrc-auto-import.json
 analyzer.html
+virtual.icons.css
