@@ -35,7 +35,7 @@ export function createVitePlugins() {
 
     unoCSS(),
 
-    icon({ dir: 'src/assets/icons' }),
+    icon({ dir: 'src/assets/icons', onDemand: true }),
 
     components({
       resolvers: [VarletImportResolver()]
