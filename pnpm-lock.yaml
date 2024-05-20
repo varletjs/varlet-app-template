@@ -82,8 +82,8 @@ importers:
         specifier: 3.2.10
         version: 3.2.10(unocss@0.58.2(postcss@8.4.38)(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3)))
       '@varlet/unplugin-icon-builder':
-        specifier: 0.2.11
-        version: 0.2.11(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
+        specifier: 0.2.12
+        version: 0.2.12(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
@@ -1113,8 +1113,8 @@ packages:
   '@varlet/bounce-fixer@0.0.3':
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
 
-  '@varlet/icon-builder@0.2.11':
-    resolution: {integrity: sha512-KWw0QMpYZXZpt8O1fzPNxtFLrsgLwHI2arxEdceIlv3A9o4e23HqiVQh6Cau1qckTNQ9P+4bwnLKksfpp8J8xg==}
+  '@varlet/icon-builder@0.2.12':
+    resolution: {integrity: sha512-7ruRKxg4aasZ+J2vAH2GmG67CnWcsNdCzweK/eYq1Qcb7WVU2rGWBsqPx1wgFwG+SFnT5KZ/GrygeTHkWmThAQ==}
     hasBin: true
 
   '@varlet/icons@3.2.10':
@@ -1145,8 +1145,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  '@varlet/unplugin-icon-builder@0.2.11':
-    resolution: {integrity: sha512-K8x2qm2C4zKBK7iOOPm2LP9OdKMazfCgeXG4WGTfTGPX6aYJxsjqOEoVcPrkrUGjUEMEJnHXp2nllosICcDwfg==}
+  '@varlet/unplugin-icon-builder@0.2.12':
+    resolution: {integrity: sha512-KN5CzZpTY7ZMzQTucTp2OOz1wPtjblJtfbkeN6gPAepjtPGvsif41nz+/OlsWoFQYqBUTOFaR0/oiHpBcvJx8w==}
     peerDependencies:
       rollup: ^3
       vite: '>=3'
@@ -1506,8 +1506,8 @@ packages:
   aws4@1.12.0:
     resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
 
-  axios@1.6.8:
-    resolution: {integrity: sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==}
+  axios@1.7.0:
+    resolution: {integrity: sha512-IiB0wQeKyPRdsFVhBgIo31FbzOyf2M6wYl7/NVutFwFBRMiAbjNiydJIHKeLmPugF4kJLfA1uWZ82Is2QzqqFA==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2436,8 +2436,8 @@ packages:
     resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==}
     engines: {node: '>= 0.4'}
 
-  hasown@2.0.1:
-    resolution: {integrity: sha512-1/th4MHjnwncwXsIW6QMzlvYL9kG5e/CpVvLRZe4XPa8TOUNbCELqmvhDmnkNsAjwaG4+I8gJJL0JBvTTLO9qA==}
+  hasown@2.0.2:
+    resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
   he@1.2.0:
@@ -5355,7 +5355,7 @@ snapshots:
   '@varlet/axle@0.7.1(vue@3.4.21(typescript@5.0.2))':
     dependencies:
       '@varlet/shared': 2.20.3
-      axios: 1.6.8
+      axios: 1.7.0
       crypto-js: 4.2.0
       lodash: 4.17.21
       minimatch: 9.0.4
@@ -5366,7 +5366,7 @@ snapshots:
 
   '@varlet/bounce-fixer@0.0.3': {}
 
-  '@varlet/icon-builder@0.2.11(vue@3.4.21(typescript@5.0.2))':
+  '@varlet/icon-builder@0.2.12(vue@3.4.21(typescript@5.0.2))':
     dependencies:
       '@varlet/axle': 0.7.1(vue@3.4.21(typescript@5.0.2))
       '@varlet/shared': 3.2.10
@@ -5408,9 +5408,9 @@ snapshots:
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.0.2)
 
-  '@varlet/unplugin-icon-builder@0.2.11(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))':
+  '@varlet/unplugin-icon-builder@0.2.12(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))':
     dependencies:
-      '@varlet/icon-builder': 0.2.11(vue@3.4.21(typescript@5.0.2))
+      '@varlet/icon-builder': 0.2.12(vue@3.4.21(typescript@5.0.2))
       '@varlet/shared': 3.2.11-alpha.1716133168406
       chokidar: 3.6.0
       fast-glob: 3.3.2
@@ -5865,7 +5865,7 @@ snapshots:
 
   aws4@1.12.0: {}
 
-  axios@1.6.8:
+  axios@1.7.0:
     dependencies:
       follow-redirects: 1.15.6
       form-data: 4.0.0
@@ -6844,7 +6844,7 @@ snapshots:
       function-bind: 1.1.2
       has-proto: 1.0.3
       has-symbols: 1.0.3
-      hasown: 2.0.1
+      hasown: 2.0.2
 
   get-stream@5.2.0:
     dependencies:
@@ -6975,7 +6975,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hasown@2.0.1:
+  hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
 
