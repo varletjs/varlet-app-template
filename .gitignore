@@ -33,3 +33,4 @@ typed-router.d.ts
 .eslintrc-auto-import.json
 analyzer.html
 virtual.icons.css
+virtual.icons.ttf
