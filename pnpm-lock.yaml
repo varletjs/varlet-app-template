@@ -82,8 +82,8 @@ importers:
         specifier: 3.2.10
         version: 3.2.10(unocss@0.58.2(postcss@8.4.38)(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3)))
       '@varlet/unplugin-icon-builder':
-        specifier: 0.2.19
-        version: 0.2.19(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
+        specifier: 0.2.21
+        version: 0.2.21(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))
@@ -1113,8 +1113,8 @@ packages:
   '@varlet/bounce-fixer@0.0.3':
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
 
-  '@varlet/icon-builder@0.2.19':
-    resolution: {integrity: sha512-LU/XnpsWYUJd4BIIao1Vndo7AdIqb6aKAVbj3F5+UF3u5thlUpP3sfy8x1mK14NXp6qUzGAgKwb8BLLOVodOFg==}
+  '@varlet/icon-builder@0.2.21':
+    resolution: {integrity: sha512-gsH+4crs+Q7YxliAQScDjSRBjUih804laSwM+dkwexIy5pPR6FUmAiwFVNaRw81X9g/Dys2EW4iDk4nj7BdDdg==}
     hasBin: true
 
   '@varlet/icons@3.2.10':
@@ -1145,8 +1145,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  '@varlet/unplugin-icon-builder@0.2.19':
-    resolution: {integrity: sha512-6FE+7v3M8/m4cuT9UcqeO3ji/fOwpgq2CURqh3lHMSnvvgdFwzCygNtAMz6ik2sapH/oXKkaqB5zkpwU7F0xzA==}
+  '@varlet/unplugin-icon-builder@0.2.21':
+    resolution: {integrity: sha512-SrJF6bYAnijaKqUULY1DJtEiuCJShCx02ysk0V2a088RE+tcc8NUtFmd+9IiZ9e7g/x/+EnRiobXqf2d3A9JXg==}
     peerDependencies:
       rollup: ^3
       vite: '>=3'
@@ -5382,7 +5382,7 @@ snapshots:
 
   '@varlet/bounce-fixer@0.0.3': {}
 
-  '@varlet/icon-builder@0.2.19(vue@3.4.21(typescript@5.0.2))':
+  '@varlet/icon-builder@0.2.21(vue@3.4.21(typescript@5.0.2))':
     dependencies:
       '@varlet/axle': 0.7.1(vue@3.4.21(typescript@5.0.2))
       '@varlet/shared': 3.2.10
@@ -5424,9 +5424,9 @@ snapshots:
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.0.2)
 
-  '@varlet/unplugin-icon-builder@0.2.19(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))':
+  '@varlet/unplugin-icon-builder@0.2.21(rollup@4.17.2)(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.4.21(typescript@5.0.2))':
     dependencies:
-      '@varlet/icon-builder': 0.2.19(vue@3.4.21(typescript@5.0.2))
+      '@varlet/icon-builder': 0.2.21(vue@3.4.21(typescript@5.0.2))
       '@varlet/shared': 3.2.11-alpha.1716133168406
       chokidar: 3.6.0
       fast-glob: 3.3.2
