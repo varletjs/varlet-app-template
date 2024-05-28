@@ -35,7 +35,7 @@
           :key="i"
         >
           <template #icon>
-            <var-icon class="profile-detail-section-icon" name="shopping" size="10vmin" />
+            <var-icon class="mr-[24px]" name="shopping" size="10vmin" />
           </template>
         </var-cell>
       </div>
