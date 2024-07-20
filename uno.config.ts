@@ -7,8 +7,11 @@ export default defineConfig({
   theme: {
     colors: {
       secondary: 'var(--color-secondary)',
+      hslSecondary: 'hsla(var(--hsl-secondary), <alpha-value>)',
       tertiary: 'var(--color-tertiary)',
-      muted: 'var(--color-muted)'
+      hslTertiary: 'hsla(var(--hsl-tertiary), <alpha-value>)',
+      muted: 'var(--color-muted)',
+      hslMuted: 'hsla(var(--hsl-muted), <alpha-value>)'
     }
   },
   rules: [
