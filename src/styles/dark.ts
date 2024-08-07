@@ -8,5 +8,5 @@ export const darkTheme = Themes.toViewport({
   '--hsl-tertiary': 'var(--hsl-on-surface-variant)',
   '--color-tertiary': 'hsla(var(--hsl-tertiary), 1)',
   '--hsl-muted': '264, 5%, 58%',
-  '--color-muted': 'hsla(var(--color-muted), 1)'
+  '--color-muted': 'hsla(var(--hsl-muted), 1)'
 })
