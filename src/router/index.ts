@@ -16,7 +16,6 @@ const router: Router = createRouter({
 const { notify } = registryRouterChannel(router)
 
 router.beforeEach((to) => {
-  console.log(to.path)
   notify(to.fullPath)
 })
 

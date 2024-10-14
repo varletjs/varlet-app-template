@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { useDark } from './use'
+import { codeToHtml } from 'shiki'
 
-useDark()
+const { isDark } = useDark()
 </script>
 
 <template>
-  <router-view />
+  <var-highlighter-provider :highlighter="{ codeToHtml }" :theme="isDark ? 'vitesse-dark' : 'vitesse-light'">
+    <router-view />
+  </var-highlighter-provider>
 </template>
