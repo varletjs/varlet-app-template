@@ -1,6 +1,6 @@
 import App from './Desktop.vue'
 import { createApp } from 'vue'
-import { inMobile } from '@varlet/shared'
+import { inMobile } from 'rattail'
 
 import '@/styles/common.less'
 import 'virtual:uno.css'

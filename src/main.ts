@@ -6,7 +6,7 @@ import { i18n } from '@/i18n'
 import { createApp } from 'vue'
 import { createBounceFixer } from '@varlet/bounce-fixer'
 import { setupAppHeight } from './utils/elements'
-import { inMobile } from '@varlet/shared'
+import { inMobile } from 'rattail'
 
 import '@/styles/common.less'
 import '@varlet/touch-emulator'
