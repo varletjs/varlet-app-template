@@ -1,6 +1,6 @@
 import { Router, createRouter, createWebHashHistory } from 'vue-router'
 import { routes } from 'vue-router/auto-routes'
-import { setupIframeChannel } from './iframeChannel'
+import { setupDesktopChannel } from './desktopChannel'
 import { setupLayouts } from 'virtual:generated-layouts'
 
 const router: Router = createRouter({
@@ -14,10 +14,8 @@ const router: Router = createRouter({
   ]
 })
 
-const { notify } = setupIframeChannel(router)
-
-router.beforeEach((to) => {
-  notify(to.fullPath)
+router.isReady().then(() => {
+  setupDesktopChannel(router)
 })
 
 export default router

@@ -22,7 +22,7 @@ export function useDark() {
       return
     }
 
-    window.parent.postMessage({ type: 'theme-change', isDark: isDark.value }, '*')
+    window.parent.postMessage({ type: 'mobile-theme-change', isDark: isDark.value }, '*')
   }
 
   updateTheme()
