@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Form } from '@varlet/ui'
-import { validateNotEmpty, validateEmail, validateLength } from '@/utils/validate'
+import { z } from 'zod'
 
 const { t } = useI18n()
 const form = ref<Form>()
@@ -42,7 +42,7 @@ async function submit() {
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
-            :rules="[validateNotEmpty()]"
+            :rules="z.string().min(1, $t('Value cannot be empty'))"
             v-model="account.username"
           >
             <template #prepend-icon>
@@ -53,7 +53,7 @@ async function submit() {
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
             :type="isViewPassword ? 'text' : 'password'"
-            :rules="[validateNotEmpty()]"
+            :rules="z.string().min(1, $t('Value cannot be empty'))"
             v-model="account.password"
           >
             <template #prepend-icon>
@@ -71,7 +71,10 @@ async function submit() {
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('confirm password') })"
             :type="isViewConfirmPassword ? 'text' : 'password'"
-            :rules="[validateNotEmpty(), (v) => v === account.password || $t('Not match the password')]"
+            :rules="[
+              z.string().min(1, $t('Value cannot be empty')),
+              (v) => v === account.password || $t('Not match the password')
+            ]"
             v-model="account.confirmPassword"
           >
             <template #prepend-icon>
@@ -88,7 +91,7 @@ async function submit() {
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('email') })"
-            :rules="[validateEmail()]"
+            :rules="z.string().email($t('Email format error'))"
             v-model="account.email"
           >
             <template #prepend-icon>
@@ -98,7 +101,7 @@ async function submit() {
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('verify code') })"
-            :rules="[validateLength(6)]"
+            :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
             v-model="account.verifyCode"
           >
             <template #prepend-icon>

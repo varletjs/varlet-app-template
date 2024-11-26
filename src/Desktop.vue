@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useDark } from './use'
+import { useEventListener } from '@vueuse/core'
 
 const iframeRef = ref<HTMLIFrameElement>()
 
 const { isDark, updateTheme } = useDark()
 
-window.addEventListener('message', (event) => {
+useEventListener(window, 'message', (event) => {
   if (event.data?.type === 'router-channel-connected') {
     notify()
   }
@@ -20,7 +20,7 @@ window.addEventListener('message', (event) => {
   }
 })
 
-window.addEventListener('hashchange', notify)
+useEventListener(window, 'hashchange', notify)
 
 function notify() {
   iframeRef.value?.contentWindow?.postMessage({ type: 'route-change', path: window.location.hash.slice(1) }, '*')

@@ -5,7 +5,7 @@ import { createPinia } from 'pinia'
 import { i18n } from '@/i18n'
 import { createApp } from 'vue'
 import { createBounceFixer } from '@varlet/bounce-fixer'
-import { setupAppHeight } from './utils/elements'
+import { setupAppHeight } from '@/utils'
 import { inMobile } from 'rattail'
 
 import '@/styles/common.less'

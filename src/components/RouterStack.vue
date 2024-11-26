@@ -1,19 +1,12 @@
 <script setup lang="ts">
-import { useZIndex } from '@/use'
 import { useParent, useChildren } from '@varlet/use'
 import { watch, ref, nextTick } from 'vue'
 
-defineProps({
-  keepAlive: {
-    type: Boolean,
-    default: true
-  },
-  animation: {
-    type: String
-  }
+withDefaults(defineProps<{ keepAlive?: boolean; animation?: 'slide-x' | 'slide-y' }>(), {
+  keepAlive: true
 })
 
-defineEmits(['push', 'pushed', 'pop', 'popped'])
+defineEmits<{ push: []; pushed: []; pop: []; popped: [] }>()
 
 const stack = ref<HTMLElement>()
 const showParent = ref(true)

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useDark } from '@/use'
-
 const { isDark, toggleDark } = useDark()
 </script>
 

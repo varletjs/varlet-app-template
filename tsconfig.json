@@ -14,9 +14,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "types": [
-      "unplugin-vue-router/client"
-    ],
+    "types": ["unplugin-vue-router/client", "vite-plugin-vue-layouts/client"],
     "paths": {
       "@/*": ["./src/*"]
     }

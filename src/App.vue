@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useDark } from './use'
 import { codeToHtml } from 'shiki'
 
 const { isDark } = useDark()

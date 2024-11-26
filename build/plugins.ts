@@ -1,19 +1,15 @@
 import { VarletImportResolver } from '@varlet/import-resolver'
 import vue from '@vitejs/plugin-vue'
 import jsx from '@vitejs/plugin-vue-jsx'
+import layouts from 'vite-plugin-vue-layouts'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import vueRouter from 'unplugin-vue-router/vite'
 import icon from '@varlet/unplugin-icon-builder/vite'
+import { extendRoute } from './stacksRoute'
 import unoCSS from 'unocss/vite'
-import { EditableTreeNode } from 'unplugin-vue-router/types'
 // Use as needed
 // import eruda from 'vite-plugin-eruda'
-
-export interface StackRoute {
-  name: string
-  children?: StackRoute[]
-}
 
 export function createVitePlugins() {
   return [
@@ -42,18 +38,13 @@ export function createVitePlugins() {
     }),
 
     autoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'pinia',
-        'vue-i18n',
-        {
-          '@/use': ['useAppRouter']
-        }
-      ],
-      resolvers: [VarletImportResolver({ autoImport: true })],
-      eslintrc: { enabled: true }
+      imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
+      dirs: ['./src/composables', './src/stores'],
+      eslintrc: { enabled: true },
+      resolvers: [VarletImportResolver({ autoImport: true })]
     }),
+
+    layouts(),
 
     vueRouter({
       routesFolder: [
@@ -65,23 +56,8 @@ export function createVitePlugins() {
           path: 'stacks/'
         }
       ],
-      exclude: ['**/components/**', '**/use/**'],
-      extendRoute(route) {
-        const stacks = (route.meta?.stacks ?? []) as StackRoute[]
-        const processStacks = (route: EditableTreeNode, stacks: (StackRoute | string)[]) => {
-          stacks.forEach((stack) => {
-            const isStringifyStack = typeof stack === 'string'
-            const name = isStringifyStack ? stack : stack.name
-            const newRoute = route.insert(name, `/src/stacks/${name}.vue`)
-
-            if (!isStringifyStack && stack.children) {
-              processStacks(newRoute, stack.children)
-            }
-          })
-        }
-
-        processStacks(route, stacks)
-      }
+      exclude: ['**/components/**', '**/composables/**', '**/lib/**'],
+      extendRoute
     })
     // eruda()
   ]

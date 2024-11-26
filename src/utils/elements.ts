@@ -1,10 +1,9 @@
 export function setupAppHeight() {
-  const setAppHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-  }
+  window.addEventListener('resize', updateAppHeight)
+  window.addEventListener('orientationchange', updateAppHeight)
+  updateAppHeight()
 
-  window.addEventListener('resize', setAppHeight)
-  window.addEventListener('orientationchange', setAppHeight)
-  setAppHeight()
+  function updateAppHeight() {
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+  }
 }

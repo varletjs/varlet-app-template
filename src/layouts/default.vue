@@ -8,23 +8,23 @@ const tabs = ref([
   {
     label: 'HOME',
     icon: 'home',
-    name: '/layout/home'
+    name: '/home'
   },
   {
     label: 'TOPIC',
     icon: 'heart',
-    name: '/layout/topic'
+    name: '/topic'
   },
   {
     label: 'MESSAGE',
     icon: 'border-radius',
     namespace: 'i',
-    name: '/layout/message'
+    name: '/message'
   },
   {
     label: 'PROFILE',
     icon: 'account-circle',
-    name: '/layout/profile'
+    name: '/profile'
   }
 ])
 

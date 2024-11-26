@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { useAppRouter } from '@/use'
-
 defineOptions({
   inheritAttrs: false
 })
 
-defineProps({
-  animation: {
-    type: String,
-    // slide-x slide-y
-    default: 'slide-x'
-  }
+withDefaults(defineProps<{ animation?: 'slide-x' | 'slide-y' }>(), {
+  animation: 'slide-x'
 })
 
-const emit = defineEmits(['push', 'pushed', 'pop', 'popped'])
+const emit = defineEmits<{ push: []; pushed: []; pop: [path: string]; popped: [path: string] }>()
 const { route } = useAppRouter()
 
 // When the router-stack-view is deactivated in keep-alive, it will still be matched by vue-router and may render the child route view multiple times.

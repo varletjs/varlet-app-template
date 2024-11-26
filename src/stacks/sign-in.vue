@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Form } from '@varlet/ui'
-import { validateNotEmpty } from '@/utils/validate'
+import { z } from 'zod'
 
 const { pushStack } = useAppRouter()
 const { t } = useI18n()
@@ -41,7 +41,7 @@ async function submit() {
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
-            :rules="[validateNotEmpty()]"
+            :rules="z.string().min(1, $t('Value cannot be empty'))"
             v-model="account.username"
           >
             <template #prepend-icon>
@@ -51,7 +51,7 @@ async function submit() {
           <var-input
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
-            :rules="[validateNotEmpty()]"
+            :rules="z.string().min(1, $t('Value cannot be empty'))"
             :type="isViewPassword ? 'text' : 'password'"
             v-model="account.password"
           >

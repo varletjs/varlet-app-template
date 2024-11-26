@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import { AppBarProps } from '@varlet/ui'
-import { PropType } from 'vue'
 
-defineProps({
-  title: {
-    type: String as PropType<AppBarProps['title']>
-  },
-  titlePosition: {
-    type: String as PropType<AppBarProps['titlePosition']>,
-    default: 'center'
+withDefaults(
+  defineProps<{
+    title?: AppBarProps['title']
+    titlePosition?: AppBarProps['titlePosition']
+  }>(),
+  {
+    titlePosition: 'center'
   }
-})
+)
 </script>
 
 <template>

@@ -1,4 +1,4 @@
-import { localStorage } from '@/utils/storage'
+import { localStorage } from 'rattail'
 import { darkTheme } from '@/styles/dark'
 import { lightTheme } from '@/styles/light'
 
@@ -9,7 +9,6 @@ export function useDark() {
   function updateTheme() {
     localStorage.set('prefer-dark', isDark.value)
     StyleProvider(isDark.value ? darkTheme : lightTheme)
-    document.documentElement.style.setProperty('color-scheme', isDark.value ? 'dark' : 'light')
     notify()
   }
 
