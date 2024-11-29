@@ -1,11 +1,11 @@
 import { type Router } from 'vue-router'
 
 export function setupDesktopChannel(router: Router) {
-  let isDesktopInitialized = false
+  let isDesktopChannelInitialized = false
 
   window.addEventListener('message', (event) => {
     if (event.data?.type === 'desktop-channel-initialized') {
-      isDesktopInitialized = true
+      isDesktopChannelInitialized = true
       router.push(event.data.path)
     }
 
@@ -15,18 +15,10 @@ export function setupDesktopChannel(router: Router) {
   })
 
   router.afterEach((to) => {
-    if (isDesktopInitialized) {
-      notify(to.fullPath)
+    if (isDesktopChannelInitialized) {
+      window.parent.postMessage({ type: 'mobile-route-change', path: to.fullPath }, '*')
     }
   })
 
   window.parent.postMessage({ type: 'mobile-channel-initialized' }, '*')
-
-  function notify(path: string) {
-    window.parent.postMessage({ type: 'mobile-route-change', path }, '*')
-  }
-
-  return {
-    notify
-  }
 }

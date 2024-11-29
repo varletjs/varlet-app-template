@@ -21,6 +21,7 @@ export function useDesktop() {
     }
 
     if (event.data?.type === 'mobile-route-change') {
+      // do not trigger hashchange event
       window.history.replaceState(null, '', '#' + event.data.path)
     }
 
