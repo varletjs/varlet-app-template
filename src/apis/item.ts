@@ -4,7 +4,7 @@ export interface Item {
   id: number
 }
 
-export const apiGetItems = api<Res<Item[]>>('/card', 'get')
+export const apiGetItems = api<Res<Item[]>>('/item', 'get')
 
 export const apiGetPlainItems = api<Res<Item[]>>('/plain-item', 'get')
 

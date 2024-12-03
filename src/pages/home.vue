@@ -14,7 +14,7 @@ export interface List {
   error: boolean
 }
 
-const [list, getItems, { loading: isItemsLoading }] = apiGetItems.use<List>({
+const [list, getItems] = apiGetItems.use<List>({
   value: {
     items: [],
     current: 1,
@@ -25,7 +25,7 @@ const [list, getItems, { loading: isItemsLoading }] = apiGetItems.use<List>({
   onError
 })
 
-const [plainList, getPlainItems, { loading: isPlainItemsLoading }] = apiGetPlainItems.use<List>({
+const [plainList, getPlainItems] = apiGetPlainItems.use<List>({
   value: {
     items: [],
     current: 1,
@@ -36,7 +36,7 @@ const [plainList, getPlainItems, { loading: isPlainItemsLoading }] = apiGetPlain
   onError
 })
 
-const [rowList, getRowItems, { loading: isRowItemsLoading }] = apiGetRowItems.use<List>({
+const [rowList, getRowItems] = apiGetRowItems.use<List>({
   value: {
     items: [],
     current: 1,
@@ -121,9 +121,9 @@ function handleClick() {
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="list">
           <var-list
             :finished="list.finished"
-            v-model:loading="isItemsLoading"
+            v-model:loading="getItems.loading.value"
             v-model:error="list.error"
-            @load="() => getItems({ params: { current: list.current } })"
+            @load="getItems({ params: { current: list.current } })"
           >
             <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
@@ -153,9 +153,9 @@ function handleClick() {
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="rowList">
           <var-list
             :finished="rowList.finished"
-            v-model:loading="isRowItemsLoading"
+            v-model:loading="getRowItems.loading.value"
             v-model:error="rowList.error"
-            @load="() => getRowItems({ params: { current: rowList.current } })"
+            @load="getRowItems({ params: { current: rowList.current } })"
           >
             <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
@@ -183,7 +183,7 @@ function handleClick() {
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="plainList">
           <var-list
             :finished="plainList.finished"
-            v-model:loading="isPlainItemsLoading"
+            v-model:loading="getPlainItems.loading.value"
             v-model:error="plainList.error"
             @load="() => getPlainItems({ params: { current: plainList.current } })"
           >
