@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { apiGetItems, apiGetPlainItems, apiGetRowItems, Item } from '@/apis'
 import { UseAxleRefs } from '@varlet/axle/use'
+import { apiGetItems, apiGetPlainItems, apiGetRowItems, Item } from '@/apis'
 
 const { pushStack } = useAppRouter()
 const active = ref('list')
@@ -19,10 +19,10 @@ const [list, getItems] = apiGetItems.use<List>({
     items: [],
     current: 1,
     error: false,
-    finished: false
+    finished: false,
   },
   onTransform,
-  onError
+  onError,
 })
 
 const [plainList, getPlainItems] = apiGetPlainItems.use<List>({
@@ -30,10 +30,10 @@ const [plainList, getPlainItems] = apiGetPlainItems.use<List>({
     items: [],
     current: 1,
     error: false,
-    finished: false
+    finished: false,
   },
   onTransform,
-  onError
+  onError,
 })
 
 const [rowList, getRowItems] = apiGetRowItems.use<List>({
@@ -41,10 +41,10 @@ const [rowList, getRowItems] = apiGetRowItems.use<List>({
     items: [],
     current: 1,
     error: false,
-    finished: false
+    finished: false,
   },
   onTransform,
-  onError
+  onError,
 })
 
 function onTransform(response: Res<Item[]>, { value }: UseAxleRefs<List>) {
@@ -52,7 +52,7 @@ function onTransform(response: Res<Item[]>, { value }: UseAxleRefs<List>) {
     return {
       ...value.value,
       finished: false,
-      error: true
+      error: true,
     }
   }
 
@@ -60,7 +60,7 @@ function onTransform(response: Res<Item[]>, { value }: UseAxleRefs<List>) {
     items: [...value.value.items, ...response.data],
     current: value.value.current + 1,
     finished: response.data.length < 10,
-    error: false
+    error: false,
   }
 }
 
@@ -73,7 +73,7 @@ async function handleRefresh() {
   const loaders = {
     list: getItems,
     rowList: getRowItems,
-    plainList: getPlainItems
+    plainList: getPlainItems,
   }
 
   if (active.value === 'list') {
@@ -98,7 +98,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="pt-[114px] pb-[16px] px-[14px]">
+  <div class="px-[14px] pb-[16px] pt-[114px]">
     <app-header>
       <template #left>
         <app-side-menu />
@@ -108,7 +108,7 @@ function handleClick() {
         <app-theme-switch />
       </template>
       <template #content>
-        <var-tabs color="transparent" active-color="#fff" inactive-color="#ddd" v-model:active="active">
+        <var-tabs v-model:active="active" color="transparent" active-color="#fff" inactive-color="#ddd">
           <var-tab name="list">{{ $t('Card List') }}</var-tab>
           <var-tab name="rowList">{{ $t('Card List') }}</var-tab>
           <var-tab name="plainList">{{ $t('Card List') }}</var-tab>
@@ -120,19 +120,19 @@ function handleClick() {
       <var-tabs-items v-model:active="active">
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="list">
           <var-list
-            :finished="list.finished"
             v-model:loading="getItems.loading.value"
             v-model:error="list.error"
+            :finished="list.finished"
             @load="getItems({ params: { current: list.current } })"
           >
             <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
+                v-for="i in list.items"
+                :key="i"
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 src="@/assets/images/material-2.png"
                 ripple
-                v-for="i in list.items"
-                :key="i"
                 @click="handleClick"
               >
                 <template #description>
@@ -152,20 +152,20 @@ function handleClick() {
         </var-tab-item>
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="rowList">
           <var-list
-            :finished="rowList.finished"
             v-model:loading="getRowItems.loading.value"
             v-model:error="rowList.error"
+            :finished="rowList.finished"
             @load="getRowItems({ params: { current: rowList.current } })"
           >
             <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
+                v-for="i in rowList.items"
+                :key="i"
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 src="@/assets/images/material-1.png"
                 layout="row"
                 ripple
-                v-for="i in rowList.items"
-                :key="i"
                 @click="handleClick"
               >
                 <template #extra>
@@ -182,18 +182,18 @@ function handleClick() {
         </var-tab-item>
         <var-tab-item class="min-h-[calc(var(--app-height)-190px)]" name="plainList">
           <var-list
-            :finished="plainList.finished"
             v-model:loading="getPlainItems.loading.value"
             v-model:error="plainList.error"
+            :finished="plainList.finished"
             @load="() => getPlainItems({ params: { current: plainList.current } })"
           >
             <var-space class="p-[4px]" direction="column" :size="['5vmin', 0]">
               <var-card
+                v-for="i in plainList.items"
+                :key="i"
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 ripple
-                v-for="i in plainList.items"
-                :key="i"
                 @click="handleClick"
               >
                 <template #description>

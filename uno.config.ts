@@ -1,6 +1,6 @@
-import { defineConfig, presetUno, presetIcons } from 'unocss'
-import { presetVarlet } from '@varlet/preset-unocss'
 import presetRemToPx from '@unocss/preset-rem-to-px'
+import { presetVarlet } from '@varlet/preset-unocss'
+import { defineConfig, presetIcons, presetUno } from 'unocss'
 
 export default defineConfig({
   presets: [presetUno(), presetRemToPx(), presetIcons(), presetVarlet()],
@@ -11,8 +11,8 @@ export default defineConfig({
       tertiary: 'var(--color-tertiary)',
       hslTertiary: 'hsla(var(--hsl-tertiary), <alpha-value>)',
       muted: 'var(--color-muted)',
-      hslMuted: 'hsla(var(--hsl-muted), <alpha-value>)'
-    }
+      hslMuted: 'hsla(var(--hsl-muted), <alpha-value>)',
+    },
   },
   rules: [
     [
@@ -27,13 +27,13 @@ export default defineConfig({
           '6xl': '28px',
           '7xl': '30px',
           '8xl': '32px',
-          '9xl': '34px'
+          '9xl': '34px',
         }
 
         return {
-          'font-size': sizes[s as keyof typeof sizes]
+          'font-size': sizes[s as keyof typeof sizes],
         }
-      }
-    ]
-  ]
+      },
+    ],
+  ],
 })

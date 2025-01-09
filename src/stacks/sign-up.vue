@@ -11,7 +11,7 @@ const account = reactive({
   password: '',
   confirmPassword: '',
   email: '',
-  verifyCode: ''
+  verifyCode: '',
 })
 
 async function submit() {
@@ -40,21 +40,21 @@ async function submit() {
       <var-form ref="form" class="sign-up-form">
         <var-space direction="column" :size="['8vmin', 0]">
           <var-input
+            v-model="account.username"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
             :rules="z.string().min(1, $t('Value cannot be empty'))"
-            v-model="account.username"
           >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="account-circle" />
             </template>
           </var-input>
           <var-input
+            v-model="account.password"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
             :type="isViewPassword ? 'text' : 'password'"
             :rules="z.string().min(1, $t('Value cannot be empty'))"
-            v-model="account.password"
           >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="lock" />
@@ -68,14 +68,14 @@ async function submit() {
             </template>
           </var-input>
           <var-input
+            v-model="account.confirmPassword"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('confirm password') })"
             :type="isViewConfirmPassword ? 'text' : 'password'"
             :rules="[
               z.string().min(1, $t('Value cannot be empty')),
-              (v) => v === account.password || $t('Not match the password')
+              (v) => v === account.password || $t('Not match the password'),
             ]"
-            v-model="account.confirmPassword"
           >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="lock" />
@@ -89,20 +89,20 @@ async function submit() {
             </template>
           </var-input>
           <var-input
+            v-model="account.email"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('email') })"
             :rules="z.string().email($t('Email format error'))"
-            v-model="account.email"
           >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="email" />
             </template>
           </var-input>
           <var-input
+            v-model="account.verifyCode"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('verify code') })"
             :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
-            v-model="account.verifyCode"
           >
             <template #prepend-icon>
               <var-icon class="sign-up-form-input-icon" name="card-account-details" />

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useParent, useChildren } from '@varlet/use'
-import { watch, ref, nextTick } from 'vue'
+import { nextTick, ref, watch } from 'vue'
+import { useChildren, useParent } from '@varlet/use'
 
 withDefaults(defineProps<{ keepAlive?: boolean; animation?: 'slide-x' | 'slide-y' }>(), {
-  keepAlive: true
+  keepAlive: true,
 })
 
 defineEmits<{ push: []; pushed: []; pop: []; popped: [] }>()
@@ -35,14 +35,14 @@ function saveParent() {
 
 watch(
   () => length.value,
-  async (value) => {
+  (value) => {
     value === 0 ? restoreParent() : saveParent()
-  }
+  },
 )
 </script>
 
 <template>
-  <div class="router-stack" ref="stack" :style="{ zIndex }">
+  <div ref="stack" class="router-stack" :style="{ zIndex }">
     <keep-alive v-if="keepAlive">
       <div v-if="showParent">
         <slot />

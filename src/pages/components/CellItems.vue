@@ -3,38 +3,38 @@ const items = ref([
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
+    enabled: false,
   },
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
+    enabled: false,
   },
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
+    enabled: false,
   },
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
+    enabled: false,
   },
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
+    enabled: false,
   },
   {
     name: 'Vue',
     icon: 'star',
-    enabled: false
-  }
+    enabled: false,
+  },
 ])
 </script>
 
 <template>
-  <div class="pt-[10px] pb-[16px] px-[10px]">
+  <div class="px-[10px] pb-[16px] pt-[10px]">
     <var-paper :elevation="2">
       <var-cell
         v-for="(item, index) in items"

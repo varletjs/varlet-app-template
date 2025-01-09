@@ -7,7 +7,7 @@ export default {
       unitPrecision: 6,
       unitToConvert: 'px',
       propList: ['*'],
-      selectorBlackList: ['var-elevation']
-    }
-  }
+      selectorBlackList: ['var-elevation'],
+    },
+  },
 }

@@ -6,7 +6,7 @@ const { t } = useI18n()
 const form = ref<Form>()
 const account = reactive({
   email: '',
-  verifyCode: ''
+  verifyCode: '',
 })
 
 async function submit() {
@@ -35,20 +35,20 @@ async function submit() {
       <var-form ref="form" class="forgot-password-form">
         <var-space direction="column" :size="['8vmin', 0]">
           <var-input
+            v-model="account.email"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('email') })"
             :rules="z.string().email($t('Email format error'))"
-            v-model="account.email"
           >
             <template #prepend-icon>
               <var-icon class="forgot-password-form-input-icon" name="email" />
             </template>
           </var-input>
           <var-input
+            v-model="account.verifyCode"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('verify code') })"
             :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
-            v-model="account.verifyCode"
           >
             <template #prepend-icon>
               <var-icon class="forgot-password-form-input-icon" name="card-account-details" />

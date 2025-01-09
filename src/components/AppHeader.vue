@@ -7,8 +7,8 @@ withDefaults(
     titlePosition?: AppBarProps['titlePosition']
   }>(),
   {
-    titlePosition: 'center'
-  }
+    titlePosition: 'center',
+  },
 )
 </script>
 

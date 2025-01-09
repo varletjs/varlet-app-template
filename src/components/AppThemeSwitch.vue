@@ -4,7 +4,7 @@ const { isDark, toggleDark } = useDark()
 
 <template>
   <var-button text round @click="toggleDark">
-    <var-icon class="text-[22px]!" name="weather-night" v-if="isDark" />
-    <var-icon class="text-[22px]!" name="white-balance-sunny" v-else />
+    <var-icon v-if="isDark" class="text-[22px]!" name="weather-night" />
+    <var-icon v-else class="text-[22px]!" name="white-balance-sunny" />
   </var-button>
 </template>

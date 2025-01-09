@@ -1,10 +1,10 @@
 <script setup lang="ts">
 defineOptions({
-  inheritAttrs: false
+  inheritAttrs: false,
 })
 
 withDefaults(defineProps<{ animation?: 'slide-x' | 'slide-y' }>(), {
-  animation: 'slide-x'
+  animation: 'slide-x',
 })
 
 const emit = defineEmits<{ push: []; pushed: []; pop: [path: string]; popped: [path: string] }>()
@@ -30,7 +30,7 @@ function handlePush() {
 </script>
 
 <template>
-  <teleport to="body" v-if="activated">
+  <teleport v-if="activated" to="body">
     <router-view v-slot="{ Component }">
       <transition
         :name="`router-stack-view-${animation}`"
@@ -48,7 +48,9 @@ function handlePush() {
 <style>
 .router-stack-view-slide-x-enter-active,
 .router-stack-view-slide-x-leave-active {
-  transition: opacity 0.2s, transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
 }
 
 .router-stack-view-slide-x-enter-from,
@@ -59,7 +61,9 @@ function handlePush() {
 
 .router-stack-view-slide-y-enter-active,
 .router-stack-view-slide-y-leave-active {
-  transition: opacity 0.2s, transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
 }
 
 .router-stack-view-slide-y-enter-from,

@@ -27,15 +27,15 @@ function handleRefresh() {
         <var-collapse-item v-for="i in 20" :key="i">
           <template #title>
             <div class="flex items-center" :class="{ 'color-primary': active.includes(i - 1) }">
-              <div class="flex items-center justify-center w-[46px] h-[46px] mr-[15px]">
+              <div class="mr-[15px] flex h-[46px] w-[46px] items-center justify-center">
                 <var-icon name="heart" size="6vmin" />
               </div>
               <span>{{ $t('Topic') }} {{ i }}</span>
             </div>
           </template>
 
-          <div class="flex items-center" v-for="j in 5" :key="j" v-ripple="{ color: 'var(--color-primary)' }">
-            <div class="flex items-center justify-center w-[46px] h-[46px] mr-[15px]">
+          <div v-for="j in 5" :key="j" v-ripple="{ color: 'var(--color-primary)' }" class="flex items-center">
+            <div class="mr-[15px] flex h-[46px] w-[46px] items-center justify-center">
               <var-icon name="star" size="6vmin" />
             </div>
             <span>{{ $t('Child topic') }} {{ i }} - {{ j }}</span>
