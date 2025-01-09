@@ -44,6 +44,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@configurajs/eslint": "^0.0.14",
+    "@configurajs/prettier": "^0.0.2",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@iconify-json/mdi": "^1.1.54",
@@ -61,7 +63,7 @@
     "@vue/test-utils": "^2.4.3",
     "cypress": "^13.3.2",
     "cypress-vite": "^1.5.0",
-    "eslint": "^8.41.0",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
@@ -70,7 +72,7 @@
     "less": "^4.1.3",
     "lint-staged": "^13.2.2",
     "postcss-px-to-viewport": "^1.1.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.1.0",
     "simple-git-hooks": "^2.8.1",
     "typescript": "5.0.2",
     "unocss": "^0.58.2",
