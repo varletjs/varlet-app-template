@@ -47,7 +47,7 @@
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@configurajs/eslint": "^0.0.14",
-    "@configurajs/prettier": "^0.0.3",
+    "@configurajs/prettier": "^0.1.0",
     "@iconify-json/mdi": "^1.1.54",
     "@types/mockjs": "^1.0.7",
     "@types/node": "^20.2.5",
