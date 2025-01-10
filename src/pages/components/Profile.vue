@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center px-[20px] h-[104px]">
+  <div class="flex h-[104px] items-center px-[20px]">
     <var-avatar class="flex-shrink-0" src="@/assets/images/avatar.jpg" size="22vmin" bordered />
     <div class="ml-[14px]">
       <div class="text-4xl">{{ $t('Your Name') }}</div>

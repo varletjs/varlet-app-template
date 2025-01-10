@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Locale, i18n, setLocale } from '@/i18n'
+import { i18n, Locale, setLocale } from '@/i18n'
 
 const show = ref(false)
 
 function getActiveStyles(locale: Locale) {
   return {
     color: i18n.global.locale.value === locale ? 'var(--color-primary)' : undefined,
-    backgroundColor: i18n.global.locale.value === locale ? 'var(--app-cell-active-background)' : undefined
+    backgroundColor: i18n.global.locale.value === locale ? 'var(--app-cell-active-background)' : undefined,
   }
 }
 
@@ -17,7 +17,7 @@ function handleCellClick(locale: Locale) {
 </script>
 
 <template>
-  <var-menu close-on-click-reference placement="bottom" offset-y="2vmin" v-model:show="show">
+  <var-menu v-model:show="show" close-on-click-reference placement="bottom" offset-y="2vmin">
     <var-button text round>
       <var-icon class="text-[22px]!" name="translate" />
     </var-button>

@@ -2,7 +2,7 @@ import { config } from '@vue/test-utils'
 import { vi } from 'vitest'
 
 config.global.mocks = {
-  $t: (key: string) => key
+  $t: (key: string) => key,
 }
 
 vi.mock('vue-router', () => ({
@@ -10,11 +10,11 @@ vi.mock('vue-router', () => ({
     router: {
       back: () => {},
       push: () => {},
-      replace: () => {}
-    }
+      replace: () => {},
+    },
   }),
 
   useRoute: () => ({
-    query: {}
-  })
+    query: {},
+  }),
 }))

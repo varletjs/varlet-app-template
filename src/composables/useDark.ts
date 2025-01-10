@@ -30,6 +30,6 @@ export function useDark() {
   return {
     isDark,
     toggleDark,
-    updateTheme
+    updateTheme,
   }
 }

@@ -8,7 +8,7 @@ const form = ref<Form>()
 const isViewPassword = ref(false)
 const account = reactive({
   username: '',
-  password: ''
+  password: '',
 })
 
 async function submit() {
@@ -39,21 +39,21 @@ async function submit() {
       <var-form ref="form" class="sign-in-form">
         <var-space direction="column" :size="['8vmin', 0]">
           <var-input
+            v-model="account.username"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('username') })"
             :rules="z.string().min(1, $t('Value cannot be empty'))"
-            v-model="account.username"
           >
             <template #prepend-icon>
               <var-icon class="sign-in-form-input-icon" name="account-circle" />
             </template>
           </var-input>
           <var-input
+            v-model="account.password"
             variant="outlined"
             :placeholder="$t('Please input {field}', { field: $t('password') })"
             :rules="z.string().min(1, $t('Value cannot be empty'))"
             :type="isViewPassword ? 'text' : 'password'"
-            v-model="account.password"
           >
             <template #prepend-icon>
               <var-icon class="sign-in-form-input-icon" name="lock" />

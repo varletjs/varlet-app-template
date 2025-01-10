@@ -1,13 +1,14 @@
 import { VarletImportResolver } from '@varlet/import-resolver'
+import icon from '@varlet/unplugin-icon-builder/vite'
 import vue from '@vitejs/plugin-vue'
 import jsx from '@vitejs/plugin-vue-jsx'
-import layouts from 'vite-plugin-vue-layouts'
+import unoCSS from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import vueRouter from 'unplugin-vue-router/vite'
-import icon from '@varlet/unplugin-icon-builder/vite'
+import layouts from 'vite-plugin-vue-layouts'
 import { extendRoute } from './stacksRoute'
-import unoCSS from 'unocss/vite'
+
 // Use as needed
 // import eruda from 'vite-plugin-eruda'
 
@@ -22,9 +23,9 @@ export function createVitePlugins() {
           'var-image': ['src'],
           'var-avatar': ['src'],
           'var-card': ['src'],
-          'var-app-bar': ['image']
-        }
-      }
+          'var-app-bar': ['image'],
+        },
+      },
     }),
 
     jsx(),
@@ -34,14 +35,14 @@ export function createVitePlugins() {
     icon({ dir: 'src/assets/icons', onDemand: true }),
 
     components({
-      resolvers: [VarletImportResolver()]
+      resolvers: [VarletImportResolver()],
     }),
 
     autoImport({
       imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
       dirs: ['./src/composables', './src/stores'],
       eslintrc: { enabled: true },
-      resolvers: [VarletImportResolver({ autoImport: true })]
+      resolvers: [VarletImportResolver({ autoImport: true })],
     }),
 
     layouts(),
@@ -49,16 +50,16 @@ export function createVitePlugins() {
     vueRouter({
       routesFolder: [
         {
-          src: 'src/pages'
+          src: 'src/pages',
         },
         {
           src: 'src/stacks',
-          path: 'stacks/'
-        }
+          path: 'stacks/',
+        },
       ],
       exclude: ['**/components/**', '**/composables/**', '**/lib/**'],
-      extendRoute
-    })
+      extendRoute,
+    }),
     // eruda()
   ]
 }

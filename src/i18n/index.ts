@@ -1,6 +1,6 @@
-import { I18nOptions, createI18n } from 'vue-i18n'
-import { localStorage } from 'rattail'
 import { Locale as UILocale } from '@varlet/ui'
+import { localStorage } from 'rattail'
+import { createI18n, I18nOptions } from 'vue-i18n'
 import enUS from './messages/en-US.json'
 import zhCN from './messages/zh-CN.json'
 
@@ -15,8 +15,8 @@ const options: I18nOptions = {
   fallbackLocale: 'en-US',
   messages: {
     'en-US': enUS,
-    'zh-CN': zhCN
-  }
+    'zh-CN': zhCN,
+  },
 }
 
 export const i18n = createI18n<false, typeof options>(options)

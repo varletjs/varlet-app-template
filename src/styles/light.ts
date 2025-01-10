@@ -8,5 +8,5 @@ export const lightTheme = Themes.toViewport({
   '--hsl-tertiary': 'var(--hsl-on-surface-variant)',
   '--color-tertiary': 'hsla(var(--hsl-tertiary), 1)',
   '--hsl-muted': '270, 4%, 47%',
-  '--color-muted': 'hsla(var(--hsl-muted), 1)'
+  '--color-muted': 'hsla(var(--hsl-muted), 1)',
 })

@@ -3,7 +3,7 @@ const { iframeRef } = useDesktop()
 </script>
 
 <template>
-  <div class="w-screen h-screen flex justify-center items-center">
+  <div class="flex h-screen w-screen items-center justify-center">
     <iframe ref="iframeRef" style="width: 500px" class="h-full border-none" src="./index.html"></iframe>
   </div>
 </template>

@@ -5,7 +5,7 @@ import { createUseAxle } from '@varlet/axle/use'
 import Mock from 'mockjs'
 
 export const axle = createAxle({
-  baseURL: import.meta.env.VITE_MOCK_API_BASE
+  baseURL: import.meta.env.VITE_MOCK_API_BASE,
 })
 
 axle.useRequestInterceptor(
@@ -22,14 +22,14 @@ axle.useRequestInterceptor(
               data: {
                 code: 200,
                 data: [],
-                message: 'success'
-              }
+                message: 'success',
+              },
             }
           }
 
           const data = Array.from({ length: 10 }, () => {
             return {
-              id: Mock.Random.id()
+              id: Mock.Random.id(),
             }
           })
 
@@ -37,13 +37,13 @@ axle.useRequestInterceptor(
             data: {
               code: 200,
               message: 'success',
-              data
-            }
+              data,
+            },
           }
-        }
-      }
-    ]
-  })
+        },
+      },
+    ],
+  }),
 )
 
 axle.useResponseInterceptor({
@@ -60,12 +60,12 @@ axle.useResponseInterceptor({
   onRejected(error) {
     Snackbar.error(error.message)
     return Promise.reject(error)
-  }
+  },
 })
 
 export const useAxle = createUseAxle({
   axle,
-  onTransform: (response) => response.data
+  onTransform: (response) => response.data,
 })
 
 export const api = createApi(axle, useAxle)

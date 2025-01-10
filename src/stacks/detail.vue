@@ -35,10 +35,10 @@ function handleRefresh() {
           <var-swipe-item>
             <var-image
               class="pointer-events-none"
-              @click="handleRefresh"
               fit="cover"
               height="54vmin"
               src="@/assets/images/material-2.png"
+              @click="handleRefresh"
             />
           </var-swipe-item>
           <var-swipe-item>
@@ -64,7 +64,7 @@ function handleRefresh() {
           <div class="text-md text-tertiary">{{ $t('Comment Information Area') }}</div>
           <div class="mt-[28px]!">
             <var-space :size="['5vmin', '4vmin']">
-              <var-chip class="p-0!" v-for="i in 8" :key="i">
+              <var-chip v-for="i in 8" :key="i" class="p-0!">
                 <template #left>
                   <var-avatar class="w-[32px]! h-[32px]! mr-[2px]" src="@/assets/images/avatar.jpg" />
                 </template>
@@ -75,7 +75,7 @@ function handleRefresh() {
             </var-space>
           </div>
 
-          <div class="flex items-center mt-[28px]">
+          <div class="mt-[28px] flex items-center">
             <var-rate
               class="w-auto! mr-[12px]"
               style="--rate-action-padding: 0"
@@ -92,7 +92,7 @@ function handleRefresh() {
           </div>
         </div>
 
-        <div class="pt-[28px] pb-[34px] px-[14px]">
+        <div class="px-[14px] pb-[34px] pt-[28px]">
           <var-button block type="primary">
             <var-icon name="star" />
             <span class="mx-[10px]">

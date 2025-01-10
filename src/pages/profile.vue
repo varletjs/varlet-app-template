@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Profile from './components/Profile.vue'
 import CellItems from './components/CellItems.vue'
 import ModuleItems from './components/ModuleItems.vue'
 import ModuleRowItems from './components/ModuleRowItems.vue'
+import Profile from './components/Profile.vue'
 import ProfileDetail from './components/ProfileDetail.vue'
 
 const active = ref('module')
@@ -26,7 +26,7 @@ function handleRefresh() {
         </template>
         <template #content>
           <profile />
-          <var-tabs color="transparent" active-color="#fff" inactive-color="#ddd" v-model:active="active">
+          <var-tabs v-model:active="active" color="transparent" active-color="#fff" inactive-color="#ddd">
             <var-tab name="module">{{ $t('Modules') }}</var-tab>
             <var-tab name="profile">{{ $t('Profile') }}</var-tab>
           </var-tabs>
@@ -34,7 +34,7 @@ function handleRefresh() {
       </app-header>
       <var-tabs-items v-model:active="active">
         <var-tab-item name="module">
-          <var-space class="pb-[30px] px-[14px]" direction="column" :size="['1.8vmin', 0]">
+          <var-space class="px-[14px] pb-[30px]" direction="column" :size="['1.8vmin', 0]">
             <module-items />
 
             <var-divider />

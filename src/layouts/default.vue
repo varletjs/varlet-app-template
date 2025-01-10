@@ -8,24 +8,24 @@ const tabs = ref([
   {
     label: 'HOME',
     icon: 'home',
-    name: '/home'
+    name: '/home',
   },
   {
     label: 'TOPIC',
     icon: 'heart',
-    name: '/topic'
+    name: '/topic',
   },
   {
     label: 'MESSAGE',
     icon: 'border-radius',
     namespace: 'i',
-    name: '/message'
+    name: '/message',
   },
   {
     label: 'PROFILE',
     icon: 'account-circle',
-    name: '/profile'
-  }
+    name: '/profile',
+  },
 ])
 
 watch(
@@ -33,7 +33,7 @@ watch(
   (newValue) => {
     active.value = newValue
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 function to(path: string) {
@@ -42,14 +42,14 @@ function to(path: string) {
 </script>
 
 <template>
-  <div class="h-[var(--app-height)] pb-[51px] overflow-y-auto">
+  <div class="h-[var(--app-height)] overflow-y-auto pb-[51px]">
     <router-view v-slot="{ Component }">
       <keep-alive>
         <component :is="Component" />
       </keep-alive>
     </router-view>
 
-    <var-bottom-navigation safe-area fixed v-model:active="active">
+    <var-bottom-navigation v-model:active="active" safe-area fixed>
       <var-bottom-navigation-item
         v-for="item in tabs"
         :key="item.label"

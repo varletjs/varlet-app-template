@@ -8,8 +8,8 @@ function handleRefresh() {
 
 <template>
   <var-pull-refresh
-    class="pt-[calc(var(--app-bar-height)+10px)] pb-[10px]"
     v-model="isRefresh"
+    class="pb-[10px] pt-[calc(var(--app-bar-height)+10px)]"
     @refresh="handleRefresh"
   >
     <app-header>
@@ -22,11 +22,11 @@ function handleRefresh() {
       </template>
     </app-header>
 
-    <div class="flex py-[12px]" v-for="i in 20" :key="i">
-      <var-avatar class="flex-shrink-0 mx-[18px]" src="@/assets/images/avatar.jpg" size="12vmin" />
-      <div class="w-[274px] b-b border-outline">
-        <div class="flex justify-between items-center">
-          <div class="text-lg w-[190px] text-inverse-surface">
+    <div v-for="i in 20" :key="i" class="flex py-[12px]">
+      <var-avatar class="mx-[18px] flex-shrink-0" src="@/assets/images/avatar.jpg" size="12vmin" />
+      <div class="b-b border-outline w-[274px]">
+        <div class="flex items-center justify-between">
+          <div class="text-inverse-surface w-[190px] text-lg">
             <var-ellipsis style="max-width: 100%" :tooltip="false">{{ $t('Section title') }}</var-ellipsis>
           </div>
           <div class="text-md text-tertiary mb-[2px]">2023-07-27</div>
