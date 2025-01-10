@@ -51,8 +51,6 @@
     "@iconify-json/mdi": "^1.1.54",
     "@types/mockjs": "^1.0.7",
     "@types/node": "^20.2.5",
-    "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
     "@unocss/preset-rem-to-px": "^0.58.2",
     "@varlet/import-resolver": "3.8.2",
     "@varlet/preset-unocss": "3.8.2",
