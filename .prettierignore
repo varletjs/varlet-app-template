@@ -6,6 +6,7 @@ public
 *-lock.yaml
 .vscode
 auto-imports.d.ts
+.eslintrc-auto-import.js
 components.d.ts
 README.zh-CN.md
 README.md
