@@ -41,7 +41,6 @@ export function createVitePlugins() {
     autoImport({
       imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
       dirs: ['./src/composables', './src/stores'],
-      eslintrc: { enabled: true, filepath: './.eslintrc-auto-import.js' },
       resolvers: [VarletImportResolver({ autoImport: true })],
     }),
 
