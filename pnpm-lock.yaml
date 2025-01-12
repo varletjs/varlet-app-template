@@ -15,14 +15,14 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       '@varlet/touch-emulator':
-        specifier: 3.8.2
-        version: 3.8.2
+        specifier: 3.8.3
+        version: 3.8.3
       '@varlet/ui':
-        specifier: 3.8.2
-        version: 3.8.2(vue@3.5.13(typescript@5.0.2))
+        specifier: 3.8.3
+        version: 3.8.3(vue@3.5.13(typescript@5.0.2))
       '@varlet/use':
-        specifier: 3.8.2
-        version: 3.8.2(vue@3.5.13(typescript@5.0.2))
+        specifier: 3.8.3
+        version: 3.8.3(vue@3.5.13(typescript@5.0.2))
       '@vueuse/core':
         specifier: ^10.5.0
         version: 10.11.1(vue@3.5.13(typescript@5.0.2))
@@ -61,11 +61,11 @@ importers:
         specifier: ^17.6.5
         version: 17.8.1
       '@configurajs/eslint':
-        specifier: ^0.0.14
-        version: 0.0.14(eslint-config-prettier@9.1.0(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.0.2)
-      '@configurajs/prettier':
         specifier: ^0.1.0
-        version: 0.1.0(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)
+        version: 0.1.0(eslint-config-prettier@9.1.0(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.0.2)
+      '@configurajs/prettier':
+        specifier: ^0.1.1
+        version: 0.1.1(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)
       '@iconify-json/mdi':
         specifier: ^1.1.54
         version: 1.2.2
@@ -79,11 +79,11 @@ importers:
         specifier: ^0.58.2
         version: 0.58.9
       '@varlet/import-resolver':
-        specifier: 3.8.2
-        version: 3.8.2
+        specifier: 3.8.3
+        version: 3.8.3
       '@varlet/preset-unocss':
-        specifier: 3.8.2
-        version: 3.8.2(unocss@0.58.9(postcss@8.4.49)(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1)))
+        specifier: 3.8.3
+        version: 3.8.3(unocss@0.58.9(postcss@8.4.49)(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1)))
       '@varlet/unplugin-icon-builder':
         specifier: 0.6.0
         version: 0.6.0(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1))(vue@3.5.13(typescript@5.0.2))
@@ -137,7 +137,7 @@ importers:
         version: 19.0.0(@vueuse/core@10.11.1(vue@3.5.13(typescript@5.0.2)))(rollup@4.30.1)
       unplugin-vue-components:
         specifier: ^28.0.0
-        version: 28.0.0(@babel/parser@7.26.3)(rollup@4.30.1)(vue@3.5.13(typescript@5.0.2))
+        version: 28.0.0(@babel/parser@7.26.5)(rollup@4.30.1)(vue@3.5.13(typescript@5.0.2))
       unplugin-vue-router:
         specifier: ^0.10.8
         version: 0.10.9(rollup@4.30.1)(vue-router@4.5.0(vue@3.5.13(typescript@5.0.2)))(vue@3.5.13(typescript@5.0.2))
@@ -192,6 +192,10 @@ packages:
 
   '@babel/generator@7.26.3':
     resolution: {integrity: sha512-6FF/urZvD0sTeO7k6/B15pMLC4CHUv1426lzr3N01aHJTl046uCAh9LXW/fzeXXjPNCJ6iABW5XaWOsIZB93aQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/generator@7.26.5':
+    resolution: {integrity: sha512-2caSP6fN9I7HOe6nqhtft7V4g7/V/gfDsC3Ag4W7kEzzvRGKqiv0pu0HogPiZ3KaVSoNDhUws6IJjDjpfmYIXw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-annotate-as-pure@7.25.9':
@@ -261,6 +265,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  '@babel/parser@7.26.5':
+    resolution: {integrity: sha512-SRJ4jYmXRqV1/Xc+TIVG84WjHBXKlxO9sHQnA2Pf12QQEAp1LOh6kDzNHXcUnbH1QI0FDoPPVOt+vyUDucxpaw==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   '@babel/plugin-syntax-jsx@7.25.9':
     resolution: {integrity: sha512-ld6oezHQMZsZfp6pWtbjaNDF2tiiCYYDqQszHt5VV437lewP9aSi2Of99CK0D0XB21k7FLgnLcmQKyKzynfeAA==}
     engines: {node: '>=6.9.0'}
@@ -299,8 +308,16 @@ packages:
     resolution: {integrity: sha512-fH+b7Y4p3yqvApJALCPJcwb0/XaOSgtK4pzV6WVjPR5GLFQBRI7pfoX2V2iM48NXvX07NUxxm1Vw98YjqTcU5w==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/traverse@7.26.5':
+    resolution: {integrity: sha512-rkOSPOw+AXbgtwUga3U4u8RpoK9FEFWBNAlTpcnkLFjL5CT+oyHNuUUC/xx6XefEJ16r38r8Bc/lfp6rYuHeJQ==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/types@7.26.3':
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.26.5':
+    resolution: {integrity: sha512-L6mZmwFDK6Cjh1nRCLXpa6no13ZIioJDz7mdkzHv399pThrTa/k0nUlNaenOeh2kWu/iaOQYElEpKPUswUa9Vg==}
     engines: {node: '>=6.9.0'}
 
   '@colors/colors@1.5.0':
@@ -376,14 +393,14 @@ packages:
     resolution: {integrity: sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==}
     engines: {node: '>=v14'}
 
-  '@configurajs/eslint@0.0.14':
-    resolution: {integrity: sha512-drI+JIGCswy16knjVN+/UWctnuCrK/wRsYwFTuoFATTE5yIQloevVyHwr505is3asIe/WoiHECXEYFlW/PH/1A==}
+  '@configurajs/eslint@0.1.0':
+    resolution: {integrity: sha512-AFquY5vpRn1ldUhBnYPi5DeuwF+jv8o6ZOVrp8VfHeWecgDYIz0tcwA+dVxhJ5uuqHsEQ8FQfy1XZ+h7GgBcIw==}
     engines: {pnpm: '>=9.0'}
     peerDependencies:
       eslint: ^9.17.0
 
-  '@configurajs/prettier@0.1.0':
-    resolution: {integrity: sha512-lQEgnQFzFF36YOkQGs6CYH2U4eEfV17kyrs3F89ePoe5uBpJuvpmIEstVzhrAqGEfzzpuKJa45XbgYR6bkqdzg==}
+  '@configurajs/prettier@0.1.1':
+    resolution: {integrity: sha512-vFqu5BCTwxS3k0mfUfFx0tU7gFM0VkIYn+c5wl9lUTAwWrhQMZSX8HmYuMcjycrINUjR4OxcTf1xYaiNBxEb1w==}
     engines: {pnpm: '>=9.0'}
     peerDependencies:
       prettier: ^3.4.2
@@ -1085,25 +1102,25 @@ packages:
     resolution: {integrity: sha512-OyD8FJzkQSaMc9GownrwRHP8RieTEBuYKZsv8m8HwRvEGWleQ9pHTwnHeXdtUSV4wuOz34WniXkJMdOcSPqoGg==}
     hasBin: true
 
-  '@varlet/icons@3.8.2':
-    resolution: {integrity: sha512-4FzuUdu/mhGy/n/qKEVytR9vryFnpVscUSKgQYNwvpLZGH4L7xAvUrt9E05/X0jTde7NCiOlRcVhU7DUM5sthg==}
+  '@varlet/icons@3.8.3':
+    resolution: {integrity: sha512-spECUeZP4iCEGUdOi1p36ewDV9fou4djecyscif/C9jCweCcyGHEs7bL2be/FuJXAnt4mmMagd/wag8XrrG2BA==}
 
-  '@varlet/import-resolver@3.8.2':
-    resolution: {integrity: sha512-vdMf1Hfn/2lJPBcufS7VRlkZhDPvEk4bcDVQ8ZJ2G+5dQQnlkxS0e6xUqFCVkPaWFaMDpFt+B6PIrbs0Vb55Og==}
+  '@varlet/import-resolver@3.8.3':
+    resolution: {integrity: sha512-fnQkeNLXraEpiludoJihUDh/SQUiKZtZTd8tm+Ah7h6jrXdPzfqmUIRrz+FZzxY/PG2CSvDrGB3+IFcy4jEoIA==}
 
-  '@varlet/preset-unocss@3.8.2':
-    resolution: {integrity: sha512-1qg1UTxFum+qB6Tbsa78NL7qqq1a7SAul+m4VaRW+1BeSfJlxX5zjBkCLfO0tyNxtA3badeTSPWE8P4s+A3y6g==}
+  '@varlet/preset-unocss@3.8.3':
+    resolution: {integrity: sha512-zdlEuq0rSZAQHgbvMRAKuo5/wxBAfbSpOlEjswWQTUUHwbT2JoYwW2lQ7aciU1fv6DXGbXjFz5PEAMy8clbNrw==}
     peerDependencies:
       unocss: ^0.58.5
 
-  '@varlet/shared@3.8.2':
-    resolution: {integrity: sha512-cj3QQJJ6oEDuuplAINxD+jbZnRetUrMjZJF1Yl8jEzVVHeAVN2bX6b06ukyjTRhvBSoVL0kCgP39MEoXE+/LUQ==}
+  '@varlet/shared@3.8.3':
+    resolution: {integrity: sha512-y2CO9UhNrIUbZ5hzCNOv+l50KB+/LB93fknqRjm3UVEqNvqgEdw4MhpI1q8iqQIX3Bta7k7Uxh619XHqd1F3+A==}
 
-  '@varlet/touch-emulator@3.8.2':
-    resolution: {integrity: sha512-ZIFG4fMfMW3//jakU+gxIk5hm5uk4UA5/GmsWKqY4V8YVEjkw21pbDAeYYtlE7uOh03jpdfZXoTDlSLbc+GOzA==}
+  '@varlet/touch-emulator@3.8.3':
+    resolution: {integrity: sha512-S/cDxVM8tQup1air1Lw4bBvJB5FRYVWs30LLmOoavRgj2Kybe7X3kAGDwOMHzSPP12tV1KWljsA4v4uAd3WSFA==}
 
-  '@varlet/ui@3.8.2':
-    resolution: {integrity: sha512-yuGdIDxy79Q8IQJ5152WKTThLDQHAbowz7QUycQYFc/Wdwk9Mevg3F0fGNhw38n4iHn004AqJuLQQS8EGVRDZw==}
+  '@varlet/ui@3.8.3':
+    resolution: {integrity: sha512-9DnaN01XbumR2SpA1SL2MVCk4ZzkBWaaJYc1jl+3CCSc3g6+tY5leY1K71faJtMMrYgDeAPrOpdWoMw0eBlaRQ==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -1119,8 +1136,8 @@ packages:
       webpack:
         optional: true
 
-  '@varlet/use@3.8.2':
-    resolution: {integrity: sha512-/DuVJOYGhRDawSauxNXMClwGusdvgLi0uxMR8aLT4G0SV3BgP4vlkc9UmewrD1MOOGs3dkX6gV6ct3AvL9hONg==}
+  '@varlet/use@3.8.3':
+    resolution: {integrity: sha512-bs+5ucyx8NSzF82LGY98SHzl/DBiD3Bn49bWh5mfudb8B71eofCb+Av9bg46G7DzL70JP1vfJ3vlGsuTNtgmuA==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -4252,6 +4269,14 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 3.1.0
 
+  '@babel/generator@7.26.5':
+    dependencies:
+      '@babel/parser': 7.26.5
+      '@babel/types': 7.26.5
+      '@jridgewell/gen-mapping': 0.3.8
+      '@jridgewell/trace-mapping': 0.3.25
+      jsesc: 3.1.0
+
   '@babel/helper-annotate-as-pure@7.25.9':
     dependencies:
       '@babel/types': 7.26.3
@@ -4337,6 +4362,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.3
 
+  '@babel/parser@7.26.5':
+    dependencies:
+      '@babel/types': 7.26.5
+
   '@babel/plugin-syntax-jsx@7.25.9(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
@@ -4395,7 +4424,24 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@babel/traverse@7.26.5':
+    dependencies:
+      '@babel/code-frame': 7.26.2
+      '@babel/generator': 7.26.5
+      '@babel/parser': 7.26.5
+      '@babel/template': 7.25.9
+      '@babel/types': 7.26.5
+      debug: 4.4.0(supports-color@8.1.1)
+      globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@babel/types@7.26.3':
+    dependencies:
+      '@babel/helper-string-parser': 7.25.9
+      '@babel/helper-validator-identifier': 7.25.9
+
+  '@babel/types@7.26.5':
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
@@ -4519,7 +4565,7 @@ snapshots:
     dependencies:
       chalk: 4.1.2
 
-  '@configurajs/eslint@0.0.14(eslint-config-prettier@9.1.0(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.0.2)':
+  '@configurajs/eslint@0.1.0(eslint-config-prettier@9.1.0(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.0.2)':
     dependencies:
       '@eslint-community/eslint-plugin-eslint-comments': 4.4.1(eslint@9.17.0(jiti@2.4.2))
       '@eslint-react/eslint-plugin': 1.23.2(eslint@9.17.0(jiti@2.4.2))(typescript@5.0.2)
@@ -4539,7 +4585,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@configurajs/prettier@0.1.0(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)':
+  '@configurajs/prettier@0.1.1(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)':
     dependencies:
       '@ianvs/prettier-plugin-sort-imports': 4.4.0(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)
       prettier: 3.4.2
@@ -4834,10 +4880,10 @@ snapshots:
 
   '@ianvs/prettier-plugin-sort-imports@4.4.0(@vue/compiler-sfc@3.5.13)(prettier@3.4.2)':
     dependencies:
-      '@babel/generator': 7.26.3
-      '@babel/parser': 7.26.3
-      '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.3
+      '@babel/generator': 7.26.5
+      '@babel/parser': 7.26.5
+      '@babel/traverse': 7.26.5
+      '@babel/types': 7.26.5
       prettier: 3.4.2
       semver: 7.6.3
     optionalDependencies:
@@ -5369,28 +5415,28 @@ snapshots:
       - debug
       - vue
 
-  '@varlet/icons@3.8.2': {}
+  '@varlet/icons@3.8.3': {}
 
-  '@varlet/import-resolver@3.8.2':
+  '@varlet/import-resolver@3.8.3':
     dependencies:
-      '@varlet/shared': 3.8.2
+      '@varlet/shared': 3.8.3
 
-  '@varlet/preset-unocss@3.8.2(unocss@0.58.9(postcss@8.4.49)(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1)))':
+  '@varlet/preset-unocss@3.8.3(unocss@0.58.9(postcss@8.4.49)(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1)))':
     dependencies:
       unocss: 0.58.9(postcss@8.4.49)(rollup@4.30.1)(vite@5.4.11(@types/node@20.17.12)(less@4.2.1))
 
-  '@varlet/shared@3.8.2':
+  '@varlet/shared@3.8.3':
     dependencies:
       rattail: 1.0.17
 
-  '@varlet/touch-emulator@3.8.2': {}
+  '@varlet/touch-emulator@3.8.3': {}
 
-  '@varlet/ui@3.8.2(vue@3.5.13(typescript@5.0.2))':
+  '@varlet/ui@3.8.3(vue@3.5.13(typescript@5.0.2))':
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.8.2
-      '@varlet/shared': 3.8.2
-      '@varlet/use': 3.8.2(vue@3.5.13(typescript@5.0.2))
+      '@varlet/icons': 3.8.3
+      '@varlet/shared': 3.8.3
+      '@varlet/use': 3.8.3(vue@3.5.13(typescript@5.0.2))
       dayjs: 1.11.13
       decimal.js: 10.4.3
       vue: 3.5.13(typescript@5.0.2)
@@ -5410,14 +5456,14 @@ snapshots:
       - debug
       - vue
 
-  '@varlet/use@3.8.2(vue@3.5.13(typescript@5.0.2))':
+  '@varlet/use@3.8.3(vue@3.5.13(typescript@5.0.2))':
     dependencies:
-      '@varlet/shared': 3.8.2
+      '@varlet/shared': 3.8.3
       vue: 3.5.13(typescript@5.0.2)
 
   '@varlet/webfont@0.0.9':
     dependencies:
-      '@varlet/shared': 3.8.2
+      '@varlet/shared': 3.8.3
       fs-extra: 11.2.0
       globby: 11.1.0
       p-limit: 3.1.0
@@ -8362,7 +8408,7 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  unplugin-vue-components@28.0.0(@babel/parser@7.26.3)(rollup@4.30.1)(vue@3.5.13(typescript@5.0.2)):
+  unplugin-vue-components@28.0.0(@babel/parser@7.26.5)(rollup@4.30.1)(vue@3.5.13(typescript@5.0.2)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.4(rollup@4.30.1)
@@ -8376,7 +8422,7 @@ snapshots:
       unplugin: 2.1.2
       vue: 3.5.13(typescript@5.0.2)
     optionalDependencies:
-      '@babel/parser': 7.26.3
+      '@babel/parser': 7.26.5
     transitivePeerDependencies:
       - rollup
       - supports-color
