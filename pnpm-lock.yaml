@@ -15,14 +15,14 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       '@varlet/touch-emulator':
-        specifier: 3.10.1
-        version: 3.10.1
+        specifier: 3.10.2
+        version: 3.10.2
       '@varlet/ui':
-        specifier: 3.10.1
-        version: 3.10.1(vue@3.5.13(typescript@5.7.3))
+        specifier: 3.10.2
+        version: 3.10.2(vue@3.5.13(typescript@5.7.3))
       '@varlet/use':
-        specifier: 3.10.1
-        version: 3.10.1(vue@3.5.13(typescript@5.7.3))
+        specifier: 3.10.2
+        version: 3.10.2(vue@3.5.13(typescript@5.7.3))
       '@vueuse/core':
         specifier: ^12.7.0
         version: 12.7.0(typescript@5.7.3)
@@ -79,11 +79,11 @@ importers:
         specifier: ^0.58.2
         version: 0.58.9
       '@varlet/import-resolver':
-        specifier: 3.10.1
-        version: 3.10.1
+        specifier: 3.10.2
+        version: 3.10.2
       '@varlet/preset-unocss':
-        specifier: 3.10.1
-        version: 3.10.1(unocss@0.58.9(postcss@8.5.3)(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0)))
+        specifier: 3.10.2
+        version: 3.10.2(unocss@0.58.9(postcss@8.5.3)(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0)))
       '@varlet/unplugin-icon-builder':
         specifier: 0.6.0
         version: 0.6.0(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
@@ -1583,25 +1583,25 @@ packages:
     resolution: {integrity: sha512-OyD8FJzkQSaMc9GownrwRHP8RieTEBuYKZsv8m8HwRvEGWleQ9pHTwnHeXdtUSV4wuOz34WniXkJMdOcSPqoGg==}
     hasBin: true
 
-  '@varlet/icons@3.10.1':
-    resolution: {integrity: sha512-Sp2Xu9irWd6H1D8QqMimEZjQWTPxJNVH8JloKUMkeW+Xy149PDLcI1F/1mxLLwmt5YR4tcTFdRFkTQV5HaTFIA==}
+  '@varlet/icons@3.10.2':
+    resolution: {integrity: sha512-+5mWwmafvSnjoBAFh438Rr/tt6rvCCKCc8jDRgfM9rFfKNNu0UHuuv4YV5LCB459Hts9q5e8cezA271gP1Mlbg==}
 
-  '@varlet/import-resolver@3.10.1':
-    resolution: {integrity: sha512-he3vlNcEfxKBiL4LN7olVNYY5A4XeAJ0gozGnYaLwZCMT7fBLIkTP5Qsa3xINv1wh9jgUQUJIkxY4ftoOQp2aw==}
+  '@varlet/import-resolver@3.10.2':
+    resolution: {integrity: sha512-Ae9T5MynYPtNz3zz/ex2OSgvAIzWOMlXXiFHayXmNEuUD4fsAKK326L3I+ZMX24/GJ+hWMPWmeHUb+5rDje46A==}
 
-  '@varlet/preset-unocss@3.10.1':
-    resolution: {integrity: sha512-prpxUyBuRcp0xidpkabIOUP42Y1GNrtxju/8gRhiaEk22tNZf4VXc1Jw2zx7CbmJLJh25gxvKCY7tnfchApGKg==}
+  '@varlet/preset-unocss@3.10.2':
+    resolution: {integrity: sha512-biAl3QYyvwkia6kax7SBfF31aByf66kNq6yleQgJS+U6zMQ7dF2T7CJt7g4gd5qiktU/Ju3+A43A2CbmyYl6fw==}
     peerDependencies:
       unocss: ^0.58.5
 
-  '@varlet/shared@3.10.1':
-    resolution: {integrity: sha512-0pBMziGDaCVJH+YMVuJfU5t3ogdpVguIBhHHMEOlbp+itHirWrAo/cD7AX1UNleaOmLmlG+o2QK/L42PK5qnIw==}
+  '@varlet/shared@3.10.2':
+    resolution: {integrity: sha512-Jv/9HANkNeDCVjRaaiBb1Wazj6IN056/cxbxWK+nfgMqDI5bz2Lu0ZHC+eyxTyq3xo1/Sh+KN5SxB/hnf50qhQ==}
 
-  '@varlet/touch-emulator@3.10.1':
-    resolution: {integrity: sha512-CiOVPEMsnd6KYo5Z7NOt6BbrweRvbLsHzPN3/WopJsquhCcS/isAd8IPUpMdcUYKD6BHDMTbytFlWTOQtsIysA==}
+  '@varlet/touch-emulator@3.10.2':
+    resolution: {integrity: sha512-V7PIhN3xXq83r93iRwbvtFaANDwLuk09cNItb2Pi8WW9BeJfGykQLMs+iOv+JHVsXaEliguNwOtW6Htrg/xDxw==}
 
-  '@varlet/ui@3.10.1':
-    resolution: {integrity: sha512-lS3yvR2BMqYoPkGrvo76rtvTnCT7nbPGYuI1qAb87U4EJa8tgjXhHB+7d25SE93jKCnaEV8R6L/tWJyEyfFHGA==}
+  '@varlet/ui@3.10.2':
+    resolution: {integrity: sha512-tUi4RDLBhw1wtx08M+U9fnwi4KTw2nR5VOXIMUoQJmDmoQQpdtqEnKkGMlECSeBPFGfJChHlj8LGF2x3iSItvQ==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -1617,8 +1617,8 @@ packages:
       webpack:
         optional: true
 
-  '@varlet/use@3.10.1':
-    resolution: {integrity: sha512-8S77qCZafVUEM0yyO6T+7yizV9Y43TdCzJRhx/1ZggrDgcGLeL8p7rF6rBQXa1Nbohisp7oj/MeqqIYBInblog==}
+  '@varlet/use@3.10.2':
+    resolution: {integrity: sha512-DvoV9W83LVSpJn3qML6gv1GwHaLdHi9JbXh/yvTSpESYFSRfEXI2eXBQFi2C7XRenrrzUdwaF6ZKhbQFxQIwsA==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -6398,28 +6398,28 @@ snapshots:
       - debug
       - vue
 
-  '@varlet/icons@3.10.1': {}
+  '@varlet/icons@3.10.2': {}
 
-  '@varlet/import-resolver@3.10.1':
+  '@varlet/import-resolver@3.10.2':
     dependencies:
-      '@varlet/shared': 3.10.1
+      '@varlet/shared': 3.10.2
 
-  '@varlet/preset-unocss@3.10.1(unocss@0.58.9(postcss@8.5.3)(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0)))':
+  '@varlet/preset-unocss@3.10.2(unocss@0.58.9(postcss@8.5.3)(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0)))':
     dependencies:
       unocss: 0.58.9(postcss@8.5.3)(rollup@4.36.0)(vite@6.2.0(@types/node@20.17.12)(jiti@2.4.2)(less@4.2.1)(tsx@4.19.3)(yaml@2.7.0))
 
-  '@varlet/shared@3.10.1':
+  '@varlet/shared@3.10.2':
     dependencies:
       rattail: 1.0.17
 
-  '@varlet/touch-emulator@3.10.1': {}
+  '@varlet/touch-emulator@3.10.2': {}
 
-  '@varlet/ui@3.10.1(vue@3.5.13(typescript@5.7.3))':
+  '@varlet/ui@3.10.2(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.10.1
-      '@varlet/shared': 3.10.1
-      '@varlet/use': 3.10.1(vue@3.5.13(typescript@5.7.3))
+      '@varlet/icons': 3.10.2
+      '@varlet/shared': 3.10.2
+      '@varlet/use': 3.10.2(vue@3.5.13(typescript@5.7.3))
       dayjs: 1.11.13
       decimal.js: 10.5.0
       vue: 3.5.13(typescript@5.7.3)
@@ -6439,14 +6439,14 @@ snapshots:
       - debug
       - vue
 
-  '@varlet/use@3.10.1(vue@3.5.13(typescript@5.7.3))':
+  '@varlet/use@3.10.2(vue@3.5.13(typescript@5.7.3))':
     dependencies:
-      '@varlet/shared': 3.10.1
+      '@varlet/shared': 3.10.2
       vue: 3.5.13(typescript@5.7.3)
 
   '@varlet/webfont@0.0.9':
     dependencies:
-      '@varlet/shared': 3.10.1
+      '@varlet/shared': 3.10.2
       fs-extra: 11.2.0
       globby: 11.1.0
       p-limit: 3.1.0
