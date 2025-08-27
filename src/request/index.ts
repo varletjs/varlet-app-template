@@ -12,7 +12,7 @@ axle.useRequestInterceptor(
   requestMockInterceptor({
     mappings: [
       {
-        url: '/**',
+        url: () => true,
         delay: 300,
         handler({ params = {} }) {
           const { current = 1 } = params
