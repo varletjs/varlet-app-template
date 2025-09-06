@@ -1,5 +1,7 @@
 import { setupLayouts } from 'virtual:generated-layouts'
+// eslint-disable-next-line import-x/no-duplicates
 import { createRouter, createWebHashHistory, Router } from 'vue-router'
+// eslint-disable-next-line import-x/no-duplicates
 import { routes } from 'vue-router/auto-routes'
 import { setupDesktopChannel } from './desktopChannel'
 
