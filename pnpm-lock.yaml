@@ -36,8 +36,8 @@ importers:
         specifier: ^2.1.3
         version: 2.3.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
       rattail:
-        specifier: 1.3.1
-        version: 1.3.1
+        specifier: ^1.4.0
+        version: 1.4.0
       shiki:
         specifier: ^1.22.0
         version: 1.26.1
@@ -4349,8 +4349,8 @@ packages:
     resolution: {integrity: sha512-EO9spS6qjW/y/5rKBcNkXka1e4udhOqiuUigmPd6aJZOwclkGhDGx9HnUHCz3R8Is8FqXdsqgiSOhV5/r4ynCA==}
     engines: {pnpm: '>=9.0'}
 
-  rattail@1.3.1:
-    resolution: {integrity: sha512-GZA6BvwXlqsol3yR6Zcj6yEtvcrSDGQ/MI74AKvakRvzAoKsEJGbUPXdzT6iEyTsWNMkp2DgdfCcG3LR+LwpzQ==}
+  rattail@1.4.0:
+    resolution: {integrity: sha512-ycqkFpTdgHPI3KPDHxSGmP1WKR4qy02scqExaSta1GE7q8sa1ppQi4pj7EryByRXn2swmwgd2hvXjFSrh5alUg==}
     engines: {pnpm: '>=9.0'}
 
   rd@2.0.1:
@@ -5751,7 +5751,7 @@ snapshots:
       prettier: 3.4.2
       prettier-plugin-packagejson: 2.5.22(prettier@3.4.2)
       prettier-plugin-tailwindcss: 0.6.14(@ianvs/prettier-plugin-sort-imports@4.7.1(@vue/compiler-sfc@3.5.30)(prettier@3.4.2))(prettier@3.4.2)
-      rattail: 1.3.1
+      rattail: 1.4.0
     transitivePeerDependencies:
       - '@prettier/plugin-hermes'
       - '@prettier/plugin-oxc'
@@ -7018,7 +7018,7 @@ snapshots:
       fs-extra: 11.2.0
       hash-sum: 2.0.0
       picocolors: 1.1.1
-      rattail: 1.3.1
+      rattail: 1.4.0
       typescript: 5.7.3
       unconfig: 0.3.13
     transitivePeerDependencies:
@@ -7057,7 +7057,7 @@ snapshots:
       chokidar: 3.6.0
       fast-glob: 3.3.3
       fs-extra: 11.2.0
-      rattail: 1.3.1
+      rattail: 1.4.0
       rollup: 4.59.0
       unplugin: 1.16.1
     optionalDependencies:
@@ -7442,7 +7442,7 @@ snapshots:
       openapi-typescript: 7.13.0(typescript@5.7.3)
       pluralize: 8.0.0
       prettier: 3.4.2
-      rattail: 1.3.1
+      rattail: 1.4.0
       rslog: 1.3.2
       swagger2openapi: 7.0.8
       typescript: 5.7.3
@@ -9745,7 +9745,7 @@ snapshots:
     dependencies:
       mitt: 3.0.1
 
-  rattail@1.3.1:
+  rattail@1.4.0:
     dependencies:
       mitt: 3.0.1
 
