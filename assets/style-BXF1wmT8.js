@@ -1,0 +1,3 @@
+import{Lt as e,Pt as t,S as n,f as r,t as i,x as a,z as o}from"./common-DfuI7z53.js";var s={styleVars:{type:Object,default:()=>({})},tag:{type:String,default:`div`}},{name:c,n:l}=r(`style-provider`),u=t({name:c,props:s,setup(t,{slots:n}){return()=>e(t.tag,{class:l(),style:i(t.styleVars)},o(n.default))}}),d=`varlet-style-vars`;function f(){let e=document.head.querySelector(`#${d}`);e&&document.head.removeChild(e)}function p(e){let t=document.createElement(`style`);t.id=d,t.innerHTML=e,document.head.appendChild(t)}function m(e){if(e==null){f();return}let t=i(e==null?{}:e),n=Object.entries(t).reduce((e,[t,n])=>(e+=`${t}:${n};`,e),`:root:root {
+`);f(),p(`${n}
+}`)}m.Component=u,a(u),a(u,m),n(m,s);var h=u,g=m;export{g as n,h as t};
