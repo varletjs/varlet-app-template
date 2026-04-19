@@ -9,7 +9,7 @@ function handleRefresh() {
 <template>
   <var-pull-refresh
     v-model="isRefresh"
-    class="pb-[10px] pt-[calc(var(--app-bar-height)+10px)]"
+    class="pt-[calc(var(--app-bar-height)+10px)] pb-[10px]"
     @refresh="handleRefresh"
   >
     <app-header>

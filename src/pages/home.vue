@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { UseAxleRefs } from 'rattail/axle/use'
 import { ref } from 'vue'
-import { UseAxleRefs } from '@varlet/axle/use'
 import { apiGetItems, apiGetPlainItems, apiGetRowItems, Item } from '@/apis'
 
 const { pushStack } = useAppRouter()
@@ -98,7 +98,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="px-[14px] pb-[16px] pt-[114px]">
+  <div class="px-[14px] pt-[114px] pb-[16px]">
     <app-header>
       <template #left>
         <app-side-menu />

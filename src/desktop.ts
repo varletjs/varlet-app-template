@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
 import { inMobile } from 'rattail'
+import { createApp } from 'vue'
 import App from './Desktop.vue'
 import '@/styles/common.less'
 import 'virtual:uno.css'

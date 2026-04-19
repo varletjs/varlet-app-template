@@ -1,8 +1,7 @@
-// https://github.com/varletjs/axle
-import { createAxle, requestMockInterceptor } from '@varlet/axle'
-import { createApi } from '@varlet/axle/api'
-import { createUseAxle } from '@varlet/axle/use'
-import Mock from 'mockjs'
+import { genStringKey } from 'rattail'
+import { createAxle, requestMockInterceptor } from 'rattail/axle'
+import { createApi } from 'rattail/axle/api'
+import { createUseAxle } from 'rattail/axle/use'
 
 export const axle = createAxle({
   baseURL: import.meta.env.VITE_MOCK_API_BASE,
@@ -29,7 +28,7 @@ axle.useRequestInterceptor(
 
           const data = Array.from({ length: 10 }, () => {
             return {
-              id: Mock.Random.id(),
+              id: genStringKey(),
             }
           })
 

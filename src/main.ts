@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
 import { createBounceFixer } from '@varlet/bounce-fixer'
 import dayjs from 'dayjs'
 import { createPinia } from 'pinia'
+import { createApp } from 'vue'
 import { i18n } from '@/i18n'
 import router from '@/router'
 import { setupAppHeight } from '@/utils'

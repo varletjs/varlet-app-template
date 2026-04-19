@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { nextTick, ref, watch } from 'vue'
 import { useChildren, useParent } from '@varlet/use'
+import { nextTick, ref, watch } from 'vue'
 
 withDefaults(defineProps<{ keepAlive?: boolean; animation?: 'slide-x' | 'slide-y' }>(), {
   keepAlive: true,

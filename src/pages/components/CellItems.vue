@@ -34,7 +34,7 @@ const items = ref([
 </script>
 
 <template>
-  <div class="px-[10px] pb-[16px] pt-[10px]">
+  <div class="px-[10px] pt-[10px] pb-[16px]">
     <var-paper :elevation="2">
       <var-cell
         v-for="(item, index) in items"

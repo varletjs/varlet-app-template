@@ -66,7 +66,7 @@ function handleRefresh() {
             <var-space :size="['5vmin', '4vmin']">
               <var-chip v-for="i in 8" :key="i" class="p-0!">
                 <template #left>
-                  <var-avatar class="w-[32px]! h-[32px]! mr-[2px]" src="@/assets/images/avatar.jpg" />
+                  <var-avatar class="mr-[2px] h-[32px]! w-[32px]!" src="@/assets/images/avatar.jpg" />
                 </template>
                 <var-ellipsis class="max-w-[100px]" :tooltip="{ sameWidth: false }">
                   {{ $t('This is a comment') }}
@@ -77,7 +77,7 @@ function handleRefresh() {
 
           <div class="mt-[28px] flex items-center">
             <var-rate
-              class="w-auto! mr-[12px]"
+              class="mr-[12px] w-auto!"
               style="--rate-action-padding: 0"
               size="6vmin"
               half
@@ -92,7 +92,7 @@ function handleRefresh() {
           </div>
         </div>
 
-        <div class="px-[14px] pb-[34px] pt-[28px]">
+        <div class="px-[14px] pt-[28px] pb-[34px]">
           <var-button block type="primary">
             <var-icon name="star" />
             <span class="mx-[10px]">

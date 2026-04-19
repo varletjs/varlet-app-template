@@ -15,7 +15,7 @@ const sliderValue = ref(0)
       <div class="py-[10px]">
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
             <var-switch v-model="value" class="mr-[4px]" size="5.2vmin" />
@@ -23,7 +23,7 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
             <var-switch v-model="value" class="mr-[4px]" size="5.2vmin" />
@@ -31,7 +31,7 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
           <template #icon>
-            <var-icon class="ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
             <var-switch v-model="value" class="mr-[4px]" size="5.2vmin" />
@@ -39,7 +39,7 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')" :description="$t('Setting Description')">
           <template #icon>
-            <var-icon class="ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #extra>
             <var-switch v-model="value" class="mr-[4px]" size="5.2vmin" />
@@ -47,7 +47,7 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="mb-[10px] ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] mb-[10px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #description>
             <var-slider v-model="sliderValue" />
@@ -55,7 +55,7 @@ const sliderValue = ref(0)
         </var-cell>
         <var-cell :title="$t('Setting Name')">
           <template #icon>
-            <var-icon class="mb-[10px] ml-[8px] mr-[20px]" size="6vmin" name="image" />
+            <var-icon class="mr-[20px] mb-[10px] ml-[8px]" size="6vmin" name="image" />
           </template>
           <template #description>
             <var-slider v-model="sliderValue" />
