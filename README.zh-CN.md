@@ -103,11 +103,11 @@ pnpm test:coverage
 
 我们推荐使用 `issue` 列表进行最直接有效的反馈，也可以下面的方式
 
-* 微信
+- 微信
 
 <img style="width: 25%" src="https://cdn.jsdelivr.net/gh/varletjs/varlet-static/community.png" />
 
-* 加入 [Discord](https://discord.gg/Dmb8ydBHkw) 社区交流
+- 加入 [Discord](https://discord.gg/Dmb8ydBHkw) 社区交流
 
 ### 感谢贡献者们做出的努力
 

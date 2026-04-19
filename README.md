@@ -103,11 +103,11 @@ pnpm test:coverage
 
 We recommend that `issue` be used for problem feedback, or others:
 
-* Wechat group 
+- Wechat group
 
 <img style="width: 25%" src="https://cdn.jsdelivr.net/gh/varletjs/varlet-static/community.png" />
 
-* Join the [Discord](https://discord.gg/Dmb8ydBHkw)
+- Join the [Discord](https://discord.gg/Dmb8ydBHkw)
 
 ### Thanks to contributors
 
@@ -123,7 +123,7 @@ We recommend that `issue` be used for problem feedback, or others:
 
 ### Sponsor this project
 
-Sponsor this project to support our better creation. 
+Sponsor this project to support our better creation.
 
 #### Wechat / Alipay
 
