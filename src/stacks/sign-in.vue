@@ -90,7 +90,7 @@ async function submit() {
   padding: calc(80px + var(--app-bar-height)) 0 60px;
 
   &-form {
-    width: 280px;
+    width: 300px;
     margin-top: 50px;
 
     &-input-icon {

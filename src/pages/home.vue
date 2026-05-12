@@ -132,6 +132,7 @@ function handleClick() {
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
                 src="@/assets/images/material-2.png"
+                hoverable
                 ripple
                 @click="handleClick"
               >
@@ -166,6 +167,7 @@ function handleClick() {
                 src="@/assets/images/material-1.png"
                 layout="row"
                 ripple
+                hoverable
                 @click="handleClick"
               >
                 <template #extra>
@@ -193,6 +195,7 @@ function handleClick() {
                 :key="i"
                 :title="$t('Card Title')"
                 :subtitle="$t('Card Subtitle')"
+                hoverable
                 ripple
                 @click="handleClick"
               >

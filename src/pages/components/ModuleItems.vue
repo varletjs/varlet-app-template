@@ -7,6 +7,7 @@
           width="22vmin"
           height="22vmin"
           ripple
+          hoverable
           :radius="10"
           :elevation="1"
         >

@@ -98,16 +98,20 @@ async function submit() {
               <var-icon class="sign-up-form-input-icon" name="email" />
             </template>
           </var-input>
-          <var-input
+          <var-otp-input
             v-model="account.verifyCode"
-            variant="outlined"
-            :placeholder="$t('Please input {field}', { field: $t('verify code') })"
+            variant="standard"
             :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
-          >
-            <template #prepend-icon>
-              <var-icon class="sign-up-form-input-icon" name="card-account-details" />
-            </template>
-          </var-input>
+          />
+          <var-otp-input
+            v-model="account.verifyCode"
+            variant="filled"
+            :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
+          />
+          <var-otp-input
+            v-model="account.verifyCode"
+            :rules="z.string().min(6, $t('Length must be {length}', { length: 6 }))"
+          />
 
           <var-button type="primary" block size="large" auto-loading @click="submit">{{ $t('Sign Up') }}</var-button>
         </var-space>
@@ -125,7 +129,7 @@ async function submit() {
   padding: calc(80px + var(--app-bar-height)) 0 60px;
 
   &-form {
-    width: 280px;
+    width: 300px;
     margin-top: 20px;
 
     &-input-icon {
